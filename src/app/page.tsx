@@ -63,7 +63,7 @@ export default function Home() {
       <header>
         <div className="container">
           <h1>Linux🐧Box</h1>
-          <h2>Twój domowy serwer</h2>
+          <h2>Twój domowy kompaktowy serwer</h2>
           <p>Wydajna alternatywa dla Raspberry Pi z wbudowanym dyskiem, ekranem LED, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04 (Plucky) –> Gotowy do działania! -> <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Instrukcja użytkownika Linux Box          </a></p>
           <label className="theme-switch">
             <input type="checkbox" checked={theme === 'light'} onChange={toggleTheme} />
@@ -163,6 +163,21 @@ export default function Home() {
             <li>Pi-hole – blokowanie reklam</li>
             <li>Portainer – zarządzanie Dockerem</li>
             <li>VSCode – narzędzia dla programistów</li>
+            <li>Docker - zarządzanie kontenerami</li>
+            <li>EMQX - mqtt broker</li>
+            <li>Zigbee2mqtt - zarządzanie urządzeniami Zigbee</li>
+            <li>Cockpit - interfejs administracyjny</li>
+            <li>Btop - monitorowanie wydajności</li>
+            <li>Defguard - ochrona przed atakami</li>
+            <li>Uptime Kuma - monitorowanie dostępności</li>
+            <li>Postgres DB server - baza danych</li>
+            <li>pgAdmin - zarządzanie bazą danych</li>
+            <li>Glances - monitorowanie wydajności</li>
+            <li>Grafana - wizualizacja danych.</li>
+            <li>Node-red - Low-code programowanie</li>
+            <li>Domoticz - automatyka domowa</li>
+            <li>OpenHub - automatyka domowa</li>
+            <li>...</li>
           </ul>
           <p>
             Więcej informacji w{

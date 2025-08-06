@@ -315,6 +315,7 @@ header h1 {
 
 .applications li {
     margin-bottom: 10px;
+    list-style-type: square;
 }
 
 footer {
