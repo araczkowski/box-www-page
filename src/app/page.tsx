@@ -64,7 +64,7 @@ export default function Home() {
         <div className="container">
           <h1>Linux🐧Box</h1>
           <h2>Twój domowy kompaktowy serwer</h2>
-          <p>Wydajna alternatywa dla Raspberry Pi z wbudowanym dyskiem, ekranem LED, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04 (Plucky) –> Gotowy do działania! -> <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Instrukcja użytkownika Linux Box          </a></p>
+          <p>Wydajna alternatywa dla Raspberry Pi z wbudowanym dyskiem, ekranem LED, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04 (Plucky). Gotowy do działania! <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Instrukcja użytkownika Linux Box          </a></p>
           <label className="theme-switch">
             <input type="checkbox" checked={theme === 'light'} onChange={toggleTheme} />
             <span className="slider round"></span>
