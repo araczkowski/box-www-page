@@ -6,6 +6,9 @@ import { useEffect, useState } from 'react';
 export default function Home() {
   const [theme, setTheme] = useState('dark');
 
+  const [typedCommand, setTypedCommand] = useState('');
+  const commandToType = 'doocker pull homeassistant/home-assistant';
+
   useEffect(() => {
     function updateClock() {
       const clockElement = document.getElementById('clock');
@@ -21,7 +24,34 @@ export default function Home() {
     const intervalId = setInterval(updateClock, 1000);
     updateClock();
 
-    return () => clearInterval(intervalId);
+    let charIndex = 0;
+    let typingTimeout: NodeJS.Timeout;
+    let clearingTimeout: NodeJS.Timeout;
+
+    const typeCommand = () => {
+      setTypedCommand('');
+      charIndex = 0;
+      typingTimeout = setInterval(() => {
+        if (charIndex < commandToType.length) {
+          setTypedCommand(prev => prev + commandToType.charAt(charIndex));
+          charIndex++;
+        } else {
+          clearInterval(typingTimeout);
+          clearingTimeout = setTimeout(() => {
+            setTypedCommand('');
+            setTimeout(typeCommand, 500); // Wait 0.5s before re-typing
+          }, 1500); // Wait 1.5s after typing before clearing
+        }
+      }, 150); // Typing speed (150ms per character)
+    };
+
+    typeCommand(); // Start typing on mount
+
+    return () => {
+      clearInterval(intervalId);
+      clearInterval(typingTimeout);
+      clearTimeout(clearingTimeout);
+    };
   }, []);
 
   const toggleTheme = () => {
@@ -64,7 +94,7 @@ export default function Home() {
               </div>
               <div className="terminal-body">
                 <p>
-                  box:~# <span className="cursor"></span>
+                  box:~# {typedCommand}<span className="cursor"></span>
                 </p>
               </div>
             </div>
@@ -83,7 +113,7 @@ export default function Home() {
                   <h3>Asystent domowy</h3>
                   <div className="widget" id="clock"></div>
                   <div className="widget">Pogoda: 22°C ☀️</div>
-                  <div className="widget">Światła: Włączone</div>
+                  <div className="widget">Oświetlenie tarasu: 💡</div>
                 </div>
               </div>
             </div>
