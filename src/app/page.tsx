@@ -34,7 +34,7 @@ export default function Home() {
         <div className="container">
           <h1>Linux Box</h1>
           <h2>Twój kompaktowy lokalny serwer</h2>
-          <p>Wydajna alternatywa dla Raspberry Pi z wbudowanym dyskiem i ekranem led – gotowy do działania!</p>
+          <p>Wydajna alternatywa dla Raspberry Pi z wbudowanym dyskiem, ekranem LED, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04 (Plucky) – gotowy do działania!</p>
           <label className="theme-switch">
             <input type="checkbox" checked={theme === 'dark'} onChange={toggleTheme} />
             <span className="slider round"></span>
@@ -91,7 +91,11 @@ export default function Home() {
           <div className="hero-text">
             <h2>🚀 4 GB RAM | 128 GB eMMC | Ubuntu Plucky</h2>
             <a href="#features" className="btn">
-              Zobacz funkcje
+              👇 Zobacz funkcje
+            </a>
+            {' '}
+            <a href="mailto:andrzej@sviete.pl?subject=Zakup%20bramki" className="btn">
+              🛒 Kup przez e-mail
             </a>
           </div>
         </div>
