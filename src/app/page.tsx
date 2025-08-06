@@ -1,88 +1,146 @@
-import Image from "next/image";
+'use client';
+
+import Image from 'next/image';
+import { useEffect } from 'react';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  useEffect(() => {
+    function updateClock() {
+      const clockElement = document.getElementById('clock');
+      if (clockElement) {
+        const now = new Date();
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        clockElement.textContent = `Godzina: ${hours}:${minutes}:${seconds}`;
+      }
+    }
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    const intervalId = setInterval(updateClock, 1000);
+    updateClock();
+
+    return () => clearInterval(intervalId);
+  }, []);
+
+  return (
+    <>
+      <header>
+        <div className="container">
+          <h1>Linux Box / Terminal</h1>
+          <h2>Twój kompaktowy lokalny serwer i terminal w jednym</h2>
+          <p>Wydajna alternatywa dla Raspberry Pi – gotowa do działania!</p>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+      </header>
+
+      <section className="hero">
+        <div className="container">
+          <div className="hero-content">
+            <Image
+              src="/ais_gate_dev3.png"
+              alt="AIS Gate DEV 3"
+              width={300}
+              height={200}
+              className="hero-image-side"
+            />
+            <div className="connection-lines"></div>
+            <div className="terminal">
+              <div className="terminal-header">
+                <div className="terminal-buttons">
+                  <span className="terminal-button red"></span>
+                  <span className="terminal-button yellow"></span>
+                  <span className="terminal-button green"></span>
+                </div>
+                <div className="terminal-title">bash</div>
+              </div>
+              <div className="terminal-body">
+                <p>
+                  box:~# <span className="cursor"></span>
+                </p>
+              </div>
+            </div>
+            <div className="connection-lines"></div>
+            <div className="browser">
+              <div className="browser-header">
+                <div className="browser-buttons">
+                  <span className="browser-button red"></span>
+                  <span className="browser-button yellow"></span>
+                  <span className="browser-button green"></span>
+                </div>
+                <div className="browser-address-bar">http://localhost:8123</div>
+              </div>
+              <div className="browser-body">
+                <div className="dashboard">
+                  <h3>Asystent domowy</h3>
+                  <div className="widget" id="clock"></div>
+                  <div className="widget">Pogoda: 22°C ☀️</div>
+                  <div className="widget">Światła: Włączone</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="hero-text">
+            <h2>🚀 4 GB RAM | 128 GB eMMC | Ubuntu Plucky</h2>
+            <a href="#features" className="btn">
+              Zobacz funkcje
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" className="features">
+        <div className="container">
+          <h2>Dlaczego Linux Box Terminal?</h2>
+          <div className="feature-grid">
+            <div className="feature">
+              <h3>Wydajność</h3>
+              <p>Procesor Amlogic S905X3 i 4 GB RAM zapewniają płynną pracę.</p>
+            </div>
+            <div className="feature">
+              <h3>Pamięć</h3>
+              <p>128 GB eMMC + rozszerzalność przez microSD/USB.</p>
+            </div>
+            <div className="feature">
+              <h3>System</h3>
+              <p>Ubuntu 25.04 (Plucky) – gotowy do działania.</p>
+            </div>
+            <div className="feature">
+              <h3>Wyświetlacz VFD</h3>
+              <p>Pokazuje czas, temperaturę, IP i więcej.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="applications">
+        <div className="container">
+          <h2>Zastosowania</h2>
+          <ul>
+            <li>Home Assistant – automatyka domu</li>
+            <li>Nextcloud – prywatna chmura</li>
+            <li>Pi-hole – blokowanie reklam</li>
+            <li>Portainer – zarządzanie Dockerem</li>
+            <li>VSCode – narzędzia dla programistów</li>
+          </ul>
+          <p>
+            Więcej informacji w{
+              ' '
+            }
+            <a
+              href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
+              target="_blank"
+            >
+              dokumentacji
+            </a>
+            .
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <div className="container">
+          <p>&copy; 2025 Linux Box Terminal.</p>
+        </div>
       </footer>
-    </div>
+    </>
   );
 }
