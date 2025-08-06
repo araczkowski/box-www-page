@@ -46,6 +46,7 @@ body {
 .theme-light .feature {
     background: #ffffff;
     border: 2px solid #000000;
+    padding: 1em;
 }
 
 .theme-light .applications {

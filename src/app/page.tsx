@@ -62,8 +62,8 @@ export default function Home() {
     <div className={theme === 'dark' ? 'theme-dark' : 'theme-light'}>
       <header>
         <div className="container">
-          <h1>Linux Box</h1>
-          <h2>Twój kompaktowy lokalny serwer</h2>
+          <h1>Linux🐧Box</h1>
+          <h2>Twój domowy serwer</h2>
           <p>Wydajna alternatywa dla Raspberry Pi z wbudowanym dyskiem, ekranem LED, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04 (Plucky) –> Gotowy do działania! -> <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Instrukcja użytkownika Linux Box          </a></p>
           <label className="theme-switch">
             <input type="checkbox" checked={theme === 'light'} onChange={toggleTheme} />
@@ -74,6 +74,45 @@ export default function Home() {
 
       <section className="hero">
         <div className="container">
+          <div className="hero-text">
+            <h2 style={{paddingBottom: '1em'}}>🚀 4 GB RAM | 128 GB eMMC | Ubuntu</h2>
+            <div className="hero-text">
+            <a href="mailto:andrzej@sviete.pl?subject=Zakup%20Linux%20Box&body=chc%C4%99%20kupi%C4%87%20linux%20box%2C%20prosz%C4%99%20o%20dane%20do%20przelewu%2C%20adres%20wysy%C5%82ki%20-%20paczkomat%20numer%3A%20" className="btn">
+              🛒 Kup przez e-mail<br />Za jedyne: 199zł<br /><span style={{fontSize: '10px'}}>(dostawa do paczkomatu gratis)</span>
+            </a>
+            <h2> Wifi 5GHz | Eternet 1GB | USB 3.0 | HDMI 2.0A </h2>
+            </div>
+            </div>
+        </div>
+      </section>
+
+      <section id="features" className="features">
+        <div className="container">
+          <h2>Dlaczego Linux Box?</h2>
+          <div className="feature-grid">
+            <div className="feature">
+              <h3>Wydajność 🚀</h3>
+              <p>Procesor Amlogic S905X3 i 4 GB RAM zapewniają płynną pracę.</p>
+            </div>
+            <div className="feature">
+              <h3>Pamięć 💾</h3>
+              <p>128 GB eMMC + rozszerzalność przez microSD/USB.</p>
+            </div>
+            <div className="feature">
+              <h3>System 🐧</h3>
+              <p>Ubuntu 25.04 (Plucky) – gotowy do działania.</p>
+            </div>
+            <div className="feature">
+              <h3>Wyświetlacz 🖵</h3>
+              <p>Pokazuje czas, temperaturę, IP i więcej.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="applications">
+        <div className="container">
+          <h2>Zastosowania</h2>
           <div className="hero-content">
             <Image
               src="/ais_gate_dev3.png"
@@ -118,42 +157,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="hero-text">
-            <h2>🚀 4 GB RAM | 128 GB eMMC | Ubuntu Plucky</h2>
-            <a href="mailto:andrzej@sviete.pl?subject=Zakup%20bramki&body=chc%C4%99%20kupi%C4%87%20linux%20box%2C%20prosz%C4%99%20o%20dane%20do%20przelewu%2C%20adres%20wysy%C5%82ki%20-%20paczkomat%20numer%3A%20" className="btn">
-              🛒 Kup przez e-mail<br />Za jedyne: 199zł<br /><span style={{fontSize: '12px'}}>(dostawa gratis)</span>
-            </a>
-            </div>
-        </div>
-      </section>
-
-      <section id="features" className="features">
-        <div className="container">
-          <h2>Dlaczego Linux Box Terminal?</h2>
-          <div className="feature-grid">
-            <div className="feature">
-              <h3>Wydajność</h3>
-              <p>Procesor Amlogic S905X3 i 4 GB RAM zapewniają płynną pracę.</p>
-            </div>
-            <div className="feature">
-              <h3>Pamięć</h3>
-              <p>128 GB eMMC + rozszerzalność przez microSD/USB.</p>
-            </div>
-            <div className="feature">
-              <h3>System</h3>
-              <p>Ubuntu 25.04 (Plucky) – gotowy do działania.</p>
-            </div>
-            <div className="feature">
-              <h3>Wyświetlacz VFD</h3>
-              <p>Pokazuje czas, temperaturę, IP i więcej.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="applications">
-        <div className="container">
-          <h2>Zastosowania</h2>
           <ul>
             <li>Home Assistant – automatyka domu</li>
             <li>Nextcloud – prywatna chmura</li>
