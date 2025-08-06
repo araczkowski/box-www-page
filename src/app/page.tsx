@@ -90,12 +90,8 @@ export default function Home() {
           </div>
           <div className="hero-text">
             <h2>🚀 4 GB RAM | 128 GB eMMC | Ubuntu Plucky</h2>
-            <a href="#features" className="btn">
-              👇 Zobacz funkcje
-            </a>
-            {' '}
             <a href="mailto:andrzej@sviete.pl?subject=Zakup%20bramki" className="btn">
-              🛒 Kup przez e-mail
+              🛒 Kup przez e-mail (199zł)
             </a>
           </div>
         </div>
@@ -155,6 +151,7 @@ export default function Home() {
           <p>&copy; 2025 Linux Box Terminal.</p>
         </div>
       </footer>
+      <a href="#features" className="scroll-down-btn" aria-label="Przewiń w dół" />
     </div>
   );
 }
