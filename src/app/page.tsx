@@ -1,9 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Home() {
+  const [theme, setTheme] = useState('dark');
+
   useEffect(() => {
     function updateClock() {
       const clockElement = document.getElementById('clock');
@@ -22,13 +24,21 @@ export default function Home() {
     return () => clearInterval(intervalId);
   }, []);
 
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
-    <>
+    <div className={theme === 'dark' ? 'theme-dark' : 'theme-light'}>
       <header>
         <div className="container">
-          <h1>Linux Box / Terminal</h1>
-          <h2>Twój kompaktowy lokalny serwer i terminal w jednym</h2>
-          <p>Wydajna alternatywa dla Raspberry Pi – gotowa do działania!</p>
+          <h1>Linux Box</h1>
+          <h2>Twój kompaktowy lokalny serwer</h2>
+          <p>Wydajna alternatywa dla Raspberry Pi z wbudowanym dyskiem i ekranem led – gotowy do działania!</p>
+          <label className="theme-switch">
+            <input type="checkbox" checked={theme === 'dark'} onChange={toggleTheme} />
+            <span className="slider round"></span>
+          </label>
         </div>
       </header>
 
@@ -38,7 +48,7 @@ export default function Home() {
             <Image
               src="/ais_gate_dev3.png"
               alt="AIS Gate DEV 3"
-              width={300}
+              width={200}
               height={200}
               className="hero-image-side"
             />
@@ -141,6 +151,6 @@ export default function Home() {
           <p>&copy; 2025 Linux Box Terminal.</p>
         </div>
       </footer>
-    </>
+    </div>
   );
 }

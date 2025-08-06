@@ -6,8 +6,165 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    color: #339933; /* Softer Green text */
-    background-color: #1a1a1a; /* Dark grey background */
+}
+
+/* Light Theme */
+.theme-light {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.theme-light .container {
+    border: 2px solid #000000;
+    box-shadow: 0 0 8px #000000;
+}
+
+.theme-light header {
+    background: #ffffff;
+    color: #000000;
+    border-bottom: 2px solid #000000;
+}
+
+.theme-light .hero {
+    background: #ffffff;
+}
+
+.theme-light .btn {
+    background: #000000;
+    color: #ffffff;
+    border: 2px solid #000000;
+}
+
+.theme-light .btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.theme-light .features {
+    background: #ffffff;
+}
+
+.theme-light .feature {
+    background: #ffffff;
+    border: 2px solid #000000;
+}
+
+.theme-light .applications {
+    background: #ffffff;
+}
+
+.theme-light footer {
+    background: #ffffff;
+    color: #000000;
+    border-top: 2px solid #000000;
+}
+
+.theme-light .hero-image-side {
+    border: none;
+}
+
+.theme-light .connection-lines::before,
+.theme-light .connection-lines::after {
+    color: #000000;
+}
+
+.theme-light .terminal {
+    border: 2px solid #000000;
+}
+
+.theme-light .terminal-header {
+    background-color: #f1f1f1;
+    border-bottom: 2px solid #000000;
+}
+
+.theme-light .cursor {
+    background-color: #000000;
+}
+
+.theme-light @keyframes blink {
+    from, to { background-color: transparent; }
+    50% { background-color: #000000; }
+}
+
+/* Dark Theme */
+.theme-dark {
+    color: #339933;
+    background-color: #1a1a1a;
+}
+
+.theme-dark .container {
+    border: 2px solid #339933;
+    box-shadow: 0 0 8px #339933;
+}
+
+.theme-dark header {
+    background: #1a1a1a;
+    color: #339933;
+    border-bottom: 2px solid #339933;
+}
+
+.theme-dark .hero {
+    background: #1a1a1a;
+}
+
+.theme-dark .btn {
+    background: #339933;
+    color: #1a1a1a;
+    border: 2px solid #339933;
+}
+
+.theme-dark .btn:hover {
+    background: #1a1a1a;
+    color: #339933;
+}
+
+.theme-dark .features {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.theme-dark .feature {
+    background: #1a1a1a;
+    border: 2px solid #339933;
+}
+
+.theme-dark .applications {
+    background: #1a1a1a;
+}
+
+.theme-dark footer {
+    background: #1a1a1a;
+    color: #339933;
+    border-top: 2px solid #339933;
+}
+
+.theme-dark .hero-image-side {
+    border: none;
+}
+
+.theme-dark .connection-lines::before,
+.theme-dark .connection-lines::after {
+    color: #339933;
+}
+
+.theme-dark .terminal {
+    background-color: #000;
+    border: 2px solid #339933;
+    box-shadow: 0 0 10px rgba(51, 153, 51, 0.5);
+}
+
+.theme-dark .terminal-header {
+    background-color: #333;
+    border-bottom: 2px solid #339933;
+}
+
+.theme-dark .cursor {
+    background-color: #339933;
+}
+
+.theme-dark @keyframes blink {
+    from, to { background-color: transparent; }
+    50% { background-color: #339933; }
 }
 
 .container {
@@ -15,17 +172,10 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    border: 2px solid #339933;
-    box-shadow: 0 0 8px #339933;
 }
 
-/* Nagłówek */
 header {
-    background: #1a1a1a;
-    color: #339933;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 2px solid #339933;
+    position: relative;
 }
 
 header h1 {
@@ -34,9 +184,7 @@ header h1 {
     text-transform: uppercase;
 }
 
-/* Sekcja hero */
 .hero {
-    background: #1a1a1a;
     padding: 40px 0;
     text-align: center;
 }
@@ -49,23 +197,9 @@ header h1 {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background: #339933;
-    color: #1a1a1a;
     text-decoration: none;
-    border: 2px solid #339933;
     margin-top: 10px;
     text-transform: uppercase;
-}
-
-.btn:hover {
-    background: #1a1a1a;
-    color: #339933;
-}
-
-/* Sekcja funkcji */
-.features {
-    padding: 40px 0;
-    text-align: center;
 }
 
 .features h2 {
@@ -79,18 +213,6 @@ header h1 {
     gap: 20px;
 }
 
-.feature {
-    background: #1a1a1a;
-    padding: 20px;
-    border: 2px solid #339933;
-}
-
-/* Sekcja zastosowań */
-.applications {
-    background: #1a1a1a;
-    padding: 40px 0;
-}
-
 .applications ul {
     list-style-type: '>';
     padding-left: 20px;
@@ -100,14 +222,10 @@ header h1 {
     margin-bottom: 10px;
 }
 
-/* Stopka */
 footer {
-    background: #1a1a1a;
-    color: #339933;
     text-align: center;
     padding: 20px 0;
     margin-top: 20px;
-    border-top: 2px solid #339933;
 }
 
 .hero-content {
@@ -115,12 +233,6 @@ footer {
     align-items: center;
     justify-content: center;
     gap: 20px;
-}
-
-.hero-image-side {
-    max-width: 300px;
-    height: auto;
-    border: 2px solid #339933;
 }
 
 .connection-lines {
@@ -135,7 +247,6 @@ footer {
 .connection-lines::before, .connection-lines::after {
     content: '0101010101';
     position: absolute;
-    color: #339933;
     width: 100%;
     font-size: 1.5em;
     animation: data-flow 2s linear infinite;
@@ -165,24 +276,18 @@ footer {
     }
 }
 
-/* Terminal styles */
 .terminal {
-    background-color: #000;
-    border: 2px solid #339933;
     border-radius: 5px;
     max-width: 300px;
     margin: 0;
-    box-shadow: 0 0 10px rgba(51, 153, 51, 0.5);
     text-align: left;
     flex-basis: 300px;
 }
 
 .terminal-header {
-    background-color: #333;
     padding: 5px;
     display: flex;
     align-items: center;
-    border-bottom: 2px solid #339933;
 }
 
 .terminal-buttons {
@@ -211,7 +316,6 @@ footer {
     height: 150px;
 }
 
-/* Browser styles */
 .browser {
     background-color: #fff;
     border: 2px solid #ccc;
@@ -285,7 +389,6 @@ footer {
 
 .cursor {
     display: inline-block;
-    background-color: #339933;
     width: 10px;
     height: 1.2em;
     animation: blink 1s step-end infinite;
@@ -295,4 +398,65 @@ footer {
 @keyframes blink {
     from, to { background-color: transparent; }
     50% { background-color: #339933; }
+}
+
+/* Theme Switch */
+.theme-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "\2600"; /* Sun icon */
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f1c40f; /* Yellow sun */
+    font-size: 22px;
+}
+
+input:checked + .slider:before {
+    content: "\1F319"; /* Moon icon */
+    color: #000; /* Black moon for contrast */
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
 }
