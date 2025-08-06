@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState('light');
 
   const [typedCommand, setTypedCommand] = useState('');
   const commandToType = 'doocker pull homeassistant/home-assistant';
@@ -66,7 +66,7 @@ export default function Home() {
           <h2>Twój kompaktowy lokalny serwer</h2>
           <p>Wydajna alternatywa dla Raspberry Pi z wbudowanym dyskiem, ekranem LED, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04 (Plucky) –> Gotowy do działania! -> <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Instrukcja użytkownika Linux Box          </a></p>
           <label className="theme-switch">
-            <input type="checkbox" checked={theme === 'dark'} onChange={toggleTheme} />
+            <input type="checkbox" checked={theme === 'light'} onChange={toggleTheme} />
             <span className="slider round"></span>
           </label>
         </div>
@@ -120,7 +120,7 @@ export default function Home() {
           </div>
           <div className="hero-text">
             <h2>🚀 4 GB RAM | 128 GB eMMC | Ubuntu Plucky</h2>
-            <a href="mailto:andrzej@sviete.pl?subject=Zakup%20bramki" className="btn">
+            <a href="mailto:andrzej@sviete.pl?subject=Zakup%20bramki&body=chc%C4%99%20kupi%C4%87%20linux%20box%2C%20prosz%C4%99%20o%20dane%20do%20przelewu%2C%20adres%20wysy%C5%82ki%20-%20paczkomat%20numer%3A%20" className="btn">
               🛒 Kup przez e-mail<br />Za jedyne: 199zł<br /><span style={{fontSize: '12px'}}>(dostawa gratis)</span>
             </a>
             </div>

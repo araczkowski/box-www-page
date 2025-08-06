@@ -22,7 +22,6 @@ body {
 .theme-light header {
     background: #ffffff;
     color: #000000;
-    border-bottom: 2px solid #000000;
 }
 
 .theme-light .hero {
@@ -65,7 +64,7 @@ body {
 
 .theme-light .connection-lines::before,
 .theme-light .connection-lines::after {
-    color: #000000;
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .theme-light .terminal {
@@ -142,9 +141,70 @@ body {
     border: none;
 }
 
+.theme-light .connection-lines::before,
+.theme-light .connection-lines::after {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+/* Dark Theme */
+.theme-dark {
+    color: #339933;
+    background-color: #1a1a1a;
+}
+
+.theme-dark .container {
+    border: 2px solid #339933;
+    box-shadow: 0 0 8px #339933;
+}
+
+.theme-dark header {
+    background: #1a1a1a;
+    color: #339933;
+    border-bottom: 2px solid #339933;
+}
+
+.theme-dark .hero {
+    background: #1a1a1a;
+}
+
+.theme-dark .btn {
+    background: #339933;
+    color: #1a1a1a;
+    border: 2px solid #339933;
+}
+
+.theme-dark .btn:hover {
+    background: #1a1a1a;
+    color: #339933;
+}
+
+.theme-dark .features {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.theme-dark .feature {
+    background: #1a1a1a;
+    border: 2px solid #339933;
+}
+
+.theme-dark .applications {
+    background: #1a1a1a;
+}
+
+.theme-dark footer {
+    background: #1a1a1a;
+    color: #339933;
+    border-top: 2px solid #339933;
+}
+
+.theme-dark .hero-image-side {
+    border: none;
+}
+
 .theme-dark .connection-lines::before,
 .theme-dark .connection-lines::after {
-    color: #339933;
+    color: rgba(51, 153, 51, 0.3);
 }
 
 .theme-dark .terminal {
@@ -176,6 +236,7 @@ body {
 
 header {
     position: relative;
+    padding-bottom: 0px;
 }
 
 header h1 {
@@ -187,11 +248,12 @@ header h1 {
 .hero {
     padding: 40px 0;
     text-align: center;
+    margin-top: 0px;
 }
 
 .hero-text h2 {
     font-size: 2.5em;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .btn {
@@ -279,9 +341,9 @@ footer {
 .connection-lines::before, .connection-lines::after {
     content: '0101010101';
     position: absolute;
-    width: 100%;
     font-size: 1.5em;
-    animation: data-flow 2s linear infinite;
+    animation: data-flow 4s linear infinite;
+    white-space: nowrap;
 }
 
 .connection-lines::before {
