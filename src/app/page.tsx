@@ -61,14 +61,24 @@ export default function Home() {
   return (
     <div className={theme === 'dark' ? 'theme-dark' : 'theme-light'}>
       <header>
-        <div className="container">
-          <h1>Linux🐧Box</h1>
-          <h2>Twój domowy kompaktowy serwer</h2>
-          <p>Wydajna alternatywa dla Raspberry Pi z wbudowanym dyskiem, ekranem LED, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04 (Plucky). Gotowy do działania! <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Instrukcja użytkownika Linux Box          </a></p>
-          <label className="theme-switch">
-            <input type="checkbox" checked={theme === 'light'} onChange={toggleTheme} />
-            <span className="slider round"></span>
-          </label>
+        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+          <div>
+            <h1>Linux🐧Box</h1>
+            <h2>Twój domowy kompaktowy serwer</h2>
+            <p>Wydajna alternatywa dla Raspberry Pi z wbudowanym dyskiem, ekranem LED, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04 (Plucky). Gotowy do działania! <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Instrukcja użytkownika Linux Box          </a></p>
+            <label className="theme-switch">
+              <input type="checkbox" checked={theme === 'light'} onChange={toggleTheme} />
+              <span className="slider round"></span>
+            </label>
+          </div>
+          <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '-4em'}}>
+          <Image
+            src="/ais_gate_dev3.png"
+            alt="AIS Gate DEV 3"
+            width={160}
+            height={160}
+          />
+          </div>
         </div>
       </header>
 
@@ -114,13 +124,15 @@ export default function Home() {
         <div className="container">
           <h2>Zastosowania</h2>
           <div className="hero-content">
+            <div>
             <Image
               src="/ais_gate_dev3.png"
               alt="AIS Gate DEV 3"
-              width={200}
-              height={200}
+              width={160}
+              height={160}
               className="hero-image-side"
             />
+            </div>
             <div className="connection-lines"></div>
             <div className="terminal">
               <div className="terminal-header">
