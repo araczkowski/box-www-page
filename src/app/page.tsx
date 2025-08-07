@@ -87,7 +87,7 @@ export default function Home() {
           <div className="hero-text">
             <h2 style={{paddingBottom: '1em'}}>🚀 4 GB RAM | 128 GB eMMC | Ubuntu</h2>
             <div className="hero-text">
-            <a href="mailto:andrzej@sviete.pl?subject=Zakup%20Linux%20Box&body=chc%C4%99%20kupi%C4%87%20linux%20box%2C%20prosz%C4%99%20o%20dane%20do%20przelewu%2C%20adres%20wysy%C5%82ki%20-%20paczkomat%20numer%3A%20" className="btn">
+            <a href="mailto:andrzej@sviete.pl?subject=Zakup%20Linux%20Box&body=chc%C4%99%20kupi%C4%87%20linux%20box%2C%20" className="btn">
               🛒 Kup przez e-mail<br />Za jedyne: 199zł<br /><span style={{fontSize: '10px'}}>(dostawa do paczkomatu gratis)</span>
             </a>
             <h2> Wifi 5GHz | Eternet 1GB | USB 3.0 | HDMI 2.0A </h2>
@@ -105,8 +105,8 @@ export default function Home() {
               <p>Procesor Amlogic S905X3 i 4 GB RAM zapewniają płynną pracę.</p>
             </div>
             <div className="feature">
-              <h3>Pamięć 💾</h3>
-              <p>128 GB eMMC + rozszerzalność przez microSD/USB.</p>
+              <h3>Pamięć/Dysk 💾</h3>
+              <p>128 GB eMMC + rozszerzalność przez microSD i/lub USB.</p>
             </div>
             <div className="feature">
               <h3>System 🐧</h3>
@@ -189,7 +189,7 @@ export default function Home() {
             <li>Node-red - Low-code programowanie</li>
             <li>Domoticz - automatyka domowa</li>
             <li>OpenHub - automatyka domowa</li>
-            <li>...</li>
+            <li> I wiele więcej...</li>
           </ul>
           <p>
             Więcej informacji w{
@@ -208,7 +208,7 @@ export default function Home() {
 
       <footer>
         <div className="container">
-          <p>&copy; 2025 Linux Box Terminal.</p>
+          <p>&copy; 2025 Linux Box.</p>
         </div>
       </footer>
       <a href="#features" className="scroll-down-btn" aria-label="Przewiń w dół" />
