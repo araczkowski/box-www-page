@@ -228,6 +228,25 @@ body {
     50% { background-color: #339933; }
 }
 
+.header-image-container {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    margin-top: -4em;
+}
+
+@media (min-width: 768px) {
+    .header-image-container {
+        margin-top: -7em;
+    }
+}
+
+@media (min-width: 1200px) {
+    .header-image-container {
+        margin-top: -12em;
+    }
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
