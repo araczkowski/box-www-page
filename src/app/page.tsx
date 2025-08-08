@@ -61,7 +61,7 @@ export default function Home() {
   return (
     <div className={theme === 'dark' ? 'theme-dark' : 'theme-light'}>
       <header>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div className="container">
           <div>
             <h1>Linux🐧Box</h1>
             <h2>Twój domowy kompaktowy serwer</h2>
@@ -73,10 +73,10 @@ export default function Home() {
           </div>
           <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '-4em'}}>
           <Image
-            src="/ais_gate_dev3.png"
+            src="/ais_gate_dev3_1.png"
             alt="AIS Gate DEV 3"
-            width={160}
-            height={160}
+            width={300}
+            height={290}
           />
           </div>
         </div>
@@ -211,7 +211,6 @@ export default function Home() {
           <p>&copy; 2025 Linux Box.</p>
         </div>
       </footer>
-      <a href="#features" className="scroll-down-btn" aria-label="Przewiń w dół" />
     </div>
   );
 }
