@@ -100,7 +100,6 @@ body {
 .theme-dark header {
     background: #1a1a1a;
     color: #339933;
-    border-bottom: 2px solid #339933;
 }
 
 .theme-dark .hero {
@@ -142,66 +141,7 @@ body {
     border: none;
 }
 
-.theme-light .connection-lines::before,
-.theme-light .connection-lines::after {
-    color: rgba(0, 0, 0, 0.3);
-}
 
-/* Dark Theme */
-.theme-dark {
-    color: #339933;
-    background-color: #1a1a1a;
-}
-
-.theme-dark .container {
-    border: 2px solid #339933;
-    box-shadow: 0 0 8px #339933;
-}
-
-.theme-dark header {
-    background: #1a1a1a;
-    color: #339933;
-    border-bottom: 2px solid #339933;
-}
-
-.theme-dark .hero {
-    background: #1a1a1a;
-}
-
-.theme-dark .btn {
-    background: #339933;
-    color: #1a1a1a;
-    border: 2px solid #339933;
-}
-
-.theme-dark .btn:hover {
-    background: #1a1a1a;
-    color: #339933;
-}
-
-.theme-dark .features {
-    padding: 40px 0;
-    text-align: center;
-}
-
-.theme-dark .feature {
-    background: #1a1a1a;
-    border: 2px solid #339933;
-}
-
-.theme-dark .applications {
-    background: #1a1a1a;
-}
-
-.theme-dark footer {
-    background: #1a1a1a;
-    color: #339933;
-    border-top: 2px solid #339933;
-}
-
-.theme-dark .hero-image-side {
-    border: none;
-}
 
 .theme-dark .connection-lines::before,
 .theme-dark .connection-lines::after {
@@ -591,7 +531,6 @@ input:checked + .slider:before {
     .theme-light .container, .theme-dark .container {
         border: none;
         box-shadow: none;
-        width: 100%;
     }
 
     .hero-content {
@@ -622,5 +561,10 @@ input:checked + .slider:before {
 
     .connection-lines {
         display: none;
+    }
+
+    .theme-switch {
+        top: 5px;
+        right: 5px;
     }
 }
