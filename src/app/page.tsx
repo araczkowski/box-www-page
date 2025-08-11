@@ -172,25 +172,25 @@ export default function Home() {
             </div>
           </div>
           <ul>
-            <li>Home Assistant – automatyka domu</li>
-            <li>Nextcloud – prywatna chmura</li>
-            <li>Pi-hole – blokowanie reklam</li>
-            <li>Portainer – zarządzanie Dockerem</li>
-            <li>VSCode – narzędzia dla programistów</li>
-            <li>Docker - zarządzanie kontenerami</li>
-            <li>EMQX - mqtt broker</li>
-            <li>Zigbee2mqtt - zarządzanie urządzeniami Zigbee</li>
-            <li>Cockpit - interfejs administracyjny</li>
-            <li>Btop - monitorowanie wydajności</li>
-            <li>Defguard - ochrona przed atakami</li>
-            <li>Uptime Kuma - monitorowanie dostępności</li>
-            <li>Postgres DB server - baza danych</li>
-            <li>pgAdmin - zarządzanie bazą danych</li>
-            <li>Glances - monitorowanie wydajności</li>
-            <li>Grafana - wizualizacja danych.</li>
-            <li>Node-red - Low-code programowanie</li>
-            <li>Domoticz - automatyka domowa</li>
-            <li>OpenHub - automatyka domowa</li>
+            <li><a href="https://www.home-assistant.io/" target="_blank">Home Assistant</a> – automatyka domu</li>
+            <li><a href="https://nextcloud.com/" target="_blank">Nextcloud</a> – prywatna chmura</li>
+            <li><a href="https://pi-hole.net/" target="_blank">Pi-hole</a> – blokowanie reklam</li>
+            <li><a href="https://www.portainer.io/" target="_blank">Portainer</a> – zarządzanie Dockerem</li>
+            <li><a href="https://code.visualstudio.com/" target="_blank">VSCode</a> – narzędzia dla programistów</li>
+            <li><a href="https://www.docker.com/" target="_blank">Docker</a> - zarządzanie kontenerami</li>
+            <li><a href="https://www.emqx.io/" target="_blank">EMQX</a> - mqtt broker</li>
+            <li><a href="https://www.zigbee2mqtt.io/" target="_blank">Zigbee2mqtt</a> - zarządzanie urządzeniami Zigbee</li>
+            <li><a href="https://cockpit-project.org/" target="_blank">Cockpit</a> - interfejs administracyjny</li>
+            <li><a href="https://github.com/aristocratos/btop" target="_blank">Btop</a> - monitorowanie wydajności</li>
+            <li><a href="https://defguard.net/" target="_blank">Defguard</a> - ochrona przed atakami</li>
+            <li><a href="https://uptime.kuma.pet/" target="_blank">Uptime Kuma</a> - monitorowanie dostępności</li>
+            <li><a href="https://www.postgresql.org/" target="_blank">Postgres DB server</a> - baza danych</li>
+            <li><a href="https://www.pgadmin.org/" target="_blank">pgAdmin</a> - zarządzanie bazą danych</li>
+            <li><a href="https://nicolargo.github.io/glances/" target="_blank">Glances</a> - monitorowanie wydajności</li>
+            <li><a href="https://grafana.com/" target="_blank">Grafana</a> - wizualizacja danych.</li>
+            <li><a href="https://nodered.org/" target="_blank">Node-red</a> - Low-code programowanie</li>
+            <li><a href="https://www.domoticz.com/" target="_blank">Domoticz</a> - automatyka domowa</li>
+            <li><a href="https://www.openhab.org/" target="_blank">OpenHAB</a> - automatyka domowa</li>
             <li> I wiele więcej...</li>
           </ul>
           <p>
