@@ -79,7 +79,7 @@ export default function Home() {
                 height={290}
               />
             </div>
-            <p>Gotowy do działania zestaw mini-komputera! Lepsza i tańsza alternatywa dla Raspberry Pi — z wbudowany szybkim dyskiem eMMC 128 GB, LED-owym wyświetlaczem, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04. Wystarczy podłączyć i działać! <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Dołączona instrukcja Linux Box.</a></p>
+            <p>Gotowy do działania zestaw mini-komputera! <a href="#comparison">Lepsza i tańsza</a> alternatywa dla Raspberry Pi — z wbudowany szybkim dyskiem eMMC 128 GB, LED-owym wyświetlaczem, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04. Wystarczy podłączyć i działać! <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Dołączona instrukcja Linux Box.</a></p>
           </div>
         </div>
       </header>
@@ -118,6 +118,95 @@ export default function Home() {
               <h3>Wyświetlacz 🖵</h3>
               <p>Pokazuje czas, temperaturę, IP i więcej.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="comparison" className="features">
+        <div className="container">
+          <h2>Porównanie</h2>
+          <div className="comparison-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Cecha</th>
+                  <th>
+                    <div className="image-container">
+                      <Image src="/rpi4.png" alt="Raspberry Pi 4" width={120} height={100} />
+                      <div className="image-caption">Raspberry Pi 4</div>
+                    </div>
+                  </th>
+                  <th>
+                    <div className="image-container">
+                      <Image src="/ais_gate_dev3_1.png" alt="Linux Box" width={120} height={120} />
+                      <div className="image-caption">Linux Box (S905X3)</div>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Procesor</td>
+                  <td>Broadcom BCM2711 (4x Cortex-A72 @ 1.8GHz)</td>
+                  <td>Amlogic S905X3 (4x Cortex-A55 @ 1.9GHz)</td>
+                </tr>
+                <tr>
+                  <td>Pamięć RAM</td>
+                  <td>4GB LPDDR4</td>
+                  <td>4GB DDR4</td>
+                </tr>
+                <tr>
+                  <td>Pamięć masowa</td>
+                  <td>-</td>
+                  <td>128GB eMMC</td>
+                </tr>
+                <tr>
+                  <td>Ethernet</td>
+                  <td>Gigabit</td>
+                  <td>Gigabit</td>
+                </tr>
+                <tr>
+                  <td>Wyświetlacz LED</td>
+                  <td>Brak</td>
+                  <td>Tak</td>
+                </tr>
+                <tr>
+                  <td>Płytka</td>
+                  <td>~250zł</td>
+                  <td>W zestawie</td>
+                </tr>
+                <tr>
+                  <td>Obudowa</td>
+                  <td>~30zł</td>
+                  <td>W zestawie</td>
+                </tr>
+                <tr>
+                  <td>Zasilacz</td>
+                  <td>~40zł</td>
+                  <td>W zestawie</td>
+                </tr>
+                <tr>
+                  <td>Kabel HDMI</td>
+                  <td>~15zł</td>
+                  <td>W zestawie</td>
+                </tr>
+                <tr>
+                  <td>Karta microSD 128GB</td>
+                  <td>~60zł</td>
+                  <td>Nie wymagana</td>
+                </tr>
+                <tr>
+                  <td>Wysyłka</td>
+                  <td>~15zł</td>
+                  <td><strong>Gratis</strong></td>
+                </tr>
+                <tr>
+                  <td><strong>Podsumowanie</strong></td>
+                  <td><strong>~410zł</strong></td>
+                  <td><strong>199zł</strong></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </section>

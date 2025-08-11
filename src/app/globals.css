@@ -524,6 +524,38 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
+.comparison-table {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+.theme-dark table {
+    border-color: #339933;
+}
+
+.theme-dark th, .theme-dark td {
+    border-color: #339933;
+}
+
+.theme-dark th {
+    background-color: #333;
+}
+
 
 
 /* Responsive Design */
@@ -567,4 +599,13 @@ input:checked + .slider:before {
         top: 5px;
         right: 5px;
     }
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+}
+
+.image-caption {
+  margin-left: 10px;
 }
