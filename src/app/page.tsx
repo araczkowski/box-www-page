@@ -79,7 +79,7 @@ export default function Home() {
                 height={290}
               />
             </div>
-            <p>Gotowy do działania zestaw mini-komputera! Lepszy niż Raspberry Pi — z szybkim eMMC 128 GB, LED-owym wyświetlaczem, zasilaczem, HDMI i najnowszym Ubuntu 25.04. Wystarczy podłączyć i działać! <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Dołączona instrukcja Linux Box.</a></p>
+            <p>Gotowy do działania zestaw mini-komputera! Lepsza i tańsza alternatywa dla Raspberry Pi — z wbudowany szybkim dyskiem eMMC 128 GB, LED-owym wyświetlaczem, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04. Wystarczy podłączyć i działać! <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Dołączona instrukcja Linux Box.</a></p>
           </div>
         </div>
       </header>
