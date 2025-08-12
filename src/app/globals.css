@@ -81,10 +81,7 @@ body {
     background-color: #000000;
 }
 
-.theme-light @keyframes blink {
-    from, to { background-color: transparent; }
-    50% { background-color: #000000; }
-}
+/* theme-light specific @keyframes removed; using global @keyframes below */
 
 /* Dark Theme */
 .theme-dark {
@@ -141,8 +138,6 @@ body {
     border: none;
 }
 
-
-
 .theme-dark .connection-lines::before,
 .theme-dark .connection-lines::after {
     color: rgba(51, 153, 51, 0.3);
@@ -163,10 +158,7 @@ body {
     background-color: #339933;
 }
 
-.theme-dark @keyframes blink {
-    from, to { background-color: transparent; }
-    50% { background-color: #339933; }
-}
+/* theme-dark specific @keyframes removed; using global @keyframes below */
 
 .header-image-container {
     float: right;
@@ -451,8 +443,8 @@ footer {
 }
 
 @keyframes blink {
-    from, to { background-color: transparent; }
-    50% { background-color: #339933; }
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
 }
 
 /* Theme Switch */
@@ -526,22 +518,31 @@ input:checked + .slider:before {
 
 .comparison-table {
     overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    min-width: 600px; /* Minimalna szerokość dla lepszej czytelności */
 }
 
 th, td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
+    vertical-align: top;
 }
 
 th {
     background-color: #f2f2f2;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .theme-dark table {
@@ -556,10 +557,36 @@ th {
     background-color: #333;
 }
 
-
-
-/* Responsive Design */
+/* Responsywne style dla tabeli */
 @media (max-width: 768px) {
+    .comparison-table {
+        margin: 15px -15px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    
+    table {
+        min-width: 500px;
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 8px 6px;
+        font-size: 13px;
+    }
+    
+    .image-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .image-caption {
+        margin-left: 0;
+        margin-top: 5px;
+        font-size: 12px;
+    }
+    
+    /* Przywracam usunięte style responsywne */
     .theme-light .container, .theme-dark .container {
         border: none;
         box-shadow: none;
@@ -601,6 +628,31 @@ th {
     }
 }
 
+@media (max-width: 480px) {
+    .comparison-table {
+        margin: 10px -10px;
+    }
+    
+    table {
+        min-width: 450px;
+        font-size: 12px;
+    }
+    
+    th, td {
+        padding: 6px 4px;
+        font-size: 11px;
+    }
+    
+    .image-container img {
+        width: 80px !important;
+        height: auto !important;
+    }
+    
+    .image-caption {
+        font-size: 11px;
+    }
+}
+
 .image-container {
   display: flex;
   align-items: center;
@@ -608,4 +660,75 @@ th {
 
 .image-caption {
   margin-left: 10px;
+}
+
+/* Mobile stacked table layout */
+@media (max-width: 768px) {
+  .comparison-table table {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .comparison-table td {
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .comparison-table table,
+  .comparison-table thead,
+  .comparison-table tbody,
+  .comparison-table th,
+  .comparison-table td,
+  .comparison-table tr {
+    display: block;
+  }
+
+  .comparison-table thead {
+    display: none;
+  }
+
+  .comparison-table tr {
+    margin-bottom: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .theme-dark .comparison-table tr {
+    border-color: #339933;
+  }
+
+  .comparison-table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 48%;
+    min-height: 44px;
+  }
+
+  .comparison-table td:last-child {
+    border-bottom: 0;
+  }
+
+  .comparison-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44%;
+    padding-right: 10px;
+    font-weight: bold;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 480px) {
+  .comparison-table td {
+    padding-left: 52%;
+  }
+
+  .comparison-table td::before {
+    width: 48%;
+  }
 }

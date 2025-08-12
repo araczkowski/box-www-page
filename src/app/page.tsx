@@ -146,64 +146,64 @@ export default function Home() {
               </thead>
               <tbody>
                 <tr>
-                  <td>Procesor</td>
-                  <td>Broadcom BCM2711 (4x Cortex-A72 @ 1.8GHz)</td>
-                  <td>Amlogic S905X3 (4x Cortex-A55 @ 1.9GHz)</td>
+                  <td data-label="Cecha">Procesor</td>
+                  <td data-label="Raspberry Pi 4">Broadcom BCM2711 (4x Cortex-A72 @ 1.8GHz)</td>
+                  <td data-label="Linux Box (S905X3)">Amlogic S905X3 (4x Cortex-A55 @ 1.9GHz)</td>
                 </tr>
                 <tr>
-                  <td>Pamięć RAM</td>
-                  <td>4GB LPDDR4</td>
-                  <td>4GB DDR4</td>
+                  <td data-label="Cecha">Pamięć RAM</td>
+                  <td data-label="Raspberry Pi 4">4GB LPDDR4</td>
+                  <td data-label="Linux Box (S905X3)">4GB DDR4</td>
                 </tr>
                 <tr>
-                  <td>Pamięć masowa</td>
-                  <td>-</td>
-                  <td>128GB eMMC</td>
+                  <td data-label="Cecha">Pamięć masowa</td>
+                  <td data-label="Raspberry Pi 4">-</td>
+                  <td data-label="Linux Box (S905X3)">128GB eMMC</td>
                 </tr>
                 <tr>
-                  <td>Ethernet</td>
-                  <td>Gigabit</td>
-                  <td>Gigabit</td>
+                  <td data-label="Cecha">Ethernet</td>
+                  <td data-label="Raspberry Pi 4">Gigabit</td>
+                  <td data-label="Linux Box (S905X3)">Gigabit</td>
                 </tr>
                 <tr>
-                  <td>Wyświetlacz LED</td>
-                  <td>Brak</td>
-                  <td>Tak</td>
+                  <td data-label="Cecha">Wyświetlacz LED</td>
+                  <td data-label="Raspberry Pi 4">Brak</td>
+                  <td data-label="Linux Box (S905X3)">Tak</td>
                 </tr>
                 <tr>
-                  <td>Płytka</td>
-                  <td>~250zł</td>
-                  <td>W zestawie</td>
+                  <td data-label="Cecha">Płytka</td>
+                  <td data-label="Raspberry Pi 4">~250zł</td>
+                  <td data-label="Linux Box (S905X3)">W zestawie</td>
                 </tr>
                 <tr>
-                  <td>Obudowa</td>
-                  <td>~30zł</td>
-                  <td>W zestawie</td>
+                  <td data-label="Cecha">Obudowa</td>
+                  <td data-label="Raspberry Pi 4">~30zł</td>
+                  <td data-label="Linux Box (S905X3)">W zestawie</td>
                 </tr>
                 <tr>
-                  <td>Zasilacz</td>
-                  <td>~40zł</td>
-                  <td>W zestawie</td>
+                  <td data-label="Cecha">Zasilacz</td>
+                  <td data-label="Raspberry Pi 4">~40zł</td>
+                  <td data-label="Linux Box (S905X3)">W zestawie</td>
                 </tr>
                 <tr>
-                  <td>Kabel HDMI</td>
-                  <td>~15zł</td>
-                  <td>W zestawie</td>
+                  <td data-label="Cecha">Kabel HDMI</td>
+                  <td data-label="Raspberry Pi 4">~15zł</td>
+                  <td data-label="Linux Box (S905X3)">W zestawie</td>
                 </tr>
                 <tr>
-                  <td>Karta microSD 128GB</td>
-                  <td>~60zł</td>
-                  <td>Nie wymagana</td>
+                  <td data-label="Cecha">Karta microSD 128GB</td>
+                  <td data-label="Raspberry Pi 4">~60zł</td>
+                  <td data-label="Linux Box (S905X3)">Nie wymagana</td>
                 </tr>
                 <tr>
-                  <td>Wysyłka</td>
-                  <td>~15zł</td>
-                  <td><strong>Gratis</strong></td>
+                  <td data-label="Cecha">Wysyłka</td>
+                  <td data-label="Raspberry Pi 4">~15zł</td>
+                  <td data-label="Linux Box (S905X3)"><strong>Gratis</strong></td>
                 </tr>
                 <tr>
-                  <td><strong>Podsumowanie</strong></td>
-                  <td><strong>~410zł</strong></td>
-                  <td><strong>199zł</strong></td>
+                  <td data-label="Cecha"><strong>Podsumowanie</strong></td>
+                  <td data-label="Raspberry Pi 4"><strong>~410zł</strong></td>
+                  <td data-label="Linux Box (S905X3)"><strong>199zł</strong></td>
                 </tr>
               </tbody>
             </table>
