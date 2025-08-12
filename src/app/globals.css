@@ -795,3 +795,20 @@ header .theme-switch {
     right: 340px;
   }
 }
+
+/* Globalne pozycjonowanie theme-switch w prawym górnym rogu strony */
+header .theme-switch,
+.theme-switch {
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  z-index: 2000;
+}
+
+@media (max-width: 768px) {
+  header .theme-switch,
+  .theme-switch {
+    top: 8px;
+    right: 8px;
+  }
+}
