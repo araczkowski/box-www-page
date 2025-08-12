@@ -248,7 +248,7 @@ export default function Home() {
                   <span className="browser-button yellow"></span>
                   <span className="browser-button green"></span>
                 </div>
-                <div className="browser-address-bar">http://localhost:8123</div>
+                <div className="browser-address-bar">http://box:8123</div>
               </div>
               <div className="browser-body">
                 <div className="dashboard">
