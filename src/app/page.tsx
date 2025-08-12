@@ -112,7 +112,7 @@ export default function Home() {
             </div>
             <div className="feature">
               <h3>System 🐧</h3>
-              <p>Ubuntu 25.04 (Plucky) – gotowy do działania.</p>
+              <p>Ubuntu 25.04 (Plucky) z najnowszym jądrem linux 6.12.41 – gotowy do działania.</p>
             </div>
             <div className="feature">
               <h3>Wyświetlacz 🖵</h3>

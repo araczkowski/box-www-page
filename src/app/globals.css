@@ -85,18 +85,18 @@ body {
 
 /* Dark Theme */
 .theme-dark {
-    color: #339933;
+    color: #d1d5db; /* jasnoszary */
     background-color: #1a1a1a;
 }
 
 .theme-dark .container {
-    border: 2px solid #339933;
-    box-shadow: 0 0 8px #339933;
+    border: 2px solid #9ca3af; /* szary akcent */
+    box-shadow: 0 0 8px #9ca3af;
 }
 
 .theme-dark header {
     background: #1a1a1a;
-    color: #339933;
+    color: #d1d5db;
 }
 
 .theme-dark .hero {
@@ -104,14 +104,14 @@ body {
 }
 
 .theme-dark .btn {
-    background: #339933;
+    background: #9ca3af;
     color: #1a1a1a;
-    border: 2px solid #339933;
+    border: 2px solid #9ca3af;
 }
 
 .theme-dark .btn:hover {
     background: #1a1a1a;
-    color: #339933;
+    color: #9ca3af;
 }
 
 .theme-dark .features {
@@ -121,7 +121,7 @@ body {
 
 .theme-dark .feature {
     background: #1a1a1a;
-    border: 2px solid #339933;
+    border: 2px solid #9ca3af;
 }
 
 .theme-dark .applications {
@@ -130,8 +130,8 @@ body {
 
 .theme-dark footer {
     background: #1a1a1a;
-    color: #339933;
-    border-top: 2px solid #339933;
+    color: #d1d5db;
+    border-top: 2px solid #9ca3af;
 }
 
 .theme-dark .hero-image-side {
@@ -140,22 +140,22 @@ body {
 
 .theme-dark .connection-lines::before,
 .theme-dark .connection-lines::after {
-    color: rgba(51, 153, 51, 0.3);
+    color: rgba(156, 163, 175, 0.3);
 }
 
 .theme-dark .terminal {
     background-color: #000;
-    border: 2px solid #339933;
-    box-shadow: 0 0 10px rgba(51, 153, 51, 0.5);
+    border: 2px solid #9ca3af;
+    box-shadow: 0 0 10px rgba(156, 163, 175, 0.5);
 }
 
 .theme-dark .terminal-header {
     background-color: #333;
-    border-bottom: 2px solid #339933;
+    border-bottom: 2px solid #9ca3af;
 }
 
 .theme-dark .cursor {
-    background-color: #339933;
+    background-color: #9ca3af;
 }
 
 /* theme-dark specific @keyframes removed; using global @keyframes below */
@@ -546,11 +546,11 @@ th {
 }
 
 .theme-dark table {
-    border-color: #339933;
+    border-color: #9ca3af;
 }
 
 .theme-dark th, .theme-dark td {
-    border-color: #339933;
+    border-color: #9ca3af;
 }
 
 .theme-dark th {
@@ -695,7 +695,7 @@ th {
   }
 
   .theme-dark .comparison-table tr {
-    border-color: #339933;
+    border-color: #9ca3af;
   }
 
   .comparison-table td {
@@ -748,4 +748,26 @@ th {
   .applications .hero-image-side {
     display: none !important;
   }
+}
+
+/* Linki w trybie ciemnym - lekko niebieskawe */
+.theme-dark a {
+  color: #93c5fd; /* blue-300 */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.theme-dark a:hover,
+.theme-dark a:focus {
+  color: #bfdbfe; /* blue-200 */
+  text-decoration-thickness: 2px;
+  outline: none;
+}
+
+.theme-dark a:active {
+  color: #dbeafe; /* blue-100 */
+}
+
+.theme-dark a:visited {
+  color: #60a5fa; /* blue-400 */
 }
