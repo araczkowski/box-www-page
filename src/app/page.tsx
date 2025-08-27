@@ -79,7 +79,7 @@ export default function Home() {
                 height={290}
               />
             </div>
-            <p>Gotowy do działania zestaw mini-komputera! <a href="#comparison">Lepsza i tańsza</a> alternatywa dla Raspberry Pi — z wbudowany szybkim dyskiem eMMC 128 GB, LED-owym wyświetlaczem, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04. Wystarczy podłączyć i działać! <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Dołączona instrukcja Linux Box.</a> System na bramce(Ubuntu) jest w pełni otwarty, możesz <a href="#opensource"> pobrać i samodzielnie zainstalować</a> go na USB, SD card lub eMMC.</p>
+            <p>Gotowy do działania zestaw mini-komputera! <a href="#comparison">Lepsza i tańsza</a> alternatywa dla Raspberry Pi — z wbudowany szybkim dyskiem eMMC 128 GB, LED-owym wyświetlaczem, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04. Wystarczy podłączyć i działać! <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">Dołączona instrukcja Linux Box.</a> System na bramce(Ubuntu) jest w pełni otwarty, możesz <a href="#opensource"> pobrać i samodzielnie zainstalować</a> go na USB, karcie SD lub pamięci eMMC na urządzeniu.</p>
           </div>
         </div>
       </header>
