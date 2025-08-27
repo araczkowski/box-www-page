@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 export default function Home() {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   const [typedCommand, setTypedCommand] = useState('');
   const commandToType = 'doocker pull homeassistant/home-assistant';
