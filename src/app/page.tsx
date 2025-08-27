@@ -298,32 +298,37 @@ export default function Home() {
       </section>
 
       <section id="opensource" className="opensource">
-        <div className="container">
-         <div style={{ display: 'flex', alignItems: 'center', gap: '2em', flexWrap: 'wrap' }}>
-           <Image
-             src="/Open_Source_Initiative.svg"
-             alt="Open Source"
-             width={120}
-             height={120}
-           />
-           <div>
-              <h2>Open Source</h2>
-              <p>
-                Projekt <strong>Linux Box</strong> jest w pełni otwarty – możesz pobrać i samodzielnie zainstalować na USB, karcie SD lub pamięci eMMC na urządzeniu.
-              </p>
+        <div className="container" style={{ display: 'flex', justifyContent: 'center' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', maxWidth: 500, width: '100%' }}>
+            <h2>Open Source</h2>
+            <p>
+              <strong>System na Linux Box jest w pełni otwarty!</strong>
+            </p>
+            <Image
+              src="/Open_Source_Initiative.svg"
+              alt="Open Source"
+              width={120}
+              height={120}
+              style={{ margin: '1em 0' }}
+            />
+            <p>
+              Możesz pobrać i samodzielnie zainstalować system na USB, karcie SD lub pamięci eMMC na swoim urządzeniu. Linux Box ma włączony multiboot - jeśli dodasz USB lub kartę SD z system to box wystartuje z pamięci zewnętrznej.
+            </p>
+            <div style={{ display: 'flex', justifyContent: 'center', margin: '2em 0' }}>
               <a
                 href="https://drive.google.com/file/d/1QR6u-WGWogbvLDciO9ELbaHB35zI3ucf/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn"
+                style={{ fontSize: '1.2em', padding: '1em 2.5em' }}
               >
-                Pobierz obraz systemu 🐧
+                POBIERZ OBRAZ SYSTEMU 🐧
               </a>
-              <p style={{marginTop: '1em', fontSize: '0.95em'}}>
-                Instrukcje instalacji znajdziesz w  <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">dokumentacji</a> .
-              </p>
-             </div>
-           </div>
+            </div>
+            <p style={{marginTop: '1em', fontSize: '0.95em'}}>
+              Instrukcje instalacji znajdziesz w <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">dokumentacji</a>.
+            </p>
+          </div>
         </div>
       </section>
 
