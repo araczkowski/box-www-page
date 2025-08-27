@@ -299,21 +299,31 @@ export default function Home() {
 
       <section id="opensource" className="opensource">
         <div className="container">
-          <h2>Open Source</h2>
-          <p>
-            Projekt <strong>Linux Box</strong> jest w pełni otwarty – możesz pobrać i samodzielnie zainstalować system na swoim urządzeniu.
-          </p>
-          <a
-            href="https://drive.google.com/file/d/1QR6u-WGWogbvLDciO9ELbaHB35zI3ucf/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn"
-          >
-            Pobierz obraz systemu 🐧
-          </a>
-          <p style={{marginTop: '1em', fontSize: '0.95em'}}>
-            Instrukcje instalacji znajdziesz w  <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">dokumentacji</a> .
-          </p>
+         <div style={{ display: 'flex', alignItems: 'center', gap: '2em', flexWrap: 'wrap' }}>
+           <Image
+             src="/Open_Source_Initiative.svg"
+             alt="Open Source"
+             width={120}
+             height={120}
+           />
+           <div>
+              <h2>Open Source</h2>
+              <p>
+                Projekt <strong>Linux Box</strong> jest w pełni otwarty – możesz pobrać i samodzielnie zainstalować system na swoim urządzeniu.
+              </p>
+              <a
+                href="https://drive.google.com/file/d/1QR6u-WGWogbvLDciO9ELbaHB35zI3ucf/view?usp=drive_link"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn"
+              >
+                Pobierz obraz systemu 🐧
+              </a>
+              <p style={{marginTop: '1em', fontSize: '0.95em'}}>
+                Instrukcje instalacji znajdziesz w  <a href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing" target="_blank">dokumentacji</a> .
+              </p>
+             </div>
+           </div>
         </div>
       </section>
 
