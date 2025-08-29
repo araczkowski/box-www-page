@@ -150,6 +150,24 @@ export default function Home() {
               <h3>Wyświetlacz 🖵</h3>
               <p>Pokazuje czas, temperaturę, IP i więcej.</p>
             </div>
+            <div className="feature">
+              <h3>Docker 🐳</h3>
+              <p>Uruchamiaj aplikacje w kontenerach.</p>
+            </div>
+            <div className="feature">
+              <h3>Batocera.linux 🎮</h3>
+              <p>Zmień swój Linux Box w konsolę do gier retro.</p>
+            </div>
+            <div className="feature">
+              <h3>CoreElec 🎬</h3>
+              <p>Oglądaj filmy i seriale z Kodi.</p>
+            </div>
+            <div className="feature">
+              <h3>I wiele więcej...</h3>
+              <p>
+                Zobacz <a href="#applications">Zastosowania</a>.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -265,7 +283,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="applications">
+      <section id="applications" className="applications">
         <div className="container">
           <h2>Zastosowania</h2>
           <div className="hero-content">
