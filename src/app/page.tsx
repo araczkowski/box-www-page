@@ -159,8 +159,8 @@ export default function Home() {
               <p>Zmień swój Linux Box w konsolę do gier retro.</p>
             </div>
             <div className="feature">
-              <h3>CoreElec 🎬</h3>
-              <p>Oglądaj filmy i seriale z Kodi.</p>
+              <h3>Automatyka domowa 🏠</h3>
+              <p>Home Assistant, SUPLA, Domoticz, OpenHAB i inne.</p>
             </div>
             <div className="feature">
               <h3>I wiele więcej...</h3>
