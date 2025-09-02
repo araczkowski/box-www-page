@@ -142,8 +142,7 @@ export default function Home() {
             <div className="feature">
               <h3>System 🐧</h3>
               <p>
-                Ubuntu 25.04 (Plucky) z najnowszym jądrem linux 6.12.41 – gotowy
-                do działania.
+                Oprócz Ubuntu, możesz uruchomić Debian, Armbian i inne systemy.
               </p>
             </div>
             <div className="feature">
@@ -161,6 +160,25 @@ export default function Home() {
             <div className="feature">
               <h3>Automatyka domowa 🏠</h3>
               <p>Home Assistant, SUPLA, Domoticz, OpenHAB i inne.</p>
+            </div>
+            <div className="feature">
+              <h3>CoreElec 🎬</h3>
+              <p>Oglądaj filmy i seriale z Kodi.</p>
+            </div>
+            <div className="feature">
+              <h3>Niskie zużycie energii 🔌</h3>
+              <p>Około 2 kWh miesięcznie, czyli mniej niż 2 zł.</p>
+            </div>
+            <div className="feature">
+              <h3>Dla deweloperów 👨‍💻</h3>
+              <p>Kompaktowy dev-server do Twoich projektów.</p>
+            </div>
+            <div className="feature">
+              <h3>Rozszerzalność 🧩</h3>
+              <p>
+                Możliwość rozszerzenia funkcjonalności dzięki dostępności wielu
+                projektów i narzędzi na platformę Linux.
+              </p>
             </div>
             <div className="feature">
               <h3>I wiele więcej...</h3>
@@ -473,6 +491,13 @@ export default function Home() {
                 SUPLA
               </a>{" "}
               - automatyka domowa
+            </li>
+            <li>
+              🎬{" "}
+              <a href="https://coreelec.org/" target="_blank">
+                CoreELEC
+              </a>{" "}
+              - centrum multimedialne
             </li>
             <li> I wiele więcej...</li>
           </ul>
