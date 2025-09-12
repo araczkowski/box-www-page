@@ -95,8 +95,16 @@ export default function Home() {
               >
                 Dołączona instrukcja Linux Box.
               </a>{" "}
-              System na bramce (Ubuntu) jest w pełni otwarty, możesz{" "}
-              <a href="#opensource"> go pobrać tu. </a>
+              System na bramce (Ubuntu 🐧) jest w pełni otwarty, możesz{" "}
+              <a href="#opensource"> go pobrać tu ⬇️. </a> Możesz też
+              uruchamiania/instalować na bramce inne systemy Linux w tym 👾
+              Android, więce informacji{" "}
+              <a
+                href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
+                target="_blank"
+              >
+                znajdziesz w dokumentacji.
+              </a>
             </p>
           </div>
         </div>
@@ -174,10 +182,10 @@ export default function Home() {
               <p>Kompaktowy dev-server do Twoich projektów.</p>
             </div>
             <div className="feature">
-              <h3>Rozszerzalność 🧩</h3>
+              <h3>System Android 👾</h3>
               <p>
-                Możliwość rozszerzenia funkcjonalności dzięki dostępności wielu
-                projektów i narzędzi na platformę Linux.
+                Różne obrazy oparte na Android TV lub Android AOSP do
+                uruchomienia na boxie.
               </p>
             </div>
             <div className="feature">
@@ -251,6 +259,13 @@ export default function Home() {
                   <td data-label="Cecha">Wyświetlacz LED</td>
                   <td data-label="Raspberry Pi 4">Brak</td>
                   <td data-label="Linux Box (S905X3)">Tak</td>
+                </tr>
+                <tr>
+                  <td data-label="Cecha">Android</td>
+                  <td data-label="Raspberry Pi 4">Brak</td>
+                  <td data-label="Linux Box (S905X3)">
+                    Tak, różne dystrybucje, także Android TV
+                  </td>
                 </tr>
                 <tr>
                   <td data-label="Cecha">Płytka</td>
