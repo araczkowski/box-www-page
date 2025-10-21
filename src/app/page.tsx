@@ -590,6 +590,15 @@ export default function Home() {
 
       <footer>
         <div className="container">
+          <div className="seo-keywords">
+            <p>
+              Raspberry Pi, alternatywa dla Raspberry Pi, Home Assistant, serwer
+              domowy, Ubuntu, Docker, Amlogic S905X3, Mini PC, CoreELEC,
+              Batocera, Domoticz, SUPLA, OpenHAB, Pi-hole, Nextcloud,
+              self-hosting, tani serwer, kompaktowy serwer, serwer
+              multimedialny, konsola retro.
+            </p>
+          </div>
           <p>
             &copy; 2025 Linux Box.{" "}
             <a href="mailto:info@sviete.pl">info@sviete.pl</a>

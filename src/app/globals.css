@@ -890,3 +890,19 @@ th {
     color: #ffffff !important;
     border-color: #e65100 !important;
 }
+
+/* SEO Keywords Footer Section */
+.seo-keywords {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.seo-keywords p {
+    font-size: 0.9em;
+    color: #888;
+    line-height: 1.5;
+}
+
+.theme-dark .seo-keywords p {
+    color: #666;
+}
