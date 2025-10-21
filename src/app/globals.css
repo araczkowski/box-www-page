@@ -876,3 +876,17 @@ th {
 .theme-light a.btn:active {
     color: #ffffff; /* Same as .theme-light .btn */
 }
+
+/* Allegro Button Style */
+.btn-allegro {
+    background-color: #ff5a00 !important; /* Allegro Orange */
+    color: #ffffff !important;
+    border-color: #ff5a00 !important;
+}
+
+.btn-allegro:hover,
+.btn-allegro:focus {
+    background-color: #e65100 !important; /* Darker Orange */
+    color: #ffffff !important;
+    border-color: #e65100 !important;
+}

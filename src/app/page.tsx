@@ -120,15 +120,15 @@ export default function Home() {
             </h2>
             <div className="hero-text">
               <a
-                href="mailto:info@sviete.pl?subject=Zakup%20Linux%20Box&body=chc%C4%99%20kupi%C4%87%20linux%20box%2C%20"
-                className="btn"
+                href="https://allegro.pl/uzytkownik/AI-Speaker"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-allegro"
               >
-                Kup przez e-mail ✉️
+                Kup na Allegro
                 <br />
-                Za jedyne: 199zł
-                <br />
-                <span style={{ fontSize: "10px" }}>
-                  (dostawa do paczkomatu gratis)
+                <span style={{ fontSize: "0.8em", textTransform: "none" }}>
+                  Za jedyne 199 zł
                 </span>
               </a>
               <h2> Wifi 5GHz | Eternet 1GB | USB 3.0 | HDMI 2.0A </h2>
