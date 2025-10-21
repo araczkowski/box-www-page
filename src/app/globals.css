@@ -1,8 +1,8 @@
 /* Reset i podstawowe style */
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
 body {
-    font-family: 'VT323', monospace;
+    font-family: "VT323", monospace;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -34,9 +34,11 @@ body {
     border: 2px solid #000000;
 }
 
-.theme-light .btn:hover {
-    background: #ffffff;
-    color: #000000;
+.theme-light .btn:hover,
+.theme-light .btn:focus {
+    background: #333333;
+    color: #ffffff;
+    border-color: #ffffff;
 }
 
 .theme-light .features {
@@ -109,10 +111,11 @@ body {
     border: 2px solid #60a5fa;
 }
 
-.theme-dark .btn:hover {
-    background: #1a1a1a;
-    color: #bfdbfe; /* blue-200 */
-    border-color: #bfdbfe;
+.theme-dark .btn:hover,
+.theme-dark .btn:focus {
+    background: #3b82f6; /* Darker blue */
+    color: #ffffff; /* White text */
+    border-color: #3b82f6;
 }
 
 .theme-dark .features {
@@ -229,13 +232,18 @@ header h1 {
 }
 
 .btn::after {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
     transition: none;
     animation: shimmer 2s infinite;
 }
@@ -261,7 +269,7 @@ header h1 {
 }
 
 .applications ul {
-    list-style-type: '>';
+    list-style-type: ">";
     padding-left: 20px;
 }
 
@@ -292,8 +300,9 @@ footer {
     justify-content: center;
 }
 
-.connection-lines::before, .connection-lines::after {
-    content: '0101010101';
+.connection-lines::before,
+.connection-lines::after {
+    content: "0101010101";
     position: absolute;
     font-size: 1.5em;
     animation: data-flow 4s linear infinite;
@@ -349,9 +358,15 @@ footer {
     margin-right: 5px;
 }
 
-.terminal-button.red { background-color: #ff5f56; }
-.terminal-button.yellow { background-color: #ffbd2e; }
-.terminal-button.green { background-color: #27c93f; }
+.terminal-button.red {
+    background-color: #ff5f56;
+}
+.terminal-button.yellow {
+    background-color: #ffbd2e;
+}
+.terminal-button.green {
+    background-color: #27c93f;
+}
 
 .terminal-title {
     color: #ccc;
@@ -394,9 +409,15 @@ footer {
     margin-right: 5px;
 }
 
-.browser-button.red { background-color: #ff5f56; }
-.browser-button.yellow { background-color: #ffbd2e; }
-.browser-button.green { background-color: #27c93f; }
+.browser-button.red {
+    background-color: #ff5f56;
+}
+.browser-button.yellow {
+    background-color: #ffbd2e;
+}
+.browser-button.green {
+    background-color: #27c93f;
+}
 
 .browser-address-bar {
     background-color: #fff;
@@ -444,8 +465,13 @@ footer {
 }
 
 @keyframes blink {
-    0%, 100% { opacity: 0; }
-    50% { opacity: 1; }
+    0%,
+    100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
 }
 
 /* Theme Switch */
@@ -472,8 +498,8 @@ footer {
     right: 0;
     bottom: 0;
     background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
 }
 
 .slider:before {
@@ -484,8 +510,8 @@ footer {
     left: 4px;
     bottom: 4px;
     background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -494,11 +520,11 @@ footer {
 }
 
 input:checked + .slider {
-    background-color: #2196F3;
+    background-color: #2196f3;
 }
 
 input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #2196f3;
 }
 
 input:checked + .slider:before {
@@ -531,7 +557,8 @@ table {
     min-width: 600px; /* Minimalna szerokość dla lepszej czytelności */
 }
 
-th, td {
+th,
+td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
@@ -550,7 +577,8 @@ th {
     border-color: #9ca3af;
 }
 
-.theme-dark th, .theme-dark td {
+.theme-dark th,
+.theme-dark td {
     border-color: #9ca3af;
 }
 
@@ -565,30 +593,32 @@ th {
         border-radius: 0;
         box-shadow: none;
     }
-    
+
     table {
         min-width: 500px;
         font-size: 14px;
     }
-    
-    th, td {
+
+    th,
+    td {
         padding: 8px 6px;
         font-size: 13px;
     }
-    
+
     .image-container {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .image-caption {
         margin-left: 0;
         margin-top: 5px;
         font-size: 12px;
     }
-    
+
     /* Przywracam usunięte style responsywne */
-    .theme-light .container, .theme-dark .container {
+    .theme-light .container,
+    .theme-dark .container {
         border: none;
         box-shadow: none;
     }
@@ -633,182 +663,208 @@ th {
     .comparison-table {
         margin: 10px -10px;
     }
-    
+
     table {
         min-width: 450px;
         font-size: 12px;
     }
-    
-    th, td {
+
+    th,
+    td {
         padding: 6px 4px;
         font-size: 11px;
     }
-    
+
     .image-container img {
         width: 80px !important;
         height: auto !important;
     }
-    
+
     .image-caption {
         font-size: 11px;
     }
 }
 
 .image-container {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .image-caption {
-  margin-left: 10px;
+    margin-left: 10px;
 }
 
 /* Mobile stacked table layout */
 @media (max-width: 768px) {
-  .comparison-table table {
-    min-width: 0;
-    width: 100%;
-  }
+    .comparison-table table {
+        min-width: 0;
+        width: 100%;
+    }
 
-  .comparison-table td {
-    word-break: break-word;
-    overflow-wrap: anywhere;
-  }
+    .comparison-table td {
+        word-break: break-word;
+        overflow-wrap: anywhere;
+    }
 
-  .comparison-table table,
-  .comparison-table thead,
-  .comparison-table tbody,
-  .comparison-table th,
-  .comparison-table td,
-  .comparison-table tr {
-    display: block;
-  }
+    .comparison-table table,
+    .comparison-table thead,
+    .comparison-table tbody,
+    .comparison-table th,
+    .comparison-table td,
+    .comparison-table tr {
+        display: block;
+    }
 
-  .comparison-table thead {
-    display: none;
-  }
+    .comparison-table thead {
+        display: none;
+    }
 
-  .comparison-table tr {
-    margin-bottom: 12px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-    overflow: hidden;
-  }
+    .comparison-table tr {
+        margin-bottom: 12px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        overflow: hidden;
+    }
 
-  .theme-dark .comparison-table tr {
-    border-color: #9ca3af;
-  }
+    .theme-dark .comparison-table tr {
+        border-color: #9ca3af;
+    }
 
-  .comparison-table td {
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 48%;
-    min-height: 44px;
-  }
+    .comparison-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 48%;
+        min-height: 44px;
+    }
 
-  .comparison-table td:last-child {
-    border-bottom: 0;
-  }
+    .comparison-table td:last-child {
+        border-bottom: 0;
+    }
 
-  .comparison-table td::before {
-    content: attr(data-label);
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 44%;
-    padding-right: 10px;
-    font-weight: bold;
-    white-space: normal;
-  }
+    .comparison-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 12px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 44%;
+        padding-right: 10px;
+        font-weight: bold;
+        white-space: normal;
+    }
 }
 
 @media (max-width: 480px) {
-  .comparison-table td {
-    padding-left: 52%;
-  }
+    .comparison-table td {
+        padding-left: 52%;
+    }
 
-  .comparison-table td::before {
-    width: 48%;
-  }
+    .comparison-table td::before {
+        width: 48%;
+    }
 }
 
 /* Podświetlenie pierwszej kolumny (Cecha) */
 .comparison-table td[data-label="Cecha"] {
-  background-color: #f5f5f5;
-  font-weight: 600;
+    background-color: #f5f5f5;
+    font-weight: 600;
 }
 
 .theme-dark .comparison-table td[data-label="Cecha"] {
-  background-color: #222;
+    background-color: #222;
 }
 
 @media (max-width: 768px) {
-  /* Ukryj obrazek AIS Gate DEV 3 w sekcji zastosowań na mobile */
-  .applications .hero-image-side {
-    display: none !important;
-  }
+    /* Ukryj obrazek AIS Gate DEV 3 w sekcji zastosowań na mobile */
+    .applications .hero-image-side {
+        display: none !important;
+    }
 }
 
-/* Linki w trybie ciemnym - lekko niebieskawe */
-.theme-dark a {
-  color: #93c5fd; /* blue-300 */
-  text-decoration: underline;
-  text-underline-offset: 2px;
+/* Linki */
+/* Dark theme */
+.theme-dark a:not(.btn) {
+    color: #93c5fd; /* blue-300 */
+    text-decoration: underline;
+    text-underline-offset: 2px;
 }
 
-.theme-dark a:hover,
-.theme-dark a:focus {
-  color: #bfdbfe; /* blue-200 */
-  text-decoration-thickness: 2px;
-  outline: none;
+.theme-dark a:not(.btn):hover,
+.theme-dark a:not(.btn):focus {
+    color: #bfdbfe; /* blue-200 */
+    text-decoration-thickness: 2px;
+    outline: none;
 }
 
-.theme-dark a:active {
-  color: #dbeafe; /* blue-100 */
+.theme-dark a:not(.btn):visited,
+.theme-dark a:not(.btn):active {
+    color: #93c5fd; /* blue-300 */
 }
 
-.theme-dark a:visited {
-  color: #60a5fa; /* blue-400 */
+.theme-dark a.btn:visited,
+.theme-dark a.btn:active {
+    color: #0b1220; /* Same as .theme-dark .btn */
+}
+
+/* Light theme */
+.theme-light a:not(.btn) {
+    color: #007bff;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.theme-light a:not(.btn):hover,
+.theme-light a:not(.btn):focus {
+    color: #0056b3;
+}
+
+.theme-light a:not(.btn):visited,
+.theme-light a:not(.btn):active {
+    color: #007bff;
+}
+
+.theme-light a.btn:visited,
+.theme-light a.btn:active {
+    color: #ffffff; /* Same as .theme-light .btn */
 }
 
 /* Pozycjonowanie theme-switch w headerze */
 header .theme-switch {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 1000;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 1000;
 }
 
 /* Na tabletach i większych — odsuń bardziej w lewo, by nie zachodził na obraz w headerze */
 @media (min-width: 768px) {
-  header .theme-switch {
-    top: 16px;
-    right: 120px;
-  }
+    header .theme-switch {
+        top: 16px;
+        right: 120px;
+    }
 }
 
 /* Na bardzo szerokich ekranach — uwzględnij szerokość obrazka w headerze */
 @media (min-width: 1200px) {
-  header .theme-switch {
-    right: 340px;
-  }
+    header .theme-switch {
+        right: 340px;
+    }
 }
 
 /* Globalne pozycjonowanie theme-switch w prawym górnym rogu strony */
 header .theme-switch,
 .theme-switch {
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  z-index: 2000;
+    position: fixed;
+    top: 12px;
+    right: 12px;
+    z-index: 2000;
 }
 
 @media (max-width: 768px) {
-  header .theme-switch,
-  .theme-switch {
-    top: 8px;
-    right: 8px;
-  }
+    header .theme-switch,
+    .theme-switch {
+        top: 8px;
+        right: 8px;
+    }
 }
