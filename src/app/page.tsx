@@ -62,9 +62,11 @@ export default function Home() {
     <div className={theme === "dark" ? "theme-dark" : "theme-light"}>
       <header>
         <div className="container">
-          <div>
-            <h1>Linux🐧Box</h1>
-            <h2>Twój domowy kompaktowy serwer</h2>
+          <div className="header-content-wrapper">
+            <div>
+              <h1>Linux🐧Box</h1>
+              <h2>Twój domowy kompaktowy serwer</h2>
+            </div>
             <label className="theme-switch">
               <input
                 type="checkbox"
@@ -249,11 +251,6 @@ export default function Home() {
                   <td data-label="Cecha">Pamięć masowa</td>
                   <td data-label="Raspberry Pi 4">-</td>
                   <td data-label="Linux Box (S905X3)">128GB eMMC</td>
-                </tr>
-                <tr>
-                  <td data-label="Cecha">Ethernet</td>
-                  <td data-label="Raspberry Pi 4">Gigabit</td>
-                  <td data-label="Linux Box (S905X3)">Gigabit</td>
                 </tr>
                 <tr>
                   <td data-label="Cecha">Wyświetlacz LED</td>

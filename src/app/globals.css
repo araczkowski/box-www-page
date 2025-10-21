@@ -195,6 +195,12 @@ header {
     padding-bottom: 0px;
 }
 
+.header-content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 header h1 {
     margin: 0;
     font-size: 3em;
@@ -476,12 +482,18 @@ footer {
 
 /* Theme Switch */
 .theme-switch {
-    position: absolute;
+    position: sticky;
     top: 20px;
-    right: 20px;
+    z-index: 1000;
     display: inline-block;
     width: 60px;
     height: 34px;
+}
+
+@media (max-width: 767px) {
+    .theme-switch {
+        width: 80px;
+    }
 }
 
 .theme-switch input {
@@ -543,47 +555,83 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
+/* Improved Comparison Table */
 .comparison-table {
     overflow-x: auto;
-    margin: 20px 0;
+    margin: 40px 0;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
-    min-width: 600px; /* Minimalna szerokość dla lepszej czytelności */
+    min-width: 600px;
+    font-size: 1.1em;
 }
 
 th,
 td {
-    border: 1px solid #ddd;
-    padding: 12px;
+    padding: 16px;
     text-align: left;
-    vertical-align: top;
+    vertical-align: middle;
+    border: none; /* Remove all borders */
 }
 
 th {
-    background-color: #f2f2f2;
     font-weight: bold;
     position: sticky;
     top: 0;
     z-index: 10;
+    border-bottom: 2px solid;
 }
 
-.theme-dark table {
-    border-color: #9ca3af;
+/* Light Theme Table */
+.theme-light .comparison-table {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.theme-light th {
+    border-color: #dee2e6;
+}
+.theme-light td {
+    border-bottom: 1px solid #dee2e6;
+}
+.theme-light tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+.theme-light th:nth-child(2),
+.theme-light td:nth-child(2) {
+    background-color: rgba(214, 40, 40, 0.05); /* Light Red for RPi */
+}
+.theme-light th:nth-child(3),
+.theme-light td:nth-child(3) {
+    background-color: rgba(0, 123, 255, 0.05); /* Light Blue for Linux Box */
 }
 
-.theme-dark th,
-.theme-dark td {
-    border-color: #9ca3af;
+/* Dark Theme Table */
+.theme-dark .comparison-table {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-
 .theme-dark th {
-    background-color: #333;
+    border-color: #444;
+}
+.theme-dark td {
+    border-bottom: 1px solid #444;
+}
+.theme-dark tr:nth-child(even) {
+    background-color: #212121;
+}
+.theme-dark th:nth-child(2),
+.theme-dark td:nth-child(2) {
+    background-color: rgba(255, 255, 255, 0.05); /* Lighter Gray for RPi */
+}
+.theme-dark th:nth-child(3),
+.theme-dark td:nth-child(3) {
+    background-color: rgba(
+        255,
+        255,
+        255,
+        0.1
+    ); /* Another Lighter Gray for Linux Box */
 }
 
 /* Responsywne style dla tabeli */
@@ -827,44 +875,4 @@ th {
 .theme-light a.btn:visited,
 .theme-light a.btn:active {
     color: #ffffff; /* Same as .theme-light .btn */
-}
-
-/* Pozycjonowanie theme-switch w headerze */
-header .theme-switch {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 1000;
-}
-
-/* Na tabletach i większych — odsuń bardziej w lewo, by nie zachodził na obraz w headerze */
-@media (min-width: 768px) {
-    header .theme-switch {
-        top: 16px;
-        right: 120px;
-    }
-}
-
-/* Na bardzo szerokich ekranach — uwzględnij szerokość obrazka w headerze */
-@media (min-width: 1200px) {
-    header .theme-switch {
-        right: 340px;
-    }
-}
-
-/* Globalne pozycjonowanie theme-switch w prawym górnym rogu strony */
-header .theme-switch,
-.theme-switch {
-    position: fixed;
-    top: 12px;
-    right: 12px;
-    z-index: 2000;
-}
-
-@media (max-width: 768px) {
-    header .theme-switch,
-    .theme-switch {
-        top: 8px;
-        right: 8px;
-    }
 }
