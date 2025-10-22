@@ -709,68 +709,75 @@ export default function Home() {
       </section>
 
       <section id="opensource" className="opensource">
-        <div
-          className="container"
-          style={{ display: "flex", justifyContent: "center" }}
-        >
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              maxWidth: 500,
-              width: "100%",
-            }}
-          >
-            <h2>Open Source</h2>
-            <p>
-              <strong>System na Linux Box jest w pełni otwarty!</strong>
-            </p>
-            <Image
-              src="/Open_Source_Initiative.svg"
-              alt="Open Source"
-              width={120}
-              height={120}
-              style={{ margin: "1em 0" }}
-            />
-            <p>
-              Możesz pobrać i samodzielnie zainstalować system na USB, karcie SD
-              lub pamięci eMMC na swoim urządzeniu. Linux Box ma włączony
-              multiboot - jeśli dodasz USB lub kartę SD z system to box
-              wystartuje z pamięci zewnętrznej.
-            </p>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                margin: "2em 0",
-              }}
-            >
-              <a
-                href="https://drive.google.com/file/d/1QR6u-WGWogbvLDciO9ELbaHB35zI3ucf/view?usp=drive_link"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-                style={{ fontSize: "1.2em", padding: "1em 2.5em" }}
-              >
-                <span className="btn-main">
-                  POBIERZ OBRAZ SYSTEMU
-                  <br />
-                  🐧 Ubuntu 25.04
-                </span>
-              </a>
+        <div className="container">
+          <h2 className="opensource-title">Open Source</h2>
+          <p className="opensource-subtitle">
+            <strong>System na Linux Box jest w pełni otwarty!</strong>
+          </p>
+
+          <div className="opensource-grid">
+            <div className="opensource-card">
+              <div className="opensource-icon">
+                <Image
+                  src="/Open_Source_Initiative.svg"
+                  alt="Open Source"
+                  width={80}
+                  height={80}
+                />
+              </div>
+              <h3>Wolny Dostęp</h3>
+              <p>
+                Pobierz i zainstaluj system na USB, karcie SD lub pamięci eMMC.
+                Linux Box ma włączony multiboot - wystarczy podłączyć nośnik z
+                systemem.
+              </p>
             </div>
-            <p style={{ marginTop: "1em", fontSize: "0.95em" }}>
-              Instrukcje instalacji znajdziesz w{" "}
-              <a
-                href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
-                target="_blank"
-              >
-                dokumentacji
-              </a>
-              .
-            </p>
+
+            <div className="opensource-card">
+              <div className="opensource-icon">🐧</div>
+              <h3>Ubuntu 25.04</h3>
+              <p>
+                Gotowy do użycia system z preinstalowanym oprogramowaniem. W
+                pełni funkcjonalny i zoptymalizowany dla Linux Box.
+              </p>
+            </div>
+
+            <div className="opensource-card">
+              <div className="opensource-icon">⚙️</div>
+              <h3>Pełna Kontrola</h3>
+              <p>
+                Modyfikuj, instaluj i dostosowuj do swoich potrzeb. Dostęp do
+                konta root-a i pełna swoboda w instalacji programów i
+                konfiguracji systemu.
+              </p>
+            </div>
           </div>
+
+          <div className="opensource-actions">
+            <a
+              href="https://drive.google.com/file/d/1QR6u-WGWogbvLDciO9ELbaHB35zI3ucf/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-primary opensource-btn"
+            >
+              <span className="btn-main">
+                POBIERZ OBRAZ SYSTEMU
+                <br />
+                🐧 Ubuntu 25.04
+              </span>
+            </a>
+          </div>
+
+          <p className="opensource-docs">
+            Instrukcje instalacji znajdziesz w{" "}
+            <a
+              href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
+              target="_blank"
+            >
+              dokumentacji
+            </a>
+            .
+          </p>
         </div>
       </section>
 
