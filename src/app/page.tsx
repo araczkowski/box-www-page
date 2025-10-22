@@ -305,7 +305,7 @@ export default function Home() {
                   <th>
                     <div className="image-container">
                       <Image
-                        src="/ais_gate_dev3_1.png"
+                        src="/ais_gate_dev3_1.webp"
                         alt="Linux Box"
                         width={120}
                         height={120}
@@ -695,10 +695,17 @@ export default function Home() {
                 Dowiedz się więcej
               </a>
             </div>
-            <div className="app-card app-card-more">
-              <span className="app-icon">✨</span>
+            <div className="spec-card app-card-more">
+              <span className="spec-icon">✨</span>
               <h3>I wiele więcej...</h3>
               <p>Odkryj pełne możliwości Linux Box</p>
+              <a
+                href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
+                target="_blank"
+                className="app-link"
+              >
+                Zobacz dokumentację
+              </a>
             </div>
           </div>
           <p>
