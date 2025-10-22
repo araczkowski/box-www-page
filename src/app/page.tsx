@@ -88,12 +88,12 @@ export default function Home() {
               <div className="hero-visual">
                 <div className="device-showcase">
                   <Image
-                    src="/ais_gate_dev3_1.webp"
+                    src="/ais_gate_dev3_1.png"
                     alt="Linux Box - kompaktowy serwer domowy"
-                    width={320}
-                    height={220}
+                    width={400}
+                    height={300}
                     className="device-image"
-                    style={{ objectFit: "cover" }}
+                    style={{ objectFit: "contain" }}
                     priority
                   />
                   <div className="device-glow"></div>
