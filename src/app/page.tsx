@@ -88,7 +88,7 @@ export default function Home() {
               <div className="hero-visual">
                 <div className="device-showcase">
                   <Image
-                    src="/ais_gate_dev3_1.png"
+                    src="/ais_gate_dev3_1.webp"
                     alt="Linux Box - kompaktowy serwer domowy"
                     width={320}
                     height={220}
