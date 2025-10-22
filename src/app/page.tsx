@@ -62,15 +62,7 @@ export default function Home() {
     <div className={theme === "dark" ? "theme-dark" : "theme-light"}>
       <header>
         <div className="container">
-          <div className="header-content-wrapper">
-            <div>
-              <h1>Linux🐧Box</h1>
-              <h2>
-                Twój Nowy Serwer Domowy
-                <br /> Gotowy do Działania,{" "}
-                <a href="#comparison">Lepszy niż Raspberry Pi!</a>
-              </h2>
-            </div>
+          <div className="header-top">
             <label className="theme-switch">
               <input
                 type="checkbox"
@@ -80,60 +72,119 @@ export default function Home() {
               <span className="slider round"></span>
             </label>
           </div>
-          <div>
-            <div className="header-image-container">
-              <Image
-                src="/ais_gate_dev3_1.png"
-                alt="AIS Gate DEV 3"
-                width={300}
-                height={290}
-              />
-            </div>
-            <div style={{ marginTop: "1.5em", textAlign: "center" }}>
-              <a
-                href="https://allegro.pl/uzytkownik/AI-Speaker"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-allegro"
-              >
-                Kup na Allegro
+          <div className="hero-grid">
+            <div className="hero-content hero-1">
+              <div className="hero-badge">🚀 Alternatywa dla Raspberry Pi</div>
+              <div className="hero-title-container">
+                <h1 className="hero-title">
+                  Linux<span className="hero-penguin">🐧</span>Box
+                </h1>
+              </div>
+              <p className="hero-subtitle">
+                Twój kompaktowy domowy serwer Ubuntu
                 <br />
-                <span style={{ fontSize: "0.8em", textTransform: "none" }}>
-                  Za jedyne 199 zł
-                </span>
-              </a>
+                <strong>Gotowy do pracy od razu po wyjęciu z pudełka</strong>
+              </p>
+              <div className="hero-visual">
+                <div className="device-showcase">
+                  <Image
+                    src="/ais_gate_dev3_1.png"
+                    alt="Linux Box - kompaktowy serwer domowy"
+                    width={320}
+                    height={300}
+                    className="device-image"
+                    priority
+                  />
+                  <div className="device-glow"></div>
+                </div>
+              </div>
+
+              <div className="hero-actions">
+                <a
+                  href="https://allegro.pl/uzytkownik/AI-Speaker"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-allegro btn-secondary"
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    gap: "0.25rem",
+                  }}
+                >
+                  <span className="btn-main">Kup teraz</span>
+                  <span className="btn-price">Tylko 199 zł</span>
+                </a>
+                <a href="#features" className="btn btn-secondary">
+                  Poznaj <br /> możliwości
+                </a>
+              </div>
+
+              <div className="hero-specs">
+                <div className="spec-item">
+                  <span className="spec-icon">💾</span>
+                  <div>
+                    <span className="spec-value">128 GB</span>
+                    <span className="spec-label">eMMC</span>
+                  </div>
+                </div>
+                <div className="spec-item">
+                  <span className="spec-icon">🧠</span>
+                  <div>
+                    <span className="spec-value">4 GB</span>
+                    <span className="spec-label">RAM</span>
+                  </div>
+                </div>
+                <div className="spec-item">
+                  <span className="spec-icon">⚡</span>
+                  <div>
+                    <span className="spec-value">Amlogic</span>
+                    <span className="spec-label">S905X3</span>
+                  </div>
+                </div>
+                <div className="spec-item">
+                  <span className="spec-icon">🖥️</span>
+                  <div>
+                    <span className="spec-value">Ubuntu</span>
+                    <span className="spec-label">25.04</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hero-features">
+                <div className="feature-tag">✅ Wbudowany wyświetlacz LED</div>
+                <div className="feature-tag">✅ Obsługa Androida</div>
+                <div className="feature-tag">✅ Docker & Home Assistant</div>
+                <div className="feature-tag">✅ Niskie zużycie energii</div>
+              </div>
             </div>
-            <p>
-              Odkryj Linux Box – kompaktowy mini-komputer. Urządzenie z
-              wbudowanym dyskiem eMMC 128 GB, wyświetlaczem LED, zasilaczem i
-              preinstalowanym Ubuntu 25.04, jest gotowe do pracy od razu po
-              wyjęciu z pudełka. To wydajna i ekonomiczna alternatywa dla
-              Raspberry Pi, oferująca pełną swobodę dzięki otwartemu systemowi i
-              wsparciu dla wielu dystrybucji Linuxa, a nawet Androida.
-              <br />
-              <br />
-              System na bramce (Ubuntu 🐧) jest w pełni otwarty, możesz{" "}
-              <a href="#opensource">go pobrać.</a> Możesz też
-              uruchamiać/instalować na bramce inne systemy Linux, w tym 👾
-              Android.{" "}
-              <a
-                href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
-                target="_blank"
-              >
-                Więcej informacji znajdziesz w dokumentacji.
-              </a>{" "}
-            </p>
           </div>
         </div>
       </header>
 
-      <section className="hero">
+      <section className="tech-specs">
         <div className="container">
-          <div className="hero-text">
-            <h2 style={{ paddingBottom: "1em" }}>
-              🚀 4 GB RAM | 128 GB eMMC | Ubuntu
-            </h2>
-            <h2> Wifi 5GHz | Eternet 1GB | USB 3.0 | HDMI 2.0A </h2>
+          <div className="specs-grid">
+            <div className="spec-card">
+              <span className="spec-icon">📶</span>
+              <h3>WiFi 5GHz</h3>
+              <p>Szybkie bezprzewodowe połączenie</p>
+            </div>
+            <div className="spec-card">
+              <span className="spec-icon">🔌</span>
+              <h3>Ethernet 1GB</h3>
+              <p>Stabilne połączenie przewodowe</p>
+            </div>
+            <div className="spec-card">
+              <span className="spec-icon">⚡</span>
+              <h3>USB 3.0</h3>
+              <p>Szybki transfer danych</p>
+            </div>
+            <div className="spec-card">
+              <span className="spec-icon">🖥️</span>
+              <h3>HDMI 2.0A</h3>
+              <p>Wyjście wideo 4K</p>
+            </div>
           </div>
         </div>
       </section>
@@ -317,7 +368,7 @@ export default function Home() {
       <section id="applications" className="applications">
         <div className="container">
           <h2>Zastosowania</h2>
-          <div className="hero-content">
+          <div className="hero-2">
             <div>
               <Image
                 src="/ais_gate_dev3.png"
@@ -569,10 +620,11 @@ export default function Home() {
                 href="https://drive.google.com/file/d/1QR6u-WGWogbvLDciO9ELbaHB35zI3ucf/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn"
+                className="btn btn-primary"
                 style={{ fontSize: "1.2em", padding: "1em 2.5em" }}
               >
-                POBIERZ OBRAZ SYSTEMU 🐧
+                <span className="btn-main">POBIERZ OBRAZ SYSTEMU</span>
+                <span className="btn-price">🐧 Ubuntu 25.04</span>
               </a>
             </div>
             <p style={{ marginTop: "1em", fontSize: "0.95em" }}>
