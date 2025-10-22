@@ -91,8 +91,9 @@ export default function Home() {
                     src="/ais_gate_dev3_1.png"
                     alt="Linux Box - kompaktowy serwer domowy"
                     width={320}
-                    height={300}
+                    height={220}
                     className="device-image"
+                    style={{ objectFit: "cover" }}
                     priority
                   />
                   <div className="device-glow"></div>
@@ -112,11 +113,15 @@ export default function Home() {
                     gap: "0.25rem",
                   }}
                 >
-                  <span className="btn-main">Kup teraz</span>
+                  <span className="btn-main">
+                    <span className="btn-icon">🛒</span>Kup teraz
+                  </span>
                   <span className="btn-price">Tylko 199 zł</span>
                 </a>
                 <a href="#features" className="btn btn-features">
-                  <span className="btn-main">Poznaj</span>
+                  <span className="btn-main">
+                    <span className="btn-icon">ℹ️</span>Poznaj
+                  </span>
                   <span className="btn-price">możliwości</span>
                 </a>
               </div>
