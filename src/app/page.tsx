@@ -150,13 +150,6 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-              <div className="hero-features">
-                <div className="feature-tag">✅ Wbudowany wyświetlacz LED</div>
-                <div className="feature-tag">✅ Obsługa Androida</div>
-                <div className="feature-tag">✅ Docker & Home Assistant</div>
-                <div className="feature-tag">✅ Niskie zużycie energii</div>
-              </div>
             </div>
           </div>
         </div>
@@ -184,6 +177,26 @@ export default function Home() {
               <span className="spec-icon">🖥️</span>
               <h3>HDMI 2.0A</h3>
               <p>Wyjście wideo 4K</p>
+            </div>
+            <div className="spec-card">
+              <span className="spec-icon">🖵</span>
+              <h3>Wyświetlacz LED</h3>
+              <p>Pokazuje czas, temperaturę i IP</p>
+            </div>
+            <div className="spec-card">
+              <span className="spec-icon">👾</span>
+              <h3>Obsługa Androida</h3>
+              <p>Różne dystrybucje Android TV/AOSP</p>
+            </div>
+            <div className="spec-card">
+              <span className="spec-icon">🐳</span>
+              <h3>Docker & Home Assistant</h3>
+              <p>Automatyka domowa w kontenerach</p>
+            </div>
+            <div className="spec-card">
+              <span className="spec-icon">🔌</span>
+              <h3>Niskie zużycie energii</h3>
+              <p>Około 2 kWh miesięcznie</p>
             </div>
           </div>
         </div>
@@ -623,8 +636,11 @@ export default function Home() {
                 className="btn btn-primary"
                 style={{ fontSize: "1.2em", padding: "1em 2.5em" }}
               >
-                <span className="btn-main">POBIERZ OBRAZ SYSTEMU</span>
-                <span className="btn-price">🐧 Ubuntu 25.04</span>
+                <span className="btn-main">
+                  POBIERZ OBRAZ SYSTEMU
+                  <br />
+                  🐧 Ubuntu 25.04
+                </span>
               </a>
             </div>
             <p style={{ marginTop: "1em", fontSize: "0.95em" }}>
