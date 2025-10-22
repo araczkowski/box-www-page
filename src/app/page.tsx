@@ -326,7 +326,7 @@ export default function Home() {
                 </tr>
                 <tr>
                   <td data-label="Cecha">Pamięć masowa</td>
-                  <td data-label="Raspberry Pi 4">-</td>
+                  <td data-label="Raspberry Pi 4">Brak</td>
                   <td data-label="Linux Box (S905X3)">128GB eMMC</td>
                 </tr>
                 <tr>
@@ -440,156 +440,261 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <ul>
-            <li>
-              🏠{" "}
-              <a href="https://www.home-assistant.io/" target="_blank">
-                Home Assistant
-              </a>{" "}
-              – automatyka domu
-            </li>
-            <li>
-              ☁️{" "}
-              <a href="https://nextcloud.com/" target="_blank">
-                Nextcloud
-              </a>{" "}
-              – prywatna chmura
-            </li>
-            <li>
-              🕳️{" "}
-              <a href="https://pi-hole.net/" target="_blank">
-                Pi-hole
-              </a>{" "}
-              – blokowanie reklam
-            </li>
-            <li>
-              🐳{" "}
-              <a href="https://www.portainer.io/" target="_blank">
-                Portainer
-              </a>{" "}
-              – zarządzanie Dockerem
-            </li>
-            <li>
-              💻{" "}
-              <a href="https://code.visualstudio.com/" target="_blank">
-                VSCode
-              </a>{" "}
-              – narzędzia dla programistów
-            </li>
-            <li>
-              🐳{" "}
-              <a href="https://www.docker.com/" target="_blank">
-                Docker
-              </a>{" "}
-              - zarządzanie kontenerami
-            </li>
-            <li>
-              🐝{" "}
-              <a href="https://www.emqx.io/" target="_blank">
-                EMQX
-              </a>{" "}
-              - mqtt broker
-            </li>
-            <li>
-              🐝{" "}
-              <a href="https://www.zigbee2mqtt.io/" target="_blank">
-                Zigbee2mqtt
-              </a>{" "}
-              - zarządzanie urządzeniami Zigbee
-            </li>
-            <li>
-              ✈️{" "}
-              <a href="https://cockpit-project.org/" target="_blank">
-                Cockpit
-              </a>{" "}
-              - interfejs administracyjny
-            </li>
-            <li>
-              📊{" "}
-              <a href="https://github.com/aristocratos/btop" target="_blank">
-                Btop
-              </a>{" "}
-              - monitorowanie wydajności
-            </li>
-            <li>
-              🛡️{" "}
-              <a href="https://defguard.net/" target="_blank">
-                Defguard
-              </a>{" "}
-              - ochrona przed atakami
-            </li>
-            <li>
-              📈{" "}
-              <a href="https://uptime.kuma.pet/" target="_blank">
-                Uptime Kuma
-              </a>{" "}
-              - monitorowanie dostępności
-            </li>
-            <li>
-              🐘{" "}
-              <a href="https://www.postgresql.org/" target="_blank">
-                Postgres DB server
-              </a>{" "}
-              - baza danych
-            </li>
-            <li>
-              🐘{" "}
-              <a href="https://www.pgadmin.org/" target="_blank">
-                pgAdmin
-              </a>{" "}
-              - zarządzanie bazą danych
-            </li>
-            <li>
-              👀{" "}
-              <a href="https://nicolargo.github.io/glances/" target="_blank">
-                Glances
-              </a>{" "}
-              - monitorowanie wydajności
-            </li>
-            <li>
-              📊{" "}
-              <a href="https://grafana.com/" target="_blank">
-                Grafana
-              </a>{" "}
-              - wizualizacja danych.
-            </li>
-            <li>
-              🟥{" "}
-              <a href="https://nodered.org/" target="_blank">
-                Node-red
-              </a>{" "}
-              - Low-code programowanie
-            </li>
-            <li>
-              🏠{" "}
-              <a href="https://www.domoticz.com/" target="_blank">
-                Domoticz
-              </a>{" "}
-              - automatyka domowa
-            </li>
-            <li>
-              🏠{" "}
-              <a href="https://www.openhab.org/" target="_blank">
-                OpenHAB
-              </a>{" "}
-              - automatyka domowa
-            </li>
-            <li>
-              🏠{" "}
-              <a href="https://supla.org/" target="_blank">
-                SUPLA
-              </a>{" "}
-              - automatyka domowa
-            </li>
-            <li>
-              🎬{" "}
-              <a href="https://coreelec.org/" target="_blank">
-                CoreELEC
-              </a>{" "}
-              - centrum multimedialne
-            </li>
-            <li> I wiele więcej...</li>
-          </ul>
+          <div className="applications-grid">
+            <div className="app-card">
+              <span className="app-icon">🏠</span>
+              <h3>Home Assistant</h3>
+              <p>Automatyka domu</p>
+              <a
+                href="https://www.home-assistant.io/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">☁️</span>
+              <h3>Nextcloud</h3>
+              <p>Prywatna chmura</p>
+              <a
+                href="https://nextcloud.com/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🕳️</span>
+              <h3>Pi-hole</h3>
+              <p>Blokowanie reklam</p>
+              <a
+                href="https://pi-hole.net/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🐳</span>
+              <h3>Portainer</h3>
+              <p>Zarządzanie Dockerem</p>
+              <a
+                href="https://www.portainer.io/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">💻</span>
+              <h3>VSCode</h3>
+              <p>Narzędzia dla programistów</p>
+              <a
+                href="https://code.visualstudio.com/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🐳</span>
+              <h3>Docker</h3>
+              <p>Zarządzanie kontenerami</p>
+              <a
+                href="https://www.docker.com/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🐝</span>
+              <h3>EMQX</h3>
+              <p>MQTT broker</p>
+              <a
+                href="https://www.emqx.io/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🐝</span>
+              <h3>Zigbee2mqtt</h3>
+              <p>Zarządzanie urządzeniami Zigbee</p>
+              <a
+                href="https://www.zigbee2mqtt.io/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">✈️</span>
+              <h3>Cockpit</h3>
+              <p>Interfejs administracyjny</p>
+              <a
+                href="https://cockpit-project.org/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">📊</span>
+              <h3>Btop</h3>
+              <p>Monitorowanie wydajności</p>
+              <a
+                href="https://github.com/aristocratos/btop"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🛡️</span>
+              <h3>Defguard</h3>
+              <p>Ochrona przed atakami</p>
+              <a
+                href="https://defguard.net/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">📈</span>
+              <h3>Uptime Kuma</h3>
+              <p>Monitorowanie dostępności</p>
+              <a
+                href="https://uptime.kuma.pet/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🐘</span>
+              <h3>PostgreSQL</h3>
+              <p>Baza danych</p>
+              <a
+                href="https://www.postgresql.org/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🐘</span>
+              <h3>pgAdmin</h3>
+              <p>Zarządzanie bazą danych</p>
+              <a
+                href="https://www.pgadmin.org/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">👀</span>
+              <h3>Glances</h3>
+              <p>Monitorowanie wydajności</p>
+              <a
+                href="https://nicolargo.github.io/glances/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">📊</span>
+              <h3>Grafana</h3>
+              <p>Wizualizacja danych</p>
+              <a
+                href="https://grafana.com/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🟥</span>
+              <h3>Node-RED</h3>
+              <p>Low-code programowanie</p>
+              <a
+                href="https://nodered.org/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🏠</span>
+              <h3>Domoticz</h3>
+              <p>Automatyka domowa</p>
+              <a
+                href="https://www.domoticz.com/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🏠</span>
+              <h3>OpenHAB</h3>
+              <p>Automatyka domowa</p>
+              <a
+                href="https://www.openhab.org/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🏠</span>
+              <h3>SUPLA</h3>
+              <p>Automatyka domowa</p>
+              <a href="https://supla.org/" target="_blank" className="app-link">
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card">
+              <span className="app-icon">🎬</span>
+              <h3>CoreELEC</h3>
+              <p>Centrum multimedialne</p>
+              <a
+                href="https://coreelec.org/"
+                target="_blank"
+                className="app-link"
+              >
+                Dowiedz się więcej
+              </a>
+            </div>
+            <div className="app-card app-card-more">
+              <span className="app-icon">✨</span>
+              <h3>I wiele więcej...</h3>
+              <p>Odkryj pełne możliwości Linux Box</p>
+            </div>
+          </div>
           <p>
             Więcej informacji w{" "}
             <a
