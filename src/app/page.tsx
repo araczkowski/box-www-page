@@ -67,7 +67,8 @@ export default function Home() {
               <h1>Linux🐧Box</h1>
               <h2>
                 Twój Nowy Serwer Domowy
-                <br /> Gotowy do Działania, <a href="#comparison">Lepszy niż Raspberry Pi!</a>
+                <br /> Gotowy do Działania,{" "}
+                <a href="#comparison">Lepszy niż Raspberry Pi!</a>
               </h2>
             </div>
             <label className="theme-switch">
@@ -88,27 +89,6 @@ export default function Home() {
                 height={290}
               />
             </div>
-            <p>
-              Odkryj Linux Box – kompaktowy mini-komputer, który redefiniuje
-              domowy serwer. Urządzenie z wbudowanym dyskiem eMMC 128 GB,
-              wyświetlaczem LED, zasilaczem i preinstalowanym Ubuntu 25.04, jest
-              gotowe do pracy od razu po wyjęciu z pudełka. To wydajna i
-              ekonomiczna alternatywa dla Raspberry Pi, oferująca pełną swobodę
-              dzięki otwartemu systemowi i wsparciu dla wielu dystrybucji
-              Linuxa, a nawet Androida.
-              <br />
-              <br />
-              System na bramce (Ubuntu 🐧) jest w pełni otwarty, możesz{" "}
-              <a href="#opensource">go pobrać tu ⬇️.</a> Możesz też
-              uruchamiać/instalować na bramce inne systemy Linux, w tym 👾
-              Android. Więcej informacji{" "}
-              <a
-                href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
-                target="_blank"
-              >
-                znajdziesz w dokumentacji.
-              </a>
-            </p>
             <div style={{ marginTop: "1.5em", textAlign: "center" }}>
               <a
                 href="https://allegro.pl/uzytkownik/AI-Speaker"
@@ -123,6 +103,26 @@ export default function Home() {
                 </span>
               </a>
             </div>
+            <p>
+              Odkryj Linux Box – kompaktowy mini-komputer. Urządzenie z
+              wbudowanym dyskiem eMMC 128 GB, wyświetlaczem LED, zasilaczem i
+              preinstalowanym Ubuntu 25.04, jest gotowe do pracy od razu po
+              wyjęciu z pudełka. To wydajna i ekonomiczna alternatywa dla
+              Raspberry Pi, oferująca pełną swobodę dzięki otwartemu systemowi i
+              wsparciu dla wielu dystrybucji Linuxa, a nawet Androida.
+              <br />
+              <br />
+              System na bramce (Ubuntu 🐧) jest w pełni otwarty, możesz{" "}
+              <a href="#opensource">go pobrać.</a> Możesz też
+              uruchamiać/instalować na bramce inne systemy Linux, w tym 👾
+              Android.{" "}
+              <a
+                href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
+                target="_blank"
+              >
+                Więcej informacji znajdziesz w dokumentacji.
+              </a>{" "}
+            </p>
           </div>
         </div>
       </header>
@@ -133,7 +133,7 @@ export default function Home() {
             <h2 style={{ paddingBottom: "1em" }}>
               🚀 4 GB RAM | 128 GB eMMC | Ubuntu
             </h2>
-              <h2> Wifi 5GHz | Eternet 1GB | USB 3.0 | HDMI 2.0A </h2>
+            <h2> Wifi 5GHz | Eternet 1GB | USB 3.0 | HDMI 2.0A </h2>
           </div>
         </div>
       </section>
