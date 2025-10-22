@@ -115,8 +115,9 @@ export default function Home() {
                   <span className="btn-main">Kup teraz</span>
                   <span className="btn-price">Tylko 199 zł</span>
                 </a>
-                <a href="#features" className="btn btn-secondary">
-                  Poznaj <br /> możliwości
+                <a href="#features" className="btn btn-features">
+                  <span className="btn-main">Poznaj</span>
+                  <span className="btn-price">możliwości</span>
                 </a>
               </div>
 

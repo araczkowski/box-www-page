@@ -164,19 +164,27 @@ body {
 }
 
 .btn-secondary {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.1);
     color: inherit;
-    border: 2px solid currentColor;
+    border: 2px solid rgba(255, 255, 255, 0.3);
     padding: 1rem 2rem;
     border-radius: 12px;
     font-size: 1.1rem;
+    font-weight: bold;
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
     transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
 .hero-visual {
@@ -374,7 +382,9 @@ body {
 }
 
 .theme-light .btn-secondary:hover {
-    background: rgba(0, 0, 0, 0.05);
+    background: rgba(0, 0, 0, 0.1);
+    border-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
 .theme-light .container {
@@ -410,8 +420,10 @@ body {
 }
 
 .theme-light .btn-secondary {
+    background: rgba(0, 0, 0, 0.05);
     color: #000000;
-    border-color: #000000;
+    border-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .theme-light .features {
@@ -490,8 +502,10 @@ body {
 }
 
 .theme-dark .btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
     color: #d1d5db;
-    border-color: #d1d5db;
+    border-color: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
 .theme-dark .features {
@@ -1541,6 +1555,35 @@ th {
 
 .btn-allegro:focus {
     outline: 2px solid #ff5a00 !important;
+    outline-offset: 2px !important;
+}
+
+/* Features Button Style */
+.btn-features {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 1rem 2rem !important;
+    border-radius: 12px !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    text-decoration: none !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 0.25rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3) !important;
+}
+
+.btn-features:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 35px rgba(102, 126, 234, 0.4) !important;
+    background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%) !important;
+}
+
+.btn-features:focus {
+    outline: 2px solid #667eea !important;
     outline-offset: 2px !important;
 }
 
