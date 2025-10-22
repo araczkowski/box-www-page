@@ -205,57 +205,69 @@ export default function Home() {
       <section id="features" className="features">
         <div className="container">
           <h2>Dlaczego Linux Box?</h2>
-          <div className="feature-grid">
-            <div className="feature">
-              <h3>Wydajność 🚀</h3>
+          <div className="specs-grid">
+            <div className="spec-card">
+              <span className="spec-icon">🚀</span>
+              <h3>Wydajność</h3>
               <p>Procesor Amlogic S905X3 i 4 GB RAM zapewniają płynną pracę.</p>
             </div>
-            <div className="feature">
-              <h3>Pamięć/Dysk 💾</h3>
+            <div className="spec-card">
+              <span className="spec-icon">💾</span>
+              <h3>Pamięć/Dysk</h3>
               <p>128 GB eMMC + rozszerzalność przez microSD i/lub USB.</p>
             </div>
-            <div className="feature">
-              <h3>System 🐧</h3>
+            <div className="spec-card">
+              <span className="spec-icon">🐧</span>
+              <h3>System</h3>
               <p>
                 Oprócz Ubuntu, możesz uruchomić Debian, Armbian i inne systemy.
               </p>
             </div>
-            <div className="feature">
-              <h3>Wyświetlacz 🖵</h3>
+            <div className="spec-card">
+              <span className="spec-icon">🖵</span>
+              <h3>Wyświetlacz</h3>
               <p>Pokazuje czas, temperaturę, IP i więcej.</p>
             </div>
-            <div className="feature">
-              <h3>Docker 🐳</h3>
+            <div className="spec-card">
+              <span className="spec-icon">🐳</span>
+              <h3>Docker</h3>
               <p>Uruchamiaj aplikacje w kontenerach.</p>
             </div>
-            <div className="feature">
-              <h3>Batocera.linux 🎮</h3>
+            <div className="spec-card">
+              <span className="spec-icon">🎮</span>
+              <h3>Batocera.linux</h3>
               <p>Zmień swój Linux Box w konsolę do gier retro.</p>
             </div>
-            <div className="feature">
-              <h3>Automatyka domowa 🏠</h3>
+            <div className="spec-card">
+              <span className="spec-icon">🏠</span>
+              <h3>Automatyka domowa</h3>
               <p>Home Assistant, SUPLA, Domoticz, OpenHAB i inne.</p>
             </div>
-            <div className="feature">
-              <h3>CoreElec 🎬</h3>
+            <div className="spec-card">
+              <span className="spec-icon">🎬</span>
+              <h3>CoreElec</h3>
               <p>Oglądaj filmy i seriale z Kodi.</p>
             </div>
-            <div className="feature">
-              <h3>Niskie zużycie energii 🔌</h3>
+            <div className="spec-card">
+              <span className="spec-icon">🔌</span>
+              <h3>Niskie zużycie energii</h3>
               <p>Około 2 kWh miesięcznie, czyli mniej niż 2 zł.</p>
             </div>
-            <div className="feature">
-              <h3>Dla deweloperów 👨‍💻</h3>
+            <div className="spec-card">
+              <span className="spec-icon">👨‍💻</span>
+              <h3>Dla deweloperów</h3>
               <p>Kompaktowy dev-server do Twoich projektów.</p>
             </div>
-            <div className="feature">
-              <h3>System Android 👾</h3>
+            <div className="spec-card">
+              <span className="spec-icon">👾</span>
+              <h3>System Android</h3>
               <p>
                 Różne obrazy oparte na Android TV lub Android AOSP do
                 uruchomienia na boxie.
               </p>
             </div>
-            <div className="feature">
+            <div className="spec-card">
+              <span className="spec-icon">✨</span>
               <h3>I wiele więcej...</h3>
               <p>
                 Zobacz <a href="#applications">Zastosowania</a>.
@@ -267,7 +279,7 @@ export default function Home() {
 
       <section id="comparison" className="features">
         <div className="container">
-          <h2>Porównanie</h2>
+          <h2>Porównanie z Raspberry Pi</h2>
           <div className="comparison-table">
             <table>
               <thead>
