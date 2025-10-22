@@ -65,7 +65,10 @@ export default function Home() {
           <div className="header-content-wrapper">
             <div>
               <h1>Linux🐧Box</h1>
-              <h2>Twój domowy kompaktowy serwer</h2>
+              <h2>
+                Twój Nowy Serwer Domowy
+                <br /> Gotowy do Działania, <a href="#comparison">Lepszy niż Raspberry Pi!</a>
+              </h2>
             </div>
             <label className="theme-switch">
               <input
@@ -86,21 +89,19 @@ export default function Home() {
               />
             </div>
             <p>
-              Gotowy do działania zestaw mini-komputera!{" "}
-              <a href="#comparison">Lepsza i tańsza</a> alternatywa dla
-              Raspberry Pi — z wbudowany szybkim dyskiem eMMC 128 GB, LED-owym
-              wyświetlaczem, zasilaczem, kablem HDMI i najnowszym Ubuntu 25.04.
-              Wystarczy podłączyć i działać!{" "}
-              <a
-                href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
-                target="_blank"
-              >
-                Dołączona instrukcja Linux Box.
-              </a>{" "}
+              Odkryj Linux Box – kompaktowy mini-komputer, który redefiniuje
+              domowy serwer. Urządzenie z wbudowanym dyskiem eMMC 128 GB,
+              wyświetlaczem LED, zasilaczem i preinstalowanym Ubuntu 25.04, jest
+              gotowe do pracy od razu po wyjęciu z pudełka. To wydajna i
+              ekonomiczna alternatywa dla Raspberry Pi, oferująca pełną swobodę
+              dzięki otwartemu systemowi i wsparciu dla wielu dystrybucji
+              Linuxa, a nawet Androida.
+              <br />
+              <br />
               System na bramce (Ubuntu 🐧) jest w pełni otwarty, możesz{" "}
-              <a href="#opensource"> go pobrać tu ⬇️. </a> Możesz też
-              uruchamiania/instalować na bramce inne systemy Linux w tym 👾
-              Android, więce informacji{" "}
+              <a href="#opensource">go pobrać tu ⬇️.</a> Możesz też
+              uruchamiać/instalować na bramce inne systemy Linux, w tym 👾
+              Android. Więcej informacji{" "}
               <a
                 href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
                 target="_blank"
@@ -108,17 +109,7 @@ export default function Home() {
                 znajdziesz w dokumentacji.
               </a>
             </p>
-          </div>
-        </div>
-      </header>
-
-      <section className="hero">
-        <div className="container">
-          <div className="hero-text">
-            <h2 style={{ paddingBottom: "1em" }}>
-              🚀 4 GB RAM | 128 GB eMMC | Ubuntu
-            </h2>
-            <div className="hero-text">
+            <div style={{ marginTop: "1.5em", textAlign: "center" }}>
               <a
                 href="https://allegro.pl/uzytkownik/AI-Speaker"
                 target="_blank"
@@ -131,8 +122,18 @@ export default function Home() {
                   Za jedyne 199 zł
                 </span>
               </a>
-              <h2> Wifi 5GHz | Eternet 1GB | USB 3.0 | HDMI 2.0A </h2>
             </div>
+          </div>
+        </div>
+      </header>
+
+      <section className="hero">
+        <div className="container">
+          <div className="hero-text">
+            <h2 style={{ paddingBottom: "1em" }}>
+              🚀 4 GB RAM | 128 GB eMMC | Ubuntu
+            </h2>
+              <h2> Wifi 5GHz | Eternet 1GB | USB 3.0 | HDMI 2.0A </h2>
           </div>
         </div>
       </section>
