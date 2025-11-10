@@ -6,6 +6,7 @@ import ThemeToggle from "./components/ThemeToggle";
 import StickyNav from "./components/StickyNav";
 import FloatingCTA from "./components/FloatingCTA";
 import CounterAnimation from "./components/CounterAnimation";
+import MobileTopBar from "./components/MobileTopBar";
 
 export default function Home() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
@@ -37,8 +38,9 @@ export default function Home() {
 
   return (
     <main className={`min-h-screen transition-colors duration-300 ${theme === "dark" ? "bg-slate-900" : "bg-slate-50"}`}>
-      <StickyNav />
+      <MobileTopBar />
       <ThemeToggle />
+      <StickyNav />
       <FloatingCTA />
       <HeaderSimple />
 

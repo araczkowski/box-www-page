@@ -12,6 +12,19 @@ export default function ThemeToggle() {
       setTheme(savedTheme);
       document.documentElement.classList.toggle("light", savedTheme === "light");
     }
+
+    const handleThemeChange = () => {
+      const newTheme = localStorage.getItem("theme") as "dark" | "light";
+      if (newTheme) {
+        setTheme(newTheme);
+      }
+    };
+
+    window.addEventListener("themeChanged", handleThemeChange);
+
+    return () => {
+      window.removeEventListener("themeChanged", handleThemeChange);
+    };
   }, []);
 
   const toggleTheme = () => {
@@ -27,13 +40,13 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed top-6 right-6 z-50 p-3 bg-slate-800/80 backdrop-blur-sm border border-slate-700 hover:border-purple-500/50 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group"
+      className="hidden md:block fixed top-4 right-4 z-50 p-2.5 bg-slate-800/80 backdrop-blur-sm border border-slate-700 hover:border-purple-500/50 rounded-full shadow-lg hover:shadow-xl transform hover:scale-110 transition-all duration-300 group"
       aria-label="Przełącz motyw"
     >
       {theme === "dark" ? (
         // Ikona słońca dla trybu jasnego
         <svg
-          className="w-6 h-6 text-yellow-400 group-hover:rotate-180 transition-transform duration-500"
+          className="w-5 h-5 text-yellow-400 group-hover:rotate-180 transition-transform duration-500"
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -46,7 +59,7 @@ export default function ThemeToggle() {
       ) : (
         // Ikona księżyca dla trybu ciemnego
         <svg
-          className="w-6 h-6 text-purple-400 group-hover:-rotate-12 transition-transform duration-300"
+          className="w-5 h-5 text-purple-400 group-hover:-rotate-12 transition-transform duration-300"
           fill="none"
           strokeLinecap="round"
           strokeLinejoin="round"
