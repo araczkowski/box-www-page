@@ -166,6 +166,21 @@ export default function Home() {
                   <td className="px-6 py-4 text-purple-400 text-center"><CounterAnimation end={128} />GB eMMC</td>
                 </tr>
                 <tr className="hover:bg-slate-700/30">
+                  <td className="px-6 py-4 text-white font-medium">Obudowa</td>
+                  <td className="px-6 py-4 text-gray-400 text-center">Brak</td>
+                  <td className="px-6 py-4 text-purple-400 text-center">W zestawie</td>
+                </tr>
+                <tr className="hover:bg-slate-700/30">
+                  <td className="px-6 py-4 text-white font-medium">Zasilacz</td>
+                  <td className="px-6 py-4 text-gray-400 text-center">Brak</td>
+                  <td className="px-6 py-4 text-purple-400 text-center">W zestawie</td>
+                </tr>
+                <tr className="hover:bg-slate-700/30">
+                  <td className="px-6 py-4 text-white font-medium">Kabel HDMI</td>
+                  <td className="px-6 py-4 text-gray-400 text-center">Brak</td>
+                  <td className="px-6 py-4 text-purple-400 text-center">W zestawie</td>
+                </tr>
+                <tr className="hover:bg-slate-700/30">
                   <td className="px-6 py-4 text-white font-medium">Wyświetlacz LED</td>
                   <td className="px-6 py-4 text-gray-400 text-center">Brak</td>
                   <td className="px-6 py-4 text-purple-400 text-center">Tak</td>
