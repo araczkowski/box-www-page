@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import CounterAnimation from "./CounterAnimation";
 
 export default function HeaderSimple() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
@@ -87,7 +88,7 @@ export default function HeaderSimple() {
                 <span className="flex items-center gap-2">
                   🛒 Kup teraz
                 </span>
-                <span className="text-sm font-normal">Tylko 199 zł</span>
+                <span className="text-sm font-normal">Tylko <CounterAnimation end={199} /> zł</span>
               </span>
             </a>
             <a
@@ -106,10 +107,10 @@ export default function HeaderSimple() {
           {/* Specs Grid */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto opacity-0 animate-[fadeIn_0.6s_ease-in-out_0.8s_forwards]">
             {[
-              { icon: "💾", value: "128 GB", label: "eMMC" },
-              { icon: "🧠", value: "4 GB", label: "RAM" },
-              { icon: "⚡", value: "Amlogic", label: "S905X3" },
-              { icon: "🖥️", value: "Ubuntu", label: "25.04" },
+              { icon: "💾", value: 128, label: "eMMC", suffix: " GB" },
+              { icon: "🧠", value: 4, label: "RAM", suffix: " GB" },
+              { icon: "⚡", value: "Amlogic", label: "S905X3", suffix: "" },
+              { icon: "🖥️", value: "Ubuntu", label: "25.04", suffix: "" },
             ].map((spec, index) => (
               <div
                 key={index}
@@ -117,7 +118,14 @@ export default function HeaderSimple() {
               >
                 <div className="text-4xl mb-2">{spec.icon}</div>
                 <div className="text-2xl font-bold text-white mb-1">
-                  {spec.value}
+                  {typeof spec.value === "number" ? (
+                    <>
+                      <CounterAnimation end={spec.value} />
+                      {spec.suffix}
+                    </>
+                  ) : (
+                    spec.value
+                  )}
                 </div>
                 <div className="text-sm text-gray-400">{spec.label}</div>
               </div>

@@ -3,6 +3,9 @@
 import { useState, useEffect } from "react";
 import HeaderSimple from "./components/HeaderSimple";
 import ThemeToggle from "./components/ThemeToggle";
+import StickyNav from "./components/StickyNav";
+import FloatingCTA from "./components/FloatingCTA";
+import CounterAnimation from "./components/CounterAnimation";
 
 export default function Home() {
   const [theme, setTheme] = useState<"dark" | "light">("dark");
@@ -34,11 +37,13 @@ export default function Home() {
 
   return (
     <main className={`min-h-screen transition-colors duration-300 ${theme === "dark" ? "bg-slate-900" : "bg-slate-50"}`}>
+      <StickyNav />
       <ThemeToggle />
+      <FloatingCTA />
       <HeaderSimple />
 
       {/* Tech Specs */}
-      <section className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+      <section id="tech-specs" className="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -150,13 +155,13 @@ export default function Home() {
                 </tr>
                 <tr className="hover:bg-slate-700/30">
                   <td className="px-6 py-4 text-white font-medium">Pamięć RAM</td>
-                  <td className="px-6 py-4 text-gray-400 text-center">4GB LPDDR4</td>
-                  <td className="px-6 py-4 text-purple-400 text-center">4GB DDR4</td>
+                  <td className="px-6 py-4 text-gray-400 text-center"><CounterAnimation end={4} />GB LPDDR4</td>
+                  <td className="px-6 py-4 text-purple-400 text-center"><CounterAnimation end={4} />GB DDR4</td>
                 </tr>
                 <tr className="hover:bg-slate-700/30">
                   <td className="px-6 py-4 text-white font-medium">Pamięć masowa</td>
                   <td className="px-6 py-4 text-gray-400 text-center">Brak</td>
-                  <td className="px-6 py-4 text-purple-400 text-center">128GB eMMC</td>
+                  <td className="px-6 py-4 text-purple-400 text-center"><CounterAnimation end={128} />GB eMMC</td>
                 </tr>
                 <tr className="hover:bg-slate-700/30">
                   <td className="px-6 py-4 text-white font-medium">Wyświetlacz LED</td>
@@ -169,9 +174,9 @@ export default function Home() {
                   <td className="px-6 py-4 text-purple-400 text-center">Tak, różne dystrybucje</td>
                 </tr>
                 <tr className="bg-gradient-to-r from-purple-900/20 to-blue-900/20 font-bold">
-                  <td className="px-6 py-4 text-white">Cena kompletu<br/>(z zasilaczem, obudową, <br/>kablem hdmi i pamięcią)</td>
-                  <td className="px-6 py-4 text-white text-center text-xl">~410zł</td>
-                  <td className="px-6 py-4 text-purple-400 text-center text-xl">199zł</td>
+                  <td className="px-6 py-4 text-white">Cena kompletu</td>
+                  <td className="px-6 py-4 text-white text-center text-xl">~<CounterAnimation end={410} />zł</td>
+                  <td className="px-6 py-4 text-purple-400 text-center text-xl"><CounterAnimation end={199} />zł</td>
                 </tr>
               </tbody>
             </table>
@@ -180,7 +185,7 @@ export default function Home() {
           <div className="text-center">
             <div className="inline-block bg-gradient-to-r from-purple-600/20 to-blue-600/20 backdrop-blur-sm px-8 py-4 rounded-2xl border border-purple-500/30">
               <p className="text-2xl font-bold text-white">
-                Oszczędź ponad <span className="text-purple-400">50%</span> z Linux Box!
+                Oszczędź ponad <span className="text-purple-400"><CounterAnimation end={50} />%</span> z Linux Box!
               </p>
             </div>
           </div>
