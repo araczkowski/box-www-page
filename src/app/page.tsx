@@ -142,7 +142,7 @@ export default function Home() {
               {
                 icon: "✨",
                 title: "I wiele więcej...",
-                description: "Zobacz sekcję Zastosowania poniżej.",
+                description: "Zobacz więcej w dokumentacji.",
               },
             ].map((feature, index) => (
               <div
