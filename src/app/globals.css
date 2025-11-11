@@ -1,129 +1,120 @@
 @import "tailwindcss";
 
+/* Apple-style typography */
 body {
-    background-color: #0f172a;
-    color: #e2e8f0;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #000000;
+    color: #f5f5f7;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/* Dodaj transition do wszystkich sekcji */
+/* Light Theme - Apple style */
+html.light body {
+    background-color: #ffffff;
+    color: #1d1d1f;
+}
+
+html.light main {
+    background-color: #ffffff !important;
+}
+
+html.light .bg-black {
+    background-color: #ffffff !important;
+}
+
+html.light .bg-zinc-800 {
+    background-color: #f5f5f7 !important;
+}
+
+html.light .bg-zinc-900 {
+    background-color: #e8e8ed !important;
+}
+
+html.light .text-white {
+    color: #1d1d1f !important;
+}
+
+html.light .text-zinc-300 {
+    color: #6e6e73 !important;
+}
+
+html.light .text-zinc-400 {
+    color: #86868b !important;
+}
+
+html.light .text-gray-500 {
+    color: #86868b !important;
+}
+
+html.light .text-gray-600 {
+    color: #6e6e73 !important;
+}
+
+html.light .text-gray-700 {
+    color: #1d1d1f !important;
+}
+
+html.light .border-zinc-700 {
+    border-color: #d2d2d7 !important;
+}
+
+html.light .border-zinc-800 {
+    border-color: #d2d2d7 !important;
+}
+
+/* Custom scrollbar - Apple style */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+html.light ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+/* Smooth transitions */
 main,
 section,
 header,
 footer {
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Light Theme */
-html.light body {
-    background-color: #f8fafc;
-    color: #1e293b;
-}
-
-html.light {
-    --bg-primary: #ffffff;
-    --bg-secondary: #f1f5f9;
-    --text-primary: #1e293b;
-    --text-secondary: #64748b;
-    --border-color: #e2e8f0;
-}
-
-html.light main {
-    background-color: #f8fafc !important;
-}
-
-html.light section {
-    background: linear-gradient(to bottom, #f8fafc, #f1f5f9) !important;
-}
-
-html.light header {
-    background: linear-gradient(to bottom, #f8fafc, #f1f5f9) !important;
-}
-
-html.light .bg-slate-50 {
-    background-color: #f8fafc !important;
-}
-
-html.light .bg-slate-900 {
-    background-color: #f8fafc !important;
-}
-
-html.light .bg-slate-800 {
-    background-color: #f1f5f9 !important;
-}
-
-html.light .bg-slate-800\/50 {
-    background-color: rgba(241, 245, 249, 0.8) !important;
-}
-
-html.light .bg-slate-950 {
-    background-color: #ffffff !important;
-}
-
-html.light .text-white {
-    color: #1e293b !important;
-}
-
-html.light .text-gray-300 {
-    color: #475569 !important;
-}
-
-html.light .text-gray-400 {
-    color: #64748b !important;
-}
-
-html.light .text-gray-500 {
-    color: #94a3b8 !important;
-}
-
-html.light .border-slate-700 {
-    border-color: #e2e8f0 !important;
-}
-
-html.light .border-slate-800 {
-    border-color: #cbd5e1 !important;
-}
-
-html.light .border-purple-500\/30 {
-    border-color: rgba(168, 85, 247, 0.3) !important;
-}
-
-html.light .border-purple-500\/50 {
-    border-color: rgba(168, 85, 247, 0.5) !important;
-}
-
-/* Animowane tła w trybie jasnym */
-html.light .bg-purple-500\/10 {
-    background-color: rgba(168, 85, 247, 0.05) !important;
-}
-
-html.light .bg-blue-500\/10 {
-    background-color: rgba(59, 130, 246, 0.05) !important;
-}
-
-/* Custom scrollbar */
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background-color: #0f172a;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #334155;
-    border-radius: 9999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: #475569;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 /* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 @keyframes float {
     0%,
     100% {
@@ -150,4 +141,27 @@ html.light .bg-blue-500\/10 {
 
 .animate-glow {
     animation: glow 3s ease-in-out infinite;
+}
+
+/* Apple-style text selection */
+::selection {
+    background-color: #0071e3;
+    color: white;
+}
+
+::-moz-selection {
+    background-color: #0071e3;
+    color: white;
+}
+
+/* Remove blue tap highlight on mobile */
+* {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Apple-style focus states */
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid #0071e3;
+    outline-offset: 2px;
 }
