@@ -1,17 +1,50 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Wifi, Cable, Usb, Monitor, Clock, Smartphone, Container, Zap } from "lucide-react";
+import {
+  Wifi,
+  Cable,
+  Usb,
+  Monitor,
+  Clock,
+  Zap,
+  Rocket,
+  HardDrive,
+} from "lucide-react";
 
 const specs = [
-  { icon: Wifi, title: "WiFi 5GHz", description: "Szybkie bezprzewodowe połączenie" },
-  { icon: Cable, title: "Ethernet 1GB", description: "Stabilne połączenie przewodowe" },
+  {
+    icon: Rocket,
+    title: "Wydajność",
+    description: "Procesor Amlogic S905X3 i 4 GB RAM",
+  },
+  {
+    icon: HardDrive,
+    title: "Pamięć/Dysk",
+    description: "128 GB eMMC + microSD/USB",
+  },
+  {
+    icon: Wifi,
+    title: "WiFi 5GHz",
+    description: "Szybkie bezprzewodowe połączenie",
+  },
+  {
+    icon: Cable,
+    title: "Ethernet 1GB",
+    description: "Stabilne połączenie przewodowe",
+  },
   { icon: Usb, title: "USB 3.0", description: "Szybki transfer danych" },
   { icon: Monitor, title: "HDMI 2.0A", description: "Wyjście wideo 4K" },
-  { icon: Clock, title: "Wyświetlacz LED", description: "Pokazuje czas, temperaturę i IP" },
-  { icon: Smartphone, title: "Obsługa Androida", description: "Różne dystrybucje Android TV/AOSP" },
-  { icon: Container, title: "Docker & Home Assistant", description: "Automatyka domowa w kontenerach" },
-  { icon: Zap, title: "Niskie zużycie energii", description: "Około 2 kWh miesięcznie" },
+  {
+    icon: Clock,
+    title: "Wyświetlacz LED",
+    description: "Pokazuje czas, temperaturę i IP",
+  },
+  {
+    icon: Zap,
+    title: "Niskie zużycie energii",
+    description: "Około 2 kWh miesięcznie",
+  },
 ];
 
 export default function TechSpecs() {
@@ -54,9 +87,7 @@ export default function TechSpecs() {
                   {spec.title}
                 </h3>
 
-                <p className="text-gray-400">
-                  {spec.description}
-                </p>
+                <p className="text-gray-400">{spec.description}</p>
               </div>
             </motion.div>
           ))}

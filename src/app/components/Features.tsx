@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import {
-  Rocket,
-  HardDrive,
   Server,
   Monitor,
   Container,
@@ -18,92 +16,77 @@ import {
 
 const features = [
   {
-    icon: Rocket,
-    title: "Wydajność",
-    description: "Procesor Amlogic S905X3 i 4 GB RAM zapewniają płynną pracę.",
-  },
-  {
-    icon: HardDrive,
-    title: "Pamięć/Dysk",
-    description: "128 GB eMMC + rozszerzalność przez microSD i/lub USB.",
-  },
-  {
-    icon: Server,
-    title: "System",
-    description:
-      "Oprócz Ubuntu, możesz uruchomić Debian, Armbian i inne systemy.",
-  },
-  {
-    icon: Monitor,
-    title: "Wyświetlacz",
-    description: "Pokazuje czas, temperaturę, IP i więcej.",
+    icon: Smartphone,
+    title: "Android TV",
+    description: "Zainstaluj system Android TV i ciesz się aplikacjami.",
   },
   {
     icon: Container,
-    title: "Docker",
-    description: "Uruchamiaj aplikacje w kontenerach.",
+    title: "Docker & Home Assistant",
+    description: "Uruchamiaj aplikacje w lekkich kontenerach.",
+  },
+  {
+    icon: Server,
+    title: "Wiele systemów",
+    description: "Uruchom Ubuntu, Debian, Armbian i inne.",
+  },
+  {
+    icon: Monitor,
+    title: "Wyświetlacz LED",
+    description: "Monitoruj status urządzenia, czas, pogodę i inne.",
   },
   {
     icon: Gamepad2,
-    title: "Batocera.linux",
-    description: "Zmień swój Linux Box w konsolę do gier retro.",
+    title: "Gry Retro",
+    description: "Zmień swój box w konsolę z Batocera.linux.",
   },
   {
     icon: Home,
-    title: "Automatyka domowa",
-    description: "Home Assistant, SUPLA, Domoticz, OpenHAB i inne.",
+    title: "Smart Home",
+    description: "Centrum dla Home Assistant, SUPLA, Domoticz.",
   },
   {
     icon: Film,
-    title: "CoreElec",
-    description: "Oglądaj filmy i seriale z Kodi.",
+    title: "Centrum Multimedialne",
+    description: "Oglądaj filmy i seriale w 4K z CoreELEC (Kodi).",
   },
   {
     icon: Zap,
-    title: "Niskie zużycie energii",
-    description: "Około 2 kWh miesięcznie, czyli mniej niż 2 zł.",
+    title: "Energooszczędność",
+    description: "Pobór mocy na poziomie 2-3W. Koszt ~2zł/miesiąc.",
   },
   {
     icon: Code,
-    title: "Dla deweloperów",
-    description: "Kompaktowy dev-server do Twoich projektów.",
-  },
-  {
-    icon: Smartphone,
-    title: "System Android",
-    description:
-      "Różne obrazy oparte na Android TV lub Android AOSP do uruchomienia na boxie.",
+    title: "Dev Server",
+    description: "Idealny do hostowania Twoich projektów i botów.",
   },
   {
     icon: Sparkles,
-    title: "I wiele więcej...",
-    description: "Zobacz sekcję Zastosowania poniżej.",
+    title: "Nieograniczone możliwości",
+    description: "Twoja kreatywność to jedyne ograniczenie.",
   },
 ];
 
 export default function Features() {
   return (
-    <section
-      id="features"
-      className="py-20 bg-gradient-to-b from-slate-800 to-slate-900"
-    >
+    <section id="features" className="py-24 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-16"
+          className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Dlaczego Linux Box?
+          <h2 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            Mały box, wielkie możliwości.
           </h2>
-          <p className="text-xl text-gray-400">
-            Niewiarygodne możliwości w kompaktowej obudowie
+          <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
+            Odkryj, co potrafi nasze urządzenie. To więcej niż myślisz.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <motion.div
               key={index}
@@ -111,20 +94,18 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
               viewport={{ once: true }}
-              className="group relative bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
+              className="bg-[#111] p-8 rounded-3xl border border-gray-800 transition-all duration-300 hover:border-purple-500/60 hover:bg-[#1a1a1a] hover:-translate-y-2"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-blue-600/0 group-hover:from-purple-600/10 group-hover:to-blue-600/10 rounded-2xl transition-all duration-300"></div>
-
               <div className="relative z-10">
-                <div className="w-14 h-14 bg-gradient-to-br from-purple-600 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                  <feature.icon className="w-7 h-7 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                  <feature.icon className="w-8 h-8 text-white" />
                 </div>
 
-                <h3 className="text-xl font-bold text-white mb-2">
+                <h3 className="text-2xl font-semibold text-white mb-3">
                   {feature.title}
                 </h3>
 
-                <p className="text-gray-400 text-sm">{feature.description}</p>
+                <p className="text-gray-400 text-base">{feature.description}</p>
               </div>
             </motion.div>
           ))}
