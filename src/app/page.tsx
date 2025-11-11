@@ -28,24 +28,58 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { icon: "📶", title: "WiFi 5GHz", description: "Szybkie bezprzewodowe połączenie" },
-              { icon: "🔌", title: "Ethernet 1GB", description: "Stabilne połączenie przewodowe" },
-              { icon: "⚡", title: "USB 3.0", description: "Szybki transfer danych" },
-              { icon: "🖥️", title: "HDMI 2.0A", description: "Wyjście wideo 4K" },
-              { icon: "🖵", title: "Wyświetlacz LED", description: "Pokazuje czas, temperaturę i IP" },
-              { icon: "👾", title: "Obsługa Androida", description: "Różne dystrybucje Android TV/AOSP" },
-              { icon: "🐳", title: "Docker & Home Assistant", description: "Automatyka domowa w kontenerach" },
-              { icon: "🔌", title: "Niskie zużycie energii", description: "Około 2 kWh miesięcznie" },
+              {
+                icon: "📶",
+                title: "WiFi 5GHz",
+                description: "Szybkie bezprzewodowe połączenie",
+              },
+              {
+                icon: "🔌",
+                title: "Ethernet 1GB",
+                description: "Stabilne połączenie przewodowe",
+              },
+              {
+                icon: "⚡",
+                title: "USB 3.0",
+                description: "Szybki transfer danych",
+              },
+              {
+                icon: "🖥️",
+                title: "HDMI 2.0A",
+                description: "Wyjście wideo 4K",
+              },
+              {
+                icon: "🖵",
+                title: "Wyświetlacz LED",
+                description: "Pokazuje czas, temperaturę i IP",
+              },
+              {
+                icon: "👾",
+                title: "Obsługa Androida",
+                description: "Różne dystrybucje Android TV/AOSP",
+              },
+              {
+                icon: "🐳",
+                title: "Docker & Home Assistant",
+                description: "Automatyka domowa w kontenerach",
+              },
+              {
+                icon: "🔌",
+                title: "Niskie zużycie energii",
+                description: "Około 2 kWh miesięcznie",
+              },
             ].map((spec, index) => (
               <div
                 key={index}
-                className="group relative bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="group relative bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-blue-600/0 group-hover:from-purple-600/10 group-hover:to-blue-600/10 rounded-2xl transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-blue-600/0 group-hover:from-blue-600/10 group-hover:to-blue-600/10 rounded-2xl transition-all duration-300"></div>
 
                 <div className="relative z-10">
                   <div className="text-5xl mb-4">{spec.icon}</div>
-                  <h3 className="text-xl font-bold text-black mb-2">{spec.title}</h3>
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    {spec.title}
+                  </h3>
                   <p className="text-gray-600">{spec.description}</p>
                 </div>
               </div>
@@ -68,28 +102,82 @@ export default function Home() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {[
-              { icon: "🚀", title: "Wydajność", description: "Procesor Amlogic S905X3 i 4 GB RAM zapewniają płynną pracę." },
-              { icon: "💾", title: "Pamięć/Dysk", description: "128 GB eMMC + rozszerzalność przez microSD i/lub USB." },
-              { icon: "🖥️", title: "System", description: "Oprócz Ubuntu, możesz uruchomić Debian, Armbian i inne systemy." },
-              { icon: "🖵", title: "Wyświetlacz", description: "Pokazuje czas, temperaturę, IP i więcej." },
-              { icon: "🐳", title: "Docker", description: "Uruchamiaj aplikacje w kontenerach." },
-              { icon: "🎮", title: "Batocera.linux", description: "Zmień swój Linux Box w konsolę do gier retro." },
-              { icon: "🏠", title: "Automatyka domowa", description: "Home Assistant, SUPLA, Domoticz, OpenHAB i inne." },
-              { icon: "🎬", title: "CoreElec", description: "Oglądaj filmy i seriale z Kodi." },
-              { icon: "🔌", title: "Niskie zużycie energii", description: "Około 2 kWh miesięcznie, czyli mniej niż 2 zł." },
-              { icon: "👨‍💻", title: "Dla deweloperów", description: "Kompaktowy dev-server do Twoich projektów." },
-              { icon: "📱", title: "System Android", description: "Różne obrazy oparte na Android TV lub Android AOSP." },
-              { icon: "✨", title: "I wiele więcej...", description: "Zobacz sekcję Zastosowania poniżej." },
+              {
+                icon: "🚀",
+                title: "Wydajność",
+                description:
+                  "Procesor Amlogic S905X3 i 4 GB RAM zapewniają płynną pracę.",
+              },
+              {
+                icon: "💾",
+                title: "Pamięć/Dysk",
+                description:
+                  "128 GB eMMC + rozszerzalność przez microSD i/lub USB.",
+              },
+              {
+                icon: "🖥️",
+                title: "System",
+                description:
+                  "Oprócz Ubuntu, możesz uruchomić Debian, Armbian i inne systemy.",
+              },
+              {
+                icon: "🖵",
+                title: "Wyświetlacz",
+                description: "Pokazuje czas, temperaturę, IP i więcej.",
+              },
+              {
+                icon: "🐳",
+                title: "Docker",
+                description: "Uruchamiaj aplikacje w kontenerach.",
+              },
+              {
+                icon: "🎮",
+                title: "Batocera.linux",
+                description: "Zmień swój Linux Box w konsolę do gier retro.",
+              },
+              {
+                icon: "🏠",
+                title: "Automatyka domowa",
+                description: "Home Assistant, SUPLA, Domoticz, OpenHAB i inne.",
+              },
+              {
+                icon: "🎬",
+                title: "CoreElec",
+                description: "Oglądaj filmy i seriale z Kodi.",
+              },
+              {
+                icon: "🔌",
+                title: "Niskie zużycie energii",
+                description: "Około 2 kWh miesięcznie, czyli mniej niż 2 zł.",
+              },
+              {
+                icon: "👨‍💻",
+                title: "Dla deweloperów",
+                description: "Kompaktowy dev-server do Twoich projektów.",
+              },
+              {
+                icon: "📱",
+                title: "System Android",
+                description:
+                  "Różne obrazy oparte na Android TV lub Android AOSP.",
+              },
+              {
+                icon: "✨",
+                title: "I wiele więcej...",
+                description: "Zobacz sekcję Zastosowania poniżej.",
+              },
             ].map((feature, index) => (
               <div
                 key={index}
-                className="group relative bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="group relative bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/0 to-blue-600/0 group-hover:from-purple-600/10 group-hover:to-blue-600/10 rounded-2xl transition-all duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-blue-600/0 group-hover:from-blue-600/10 group-hover:to-blue-600/10 rounded-2xl transition-all duration-300"></div>
 
                 <div className="relative z-10">
                   <div className="text-5xl mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-bold text-black mb-2">{feature.title}</h3>
+                  <h3 className="text-xl font-bold text-black mb-2">
+                    {feature.title}
+                  </h3>
                   <p className="text-gray-600 text-sm">{feature.description}</p>
                 </div>
               </div>
@@ -114,56 +202,97 @@ export default function Home() {
             <table className="min-w-full bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
               <thead>
                 <tr className="bg-white border-b border-gray-200">
-                  <th className="px-6 py-4 text-left text-black font-bold">Cecha</th>
-                  <th className="px-6 py-4 text-center text-black font-bold">Raspberry Pi 4</th>
-                  <th className="px-6 py-4 text-center text-black font-bold">Linux Box</th>
+                  <th className="px-6 py-4 text-left text-black font-bold">
+                    Cecha
+                  </th>
+                  <th className="px-6 py-4 text-center text-black font-bold">
+                    Raspberry Pi 4
+                  </th>
+                  <th className="px-6 py-4 text-center text-black font-bold">
+                    Linux Box
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr className="hover:bg-gray-100">
                   <td className="px-6 py-4 text-black font-medium">Procesor</td>
-                  <td className="px-6 py-4 text-gray-600 text-center">Broadcom BCM2711</td>
-                  <td className="px-6 py-4 text-purple-400 text-center">Amlogic S905X3</td>
+                  <td className="px-6 py-4 text-gray-600 text-center">
+                    Broadcom BCM2711
+                  </td>
+                  <td className="px-6 py-4 text-blue-400 text-center">
+                    Amlogic S905X3
+                  </td>
                 </tr>
                 <tr className="hover:bg-gray-100">
-                  <td className="px-6 py-4 text-black font-medium">Pamięć RAM</td>
-                  <td className="px-6 py-4 text-gray-600 text-center"><CounterAnimation end={4} />GB LPDDR4</td>
-                  <td className="px-6 py-4 text-purple-400 text-center"><CounterAnimation end={4} />GB DDR4</td>
+                  <td className="px-6 py-4 text-black font-medium">
+                    Pamięć RAM
+                  </td>
+                  <td className="px-6 py-4 text-gray-600 text-center">
+                    <CounterAnimation end={4} />
+                    GB LPDDR4
+                  </td>
+                  <td className="px-6 py-4 text-blue-400 text-center">
+                    <CounterAnimation end={4} />
+                    GB DDR4
+                  </td>
                 </tr>
                 <tr className="hover:bg-gray-100">
-                  <td className="px-6 py-4 text-black font-medium">Pamięć masowa</td>
+                  <td className="px-6 py-4 text-black font-medium">
+                    Pamięć masowa
+                  </td>
                   <td className="px-6 py-4 text-gray-600 text-center">Brak</td>
-                  <td className="px-6 py-4 text-purple-400 text-center"><CounterAnimation end={128} />GB eMMC</td>
+                  <td className="px-6 py-4 text-blue-400 text-center">
+                    <CounterAnimation end={128} />
+                    GB eMMC
+                  </td>
                 </tr>
                 <tr className="hover:bg-gray-100">
                   <td className="px-6 py-4 text-black font-medium">Obudowa</td>
                   <td className="px-6 py-4 text-gray-600 text-center">Brak</td>
-                  <td className="px-6 py-4 text-purple-400 text-center">W zestawie</td>
+                  <td className="px-6 py-4 text-blue-400 text-center">
+                    W zestawie
+                  </td>
                 </tr>
                 <tr className="hover:bg-gray-100">
                   <td className="px-6 py-4 text-black font-medium">Zasilacz</td>
                   <td className="px-6 py-4 text-gray-600 text-center">Brak</td>
-                  <td className="px-6 py-4 text-purple-400 text-center">W zestawie</td>
+                  <td className="px-6 py-4 text-blue-400 text-center">
+                    W zestawie
+                  </td>
                 </tr>
                 <tr className="hover:bg-gray-100">
-                  <td className="px-6 py-4 text-black font-medium">Kabel HDMI</td>
+                  <td className="px-6 py-4 text-black font-medium">
+                    Kabel HDMI
+                  </td>
                   <td className="px-6 py-4 text-gray-600 text-center">Brak</td>
-                  <td className="px-6 py-4 text-purple-400 text-center">W zestawie</td>
+                  <td className="px-6 py-4 text-blue-400 text-center">
+                    W zestawie
+                  </td>
                 </tr>
                 <tr className="hover:bg-gray-100">
-                  <td className="px-6 py-4 text-black font-medium">Wyświetlacz LED</td>
+                  <td className="px-6 py-4 text-black font-medium">
+                    Wyświetlacz LED
+                  </td>
                   <td className="px-6 py-4 text-gray-600 text-center">Brak</td>
-                  <td className="px-6 py-4 text-purple-400 text-center">Tak</td>
+                  <td className="px-6 py-4 text-blue-400 text-center">Tak</td>
                 </tr>
                 <tr className="hover:bg-gray-100">
                   <td className="px-6 py-4 text-black font-medium">Android</td>
                   <td className="px-6 py-4 text-gray-600 text-center">Brak</td>
-                  <td className="px-6 py-4 text-purple-400 text-center">Tak, różne dystrybucje</td>
+                  <td className="px-6 py-4 text-blue-400 text-center">
+                    Tak, różne dystrybucje
+                  </td>
                 </tr>
                 <tr className="bg-blue-50 font-bold">
                   <td className="px-6 py-4 text-black">Cena kompletu</td>
-                  <td className="px-6 py-4 text-black text-center text-xl">~<CounterAnimation end={410} />zł</td>
-                  <td className="px-6 py-4 text-purple-400 text-center text-xl"><CounterAnimation end={199} />zł</td>
+                  <td className="px-6 py-4 text-black text-center text-xl">
+                    ~<CounterAnimation end={410} />
+                    zł
+                  </td>
+                  <td className="px-6 py-4 text-blue-400 text-center text-xl">
+                    <CounterAnimation end={199} />
+                    zł
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -172,7 +301,11 @@ export default function Home() {
           <div className="text-center">
             <div className="inline-block bg-blue-50 px-8 py-4 rounded-2xl border border-blue-200">
               <p className="text-2xl font-bold text-black">
-                Oszczędź ponad <span className="text-purple-400"><CounterAnimation end={50} />%</span> z Linux Box!
+                Oszczędź ponad{" "}
+                <span className="text-blue-400">
+                  <CounterAnimation end={50} />%
+                </span>{" "}
+                z Linux Box!
               </p>
             </div>
           </div>
@@ -194,16 +327,21 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-300 transition-all duration-300 text-center">
               <div className="text-6xl mb-6">🌐</div>
-              <h3 className="text-2xl font-bold text-black mb-4">Wolny Dostęp</h3>
+              <h3 className="text-2xl font-bold text-black mb-4">
+                Wolny Dostęp
+              </h3>
               <p className="text-gray-600">
                 Pobierz i zainstaluj system na USB, karcie SD lub pamięci eMMC.
-                Linux Box ma włączony multiboot - wystarczy podłączyć nośnik z systemem.
+                Linux Box ma włączony multiboot - wystarczy podłączyć nośnik z
+                systemem.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-300 transition-all duration-300 text-center">
               <div className="text-6xl mb-6">🐧</div>
-              <h3 className="text-2xl font-bold text-black mb-4">Ubuntu 25.04</h3>
+              <h3 className="text-2xl font-bold text-black mb-4">
+                Ubuntu 25.04
+              </h3>
               <p className="text-gray-600">
                 Gotowy do użycia system z preinstalowanym oprogramowaniem. W
                 pełni funkcjonalny i zoptymalizowany dla Linux Box.
@@ -212,7 +350,9 @@ export default function Home() {
 
             <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-300 transition-all duration-300 text-center">
               <div className="text-6xl mb-6">⚙️</div>
-              <h3 className="text-2xl font-bold text-black mb-4">Pełna Kontrola</h3>
+              <h3 className="text-2xl font-bold text-black mb-4">
+                Pełna Kontrola
+              </h3>
               <p className="text-gray-600">
                 Modyfikuj, instaluj i dostosowuj do swoich potrzeb. Dostęp do
                 konta root-a i pełna swoboda w instalacji programów i
@@ -226,7 +366,7 @@ export default function Home() {
               href="https://drive.google.com/file/d/1QR6u-WGWogbvLDciO9ELbaHB35zI3ucf/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative px-10 py-6 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-purple-500/50 transform hover:scale-105 transition-all duration-300"
+              className="group relative px-10 py-6 bg-gradient-to-r from-blue-600 to-blue-600 text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all duration-300"
             >
               <div className="flex flex-col items-center gap-2">
                 <span className="text-2xl">⬇️</span>
@@ -261,11 +401,14 @@ export default function Home() {
           <div className="text-center">
             <div className="mb-8 bg-gray-50 p-6 rounded-2xl border border-gray-200">
               <p className="text-xs text-gray-500 leading-relaxed">
-                <span className="font-semibold text-gray-600">SEO Keywords:</span>{" "}
-                Raspberry Pi, alternatywa dla Raspberry Pi, Home Assistant, serwer domowy,
-                Ubuntu, Docker, Amlogic S905X3, Mini PC, CoreELEC, Batocera, Domoticz,
-                SUPLA, OpenHAB, Pi-hole, Nextcloud, self-hosting, tani serwer,
-                kompaktowy serwer, serwer multimedialny, konsola retro.
+                <span className="font-semibold text-gray-600">
+                  SEO Keywords:
+                </span>{" "}
+                Raspberry Pi, alternatywa dla Raspberry Pi, Home Assistant,
+                serwer domowy, Ubuntu, Docker, Amlogic S905X3, Mini PC,
+                CoreELEC, Batocera, Domoticz, SUPLA, OpenHAB, Pi-hole,
+                Nextcloud, self-hosting, tani serwer, kompaktowy serwer, serwer
+                multimedialny, konsola retro.
               </p>
             </div>
 
