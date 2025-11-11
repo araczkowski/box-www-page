@@ -73,10 +73,8 @@ export default function Home() {
             ].map((spec, index) => (
               <div
                 key={index}
-                className="group relative bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="group relative bg-white p-6 rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-blue-600/0 group-hover:from-blue-600/10 group-hover:to-blue-600/10 rounded-2xl transition-all duration-300"></div>
-
                 <div className="relative z-10">
                   <div className="text-5xl mb-4">{spec.icon}</div>
                   <h3 className="text-xl font-bold text-black mb-2">
@@ -149,10 +147,8 @@ export default function Home() {
             ].map((feature, index) => (
               <div
                 key={index}
-                className="group relative bg-slate-800/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-all duration-300 hover:transform hover:scale-105"
+                className="group relative bg-white p-6 rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/0 to-blue-600/0 group-hover:from-blue-600/10 group-hover:to-blue-600/10 rounded-2xl transition-all duration-300"></div>
-
                 <div className="relative z-10">
                   <div className="text-5xl mb-4">{feature.icon}</div>
                   <h3 className="text-xl font-bold text-black mb-2">
@@ -305,7 +301,7 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-300 transition-all duration-300 text-center">
+            <div className="bg-white p-8 rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 text-center">
               <div className="text-6xl mb-6">🌐</div>
               <h3 className="text-2xl font-bold text-black mb-4">
                 Wolny Dostęp
@@ -317,7 +313,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-300 transition-all duration-300 text-center">
+            <div className="bg-white p-8 rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 text-center">
               <div className="text-6xl mb-6">🐧</div>
               <h3 className="text-2xl font-bold text-black mb-4">
                 Ubuntu 25.04
@@ -328,7 +324,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-300 transition-all duration-300 text-center">
+            <div className="bg-white p-8 rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 text-center">
               <div className="text-6xl mb-6">⚙️</div>
               <h3 className="text-2xl font-bold text-black mb-4">
                 Pełna Kontrola
