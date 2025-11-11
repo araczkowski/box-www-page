@@ -29,6 +29,18 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
+                icon: "🚀",
+                title: "Wydajność",
+                description:
+                  "Procesor Amlogic S905X3 i 4 GB RAM zapewniają płynną pracę.",
+              },
+              {
+                icon: "💾",
+                title: "Pamięć/Dysk",
+                description:
+                  "128 GB eMMC + rozszerzalność przez microSD i/lub USB.",
+              },
+              {
                 icon: "📶",
                 title: "WiFi 5GHz",
                 description: "Szybkie bezprzewodowe połączenie",
@@ -54,17 +66,7 @@ export default function Home() {
                 description: "Pokazuje czas, temperaturę i IP",
               },
               {
-                icon: "👾",
-                title: "Obsługa Androida",
-                description: "Różne dystrybucje Android TV/AOSP",
-              },
-              {
-                icon: "🐳",
-                title: "Docker & Home Assistant",
-                description: "Automatyka domowa w kontenerach",
-              },
-              {
-                icon: "🔌",
+                icon: "💲",
                 title: "Niskie zużycie energii",
                 description: "Około 2 kWh miesięcznie",
               },
@@ -103,27 +105,10 @@ export default function Home() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {[
               {
-                icon: "🚀",
-                title: "Wydajność",
-                description:
-                  "Procesor Amlogic S905X3 i 4 GB RAM zapewniają płynną pracę.",
-              },
-              {
-                icon: "💾",
-                title: "Pamięć/Dysk",
-                description:
-                  "128 GB eMMC + rozszerzalność przez microSD i/lub USB.",
-              },
-              {
                 icon: "🖥️",
                 title: "System",
                 description:
                   "Oprócz Ubuntu, możesz uruchomić Debian, Armbian i inne systemy.",
-              },
-              {
-                icon: "🖵",
-                title: "Wyświetlacz",
-                description: "Pokazuje czas, temperaturę, IP i więcej.",
               },
               {
                 icon: "🐳",
@@ -144,11 +129,6 @@ export default function Home() {
                 icon: "🎬",
                 title: "CoreElec",
                 description: "Oglądaj filmy i seriale z Kodi.",
-              },
-              {
-                icon: "🔌",
-                title: "Niskie zużycie energii",
-                description: "Około 2 kWh miesięcznie, czyli mniej niż 2 zł.",
               },
               {
                 icon: "👨‍💻",
