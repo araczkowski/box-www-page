@@ -15,7 +15,7 @@ export default function HeaderSimple() {
               Linux Box
             </span>
             <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-500">
-              Twój domowy mini serwer.
+              Twój mini serwer.
             </span>
           </h1>
 
