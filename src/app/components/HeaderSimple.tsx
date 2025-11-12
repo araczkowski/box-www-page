@@ -49,8 +49,8 @@ export default function HeaderSimple() {
               <Image
                 src="/ais_gate_dev3_1.jpg"
                 alt="Linux Box"
-                width={600}
-                height={600}
+                width={420}
+                height={420}
                 className="w-full h-auto"
                 priority
               />
