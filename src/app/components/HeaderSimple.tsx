@@ -15,13 +15,14 @@ export default function HeaderSimple() {
               Linux Box
             </span>
             <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-gray-500">
-              Twój domowy serwer.
+              Twój domowy mini serwer.
             </span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl sm:text-2xl md:text-3xl mb-8 opacity-0 animate-[fadeIn_0.8s_ease-out_0.4s_forwards] text-gray-700">
-            Za <CounterAnimation end={199} />zł
+            Za <CounterAnimation end={199} />
+            zł
           </p>
 
           {/* CTA Buttons */}
@@ -46,9 +47,9 @@ export default function HeaderSimple() {
           <div className="mb-16 opacity-0 animate-[fadeIn_1s_ease-out_0.8s_forwards]">
             <div className="relative mx-auto" style={{ maxWidth: "800px" }}>
               <Image
-                src="/box_1_transparent.png"
+                src="/ais_gate_dev3_1.jpg"
                 alt="Linux Box"
-                width={800}
+                width={600}
                 height={600}
                 className="w-full h-auto"
                 priority
@@ -75,9 +76,7 @@ export default function HeaderSimple() {
                     spec.value
                   )}
                 </div>
-                <div className="text-sm text-gray-600">
-                  {spec.label}
-                </div>
+                <div className="text-sm text-gray-600">{spec.label}</div>
               </div>
             ))}
           </div>
