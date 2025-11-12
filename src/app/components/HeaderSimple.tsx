@@ -51,7 +51,7 @@ export default function HeaderSimple() {
                 alt="Linux Box"
                 width={420}
                 height={420}
-                className="w-full h-auto"
+                className="mx-auto"
                 priority
               />
             </div>
