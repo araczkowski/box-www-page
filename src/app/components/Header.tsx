@@ -57,7 +57,7 @@ export default function Header() {
               <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl blur-2xl opacity-50 animate-pulse"></div>
               <div className="relative bg-slate-800/50 backdrop-blur-sm p-8 rounded-3xl border border-purple-500/30">
                 <Image
-                  src="/ais_gate_dev3_1.webp"
+                  src="/ais-dev3.jpeg"
                   alt="Linux Box - kompaktowy serwer domowy"
                   width={500}
                   height={375}
@@ -82,9 +82,7 @@ export default function Header() {
               className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               <span className="flex flex-col items-center gap-1">
-                <span className="flex items-center gap-2">
-                  🛒 Kup teraz
-                </span>
+                <span className="flex items-center gap-2">🛒 Kup teraz</span>
                 <span className="text-sm font-normal">Tylko 199 zł</span>
               </span>
             </a>
@@ -93,9 +91,7 @@ export default function Header() {
               className="group relative px-8 py-4 bg-slate-800/50 backdrop-blur-sm text-white rounded-xl font-bold text-lg border-2 border-purple-500/50 hover:border-purple-400 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >
               <span className="flex flex-col items-center gap-1">
-                <span className="flex items-center gap-2">
-                  ℹ️ Poznaj
-                </span>
+                <span className="flex items-center gap-2">ℹ️ Poznaj</span>
                 <span className="text-sm font-normal">możliwości</span>
               </span>
             </a>
