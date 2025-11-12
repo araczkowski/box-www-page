@@ -73,7 +73,7 @@ export default function StickyNav() {
               href="https://allegro.pl/uzytkownik/AI-Speaker"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-2 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-lg font-bold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
+              className="px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-bold hover:shadow-lg transform hover:scale-105 transition-all duration-300"
             >
               🛒 Kup teraz
             </a>
@@ -149,7 +149,7 @@ export default function StickyNav() {
               href="https://allegro.pl/uzytkownik/AI-Speaker"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-lg font-bold text-center hover:shadow-lg transition-all duration-300"
+              className="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg font-bold text-center hover:shadow-lg transition-all duration-300"
             >
               🛒 Kup teraz
             </a>
