@@ -61,7 +61,7 @@ export default function Home() {
                 description: "Wyjście wideo 4K",
               },
               {
-                icon: "🖵",
+                icon: "📟",
                 title: "Wyświetlacz LED",
                 description: "Pokazuje czas, temperaturę i IP",
               },
