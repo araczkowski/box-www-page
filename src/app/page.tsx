@@ -5,6 +5,7 @@ import StickyNav from "./components/StickyNav";
 import FloatingCTA from "./components/FloatingCTA";
 import CounterAnimation from "./components/CounterAnimation";
 import MobileTopBar from "./components/MobileTopBar";
+import TechSpecs from "./components/TechSpecs";
 
 export default function Home() {
   return (
@@ -14,79 +15,9 @@ export default function Home() {
       <FloatingCTA />
       <HeaderSimple />
 
-      {/* Tech Specs */}
-      <section id="tech-specs" className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Specyfikacja Techniczna
-            </h2>
-            <p className="text-xl text-gray-600">
-              Wszystko, czego potrzebujesz w jednym urządzeniu
-            </p>
-          </div>
+      <TechSpecs />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: "🚀",
-                title: "Wydajność",
-                description:
-                  "Procesor Amlogic S905X3 i 4 GB RAM zapewniają płynną pracę.",
-              },
-              {
-                icon: "💾",
-                title: "Pamięć/Dysk",
-                description:
-                  "128 GB eMMC + rozszerzalność przez microSD i/lub USB.",
-              },
-              {
-                icon: "📶",
-                title: "WiFi 5GHz",
-                description: "Szybkie bezprzewodowe połączenie",
-              },
-              {
-                icon: "🔌",
-                title: "Ethernet 1GB",
-                description: "Stabilne połączenie przewodowe",
-              },
-              {
-                icon: "⚡",
-                title: "USB 3.0",
-                description: "Szybki transfer danych",
-              },
-              {
-                icon: "🖥️",
-                title: "HDMI 2.0A",
-                description: "Wyjście wideo 4K",
-              },
-              {
-                icon: "📟",
-                title: "Wyświetlacz LED",
-                description: "Pokazuje czas, temperaturę i IP",
-              },
-              {
-                icon: "💲",
-                title: "Niskie zużycie energii",
-                description: "Około 2 kWh miesięcznie",
-              },
-            ].map((spec, index) => (
-              <div
-                key={index}
-                className="group relative bg-white p-6 rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105"
-              >
-                <div className="relative z-10">
-                  <div className="text-5xl mb-4">{spec.icon}</div>
-                  <h3 className="text-xl font-bold text-black mb-2">
-                    {spec.title}
-                  </h3>
-                  <p className="text-gray-600">{spec.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Features */}
 
       {/* Features */}
       <section id="features" className="py-20 bg-gray-50">
