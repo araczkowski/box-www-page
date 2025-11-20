@@ -6,6 +6,7 @@ import FloatingCTA from "./components/FloatingCTA";
 import CounterAnimation from "./components/CounterAnimation";
 import MobileTopBar from "./components/MobileTopBar";
 import TechSpecs from "./components/TechSpecs";
+import Features from "./components/Features";
 
 export default function Home() {
   return (
@@ -20,79 +21,7 @@ export default function Home() {
       {/* Features */}
 
       {/* Features */}
-      <section id="features" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Dlaczego Linux Box?
-            </h2>
-            <p className="text-xl text-gray-600">
-              Niewiarygodne możliwości w kompaktowej obudowie
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-            {[
-              {
-                icon: "🖥️",
-                title: "System",
-                description:
-                  "Oprócz Ubuntu, możesz uruchomić Debian, Armbian i inne systemy.",
-              },
-              {
-                icon: "🐳",
-                title: "Docker",
-                description: "Uruchamiaj aplikacje w kontenerach.",
-              },
-              {
-                icon: "🎮",
-                title: "Batocera.linux",
-                description: "Zmień swój Linux Box w konsolę do gier retro.",
-              },
-              {
-                icon: "🏠",
-                title: "Automatyka domowa",
-                description: "Home Assistant, SUPLA, Domoticz, OpenHAB i inne.",
-              },
-              {
-                icon: "🎬",
-                title: "CoreElec",
-                description: "Oglądaj filmy i seriale z Kodi.",
-              },
-              {
-                icon: "👨‍💻",
-                title: "Dla deweloperów",
-                description: "Kompaktowy dev-server do Twoich projektów.",
-              },
-              {
-                icon: "📱",
-                title: "System Android",
-                description:
-                  "Różne obrazy oparte na Android TV lub Android AOSP.",
-              },
-              {
-                icon: "✨",
-                title: "I wiele więcej...",
-                description: "Zobacz więcej w dokumentacji.",
-              },
-            ].map((feature, index) => (
-              <div
-                key={index}
-                className="group relative bg-white p-6 rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105"
-              >
-                <div className="relative z-10">
-                  <div className="text-5xl mb-4">{feature.icon}</div>
-                  <h3 className="text-xl font-bold text-black mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 text-sm">{feature.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
+      <Features />
       {/* Comparison */}
       <section id="comparison" className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

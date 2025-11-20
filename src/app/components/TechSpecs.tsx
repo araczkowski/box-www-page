@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cpu, HardDrive, Wifi, Zap, Monitor, Layout, Server, Database } from "lucide-react";
+import { Cpu, HardDrive, Wifi, Zap, Monitor, Server, Database } from "lucide-react";
 
 interface SpecItem {
     icon: React.ReactNode;
