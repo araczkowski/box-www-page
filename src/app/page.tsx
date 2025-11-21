@@ -3,10 +3,10 @@
 import HeaderSimple from "./components/HeaderSimple";
 import StickyNav from "./components/StickyNav";
 import FloatingCTA from "./components/FloatingCTA";
-import CounterAnimation from "./components/CounterAnimation";
 import MobileTopBar from "./components/MobileTopBar";
 import TechSpecs from "./components/TechSpecs";
 import Features from "./components/Features";
+import Comparison from "./components/Comparison";
 import OpenSource from "./components/OpenSource";
 
 export default function Home() {
@@ -24,130 +24,7 @@ export default function Home() {
       {/* Features */}
       <Features />
       {/* Comparison */}
-      <section id="comparison" className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Porównanie z Raspberry Pi
-            </h2>
-            <p className="text-xl text-gray-600">
-              Zobacz, dlaczego Linux Box to lepsza opcja
-            </p>
-          </div>
-
-          <div className="overflow-x-auto mb-12">
-            <table className="min-w-full bg-gray-50 rounded-2xl overflow-hidden border border-gray-200">
-              <thead>
-                <tr className="bg-white border-b border-gray-200">
-                  <th className="px-6 py-4 text-left text-black font-bold">
-                    Cecha
-                  </th>
-                  <th className="px-6 py-4 text-center text-black font-bold">
-                    Raspberry Pi 4
-                  </th>
-                  <th className="px-6 py-4 text-center text-black font-bold">
-                    Linux Box
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                <tr className="hover:bg-gray-100">
-                  <td className="px-6 py-4 text-black font-medium">Procesor</td>
-                  <td className="px-6 py-4 text-gray-600 text-center">
-                    Broadcom BCM2711
-                  </td>
-                  <td className="px-6 py-4 text-blue-400 text-center">
-                    Amlogic S905X3
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-100">
-                  <td className="px-6 py-4 text-black font-medium">
-                    Pamięć RAM
-                  </td>
-                  <td className="px-6 py-4 text-gray-600 text-center">
-                    <CounterAnimation end={4} />
-                    GB LPDDR4
-                  </td>
-                  <td className="px-6 py-4 text-blue-400 text-center">
-                    <CounterAnimation end={4} />
-                    GB DDR4
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-100">
-                  <td className="px-6 py-4 text-black font-medium">
-                    Pamięć masowa
-                  </td>
-                  <td className="px-6 py-4 text-gray-600 text-center">Brak</td>
-                  <td className="px-6 py-4 text-blue-400 text-center">
-                    <CounterAnimation end={128} />
-                    GB eMMC
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-100">
-                  <td className="px-6 py-4 text-black font-medium">Obudowa</td>
-                  <td className="px-6 py-4 text-gray-600 text-center">Brak</td>
-                  <td className="px-6 py-4 text-blue-400 text-center">
-                    W zestawie
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-100">
-                  <td className="px-6 py-4 text-black font-medium">Zasilacz</td>
-                  <td className="px-6 py-4 text-gray-600 text-center">Brak</td>
-                  <td className="px-6 py-4 text-blue-400 text-center">
-                    W zestawie
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-100">
-                  <td className="px-6 py-4 text-black font-medium">
-                    Kabel HDMI
-                  </td>
-                  <td className="px-6 py-4 text-gray-600 text-center">Brak</td>
-                  <td className="px-6 py-4 text-blue-400 text-center">
-                    W zestawie
-                  </td>
-                </tr>
-                <tr className="hover:bg-gray-100">
-                  <td className="px-6 py-4 text-black font-medium">
-                    Wyświetlacz LED
-                  </td>
-                  <td className="px-6 py-4 text-gray-600 text-center">Brak</td>
-                  <td className="px-6 py-4 text-blue-400 text-center">Tak</td>
-                </tr>
-                <tr className="hover:bg-gray-100">
-                  <td className="px-6 py-4 text-black font-medium">Android</td>
-                  <td className="px-6 py-4 text-gray-600 text-center">Brak</td>
-                  <td className="px-6 py-4 text-blue-400 text-center">
-                    Tak, różne dystrybucje
-                  </td>
-                </tr>
-                <tr className="bg-blue-50 font-bold">
-                  <td className="px-6 py-4 text-black">Cena kompletu</td>
-                  <td className="px-6 py-4 text-black text-center text-xl">
-                    ~<CounterAnimation end={410} />
-                    zł
-                  </td>
-                  <td className="px-6 py-4 text-blue-400 text-center text-xl">
-                    <CounterAnimation end={199} />
-                    zł
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="text-center">
-            <div className="inline-block bg-blue-50 px-8 py-4 rounded-2xl border border-blue-200">
-              <p className="text-2xl font-bold text-black">
-                Oszczędź ponad{" "}
-                <span className="text-blue-400">
-                  <CounterAnimation end={50} />%
-                </span>{" "}
-                z Linux Box!
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Comparison />
 
       {/* Open Source */}
       <OpenSource />
