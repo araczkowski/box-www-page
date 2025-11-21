@@ -7,6 +7,7 @@ import CounterAnimation from "./components/CounterAnimation";
 import MobileTopBar from "./components/MobileTopBar";
 import TechSpecs from "./components/TechSpecs";
 import Features from "./components/Features";
+import OpenSource from "./components/OpenSource";
 
 export default function Home() {
   return (
@@ -149,87 +150,7 @@ export default function Home() {
       </section>
 
       {/* Open Source */}
-      <section id="opensource" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Open Source
-            </h2>
-            <p className="text-xl text-blue-600 font-semibold">
-              System na Linux Box jest w pełni otwarty!
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-white p-8 rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 text-center">
-              <div className="text-6xl mb-6">🌐</div>
-              <h3 className="text-2xl font-bold text-black mb-4">
-                Wolny Dostęp
-              </h3>
-              <p className="text-gray-600">
-                Pobierz i zainstaluj system na USB, karcie SD lub pamięci eMMC.
-                Linux Box ma włączony multiboot - wystarczy podłączyć nośnik z
-                systemem.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 text-center">
-              <div className="text-6xl mb-6">🐧</div>
-              <h3 className="text-2xl font-bold text-black mb-4">
-                Ubuntu 25.04
-              </h3>
-              <p className="text-gray-600">
-                Gotowy do użycia system z preinstalowanym oprogramowaniem. W
-                pełni funkcjonalny i zoptymalizowany dla Linux Box.
-              </p>
-            </div>
-
-            <div className="bg-white p-8 rounded-2xl border border-gray-200 transition-all duration-300 hover:shadow-lg hover:transform hover:scale-105 text-center">
-              <div className="text-6xl mb-6">⚙️</div>
-              <h3 className="text-2xl font-bold text-black mb-4">
-                Pełna Kontrola
-              </h3>
-              <p className="text-gray-600">
-                Modyfikuj, instaluj i dostosowuj do swoich potrzeb. Dostęp do
-                konta root-a i pełna swoboda w instalacji programów i
-                konfiguracji systemu.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex justify-center mb-8">
-            <a
-              href="https://drive.google.com/file/d/1QR6u-WGWogbvLDciO9ELbaHB35zI3ucf/view?usp=drive_link"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative px-10 py-6 bg-gradient-to-r from-blue-600 to-blue-600 text-white rounded-2xl font-bold text-lg shadow-2xl hover:shadow-blue-500/50 transform hover:scale-105 transition-all duration-300"
-            >
-              <div className="flex flex-col items-center gap-2">
-                <span className="text-2xl">⬇️</span>
-                <span className="text-xl">POBIERZ OBRAZ SYSTEMU</span>
-                <span className="text-sm font-normal flex items-center gap-2">
-                  <span>🐧</span> Ubuntu 25.04
-                </span>
-              </div>
-            </a>
-          </div>
-
-          <div className="text-center">
-            <p className="text-gray-600">
-              Instrukcje instalacji znajdziesz w{" "}
-              <a
-                href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 hover:text-blue-700 transition-colors underline"
-              >
-                dokumentacji
-              </a>
-              .
-            </p>
-          </div>
-        </div>
-      </section>
+      <OpenSource />
 
       {/* Footer */}
       <footer className="bg-white border-t border-gray-200">
