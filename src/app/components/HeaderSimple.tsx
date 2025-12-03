@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import CounterAnimation from "./CounterAnimation";
+
 
 export default function HeaderSimple() {
   return (
@@ -21,8 +21,7 @@ export default function HeaderSimple() {
 
           {/* Subtitle */}
           <p className="text-xl sm:text-2xl md:text-3xl mb-8 opacity-0 animate-[fadeIn_0.8s_ease-out_0.4s_forwards] text-gray-700">
-            Za <CounterAnimation end={199} />
-            zł
+            Za 199 zł
           </p>
 
           {/* CTA Buttons */}
@@ -67,14 +66,8 @@ export default function HeaderSimple() {
             ].map((spec, index) => (
               <div key={index} className="text-center">
                 <div className="text-3xl sm:text-4xl font-semibold mb-1 text-black">
-                  {typeof spec.value === "number" ? (
-                    <>
-                      <CounterAnimation end={spec.value} />
-                      {spec.suffix}
-                    </>
-                  ) : (
-                    spec.value
-                  )}
+                  {spec.value}
+                  {spec.suffix}
                 </div>
                 <div className="text-sm text-gray-600">{spec.label}</div>
               </div>
