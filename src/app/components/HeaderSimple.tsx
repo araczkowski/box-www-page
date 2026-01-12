@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 
-
 export default function HeaderSimple() {
   return (
     <header className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white">
@@ -46,7 +45,7 @@ export default function HeaderSimple() {
           <div className="mb-16 opacity-0 animate-[fadeIn_1s_ease-out_0.8s_forwards]">
             <div className="relative mx-auto" style={{ maxWidth: "800px" }}>
               <Image
-                src="/ais_gate_dev3_1.jpg"
+                src="/ais_gate_3_main.png"
                 alt="Linux Box"
                 width={420}
                 height={420}
