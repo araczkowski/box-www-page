@@ -56,7 +56,7 @@ export default function Home() {
             </div>
 
             <p className="text-gray-600 mb-6">
-              &copy; 2025 Linux Box. Wszystkie prawa zastrzeżone.
+              &copy; 2025 - 2026 Linux Box. Wszystkie prawa zastrzeżone.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 text-sm">
