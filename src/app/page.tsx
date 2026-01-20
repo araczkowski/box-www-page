@@ -36,7 +36,7 @@ export default function Home() {
       <footer className="relative bg-gradient-to-b from-gray-50 via-white to-white border-t border-gray-100 overflow-hidden">
         {/* Decorative gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-transparent pointer-events-none" />
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16 relative">
           <div className="max-w-6xl mx-auto">
             {/* Main Footer Content */}
@@ -115,7 +115,7 @@ export default function Home() {
                 </p>
                 <div className="flex items-center gap-2 text-xs text-gray-500">
                   <span>Made with</span>
-                  <span className="text-red-500">♥</span>
+                  <span className="text-red-500 text-xl mx-1">♥</span>
                   <span>for developers</span>
                 </div>
               </div>
