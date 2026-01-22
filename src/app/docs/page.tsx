@@ -169,13 +169,13 @@ export default function DocsPage() {
                 whileHover={{ y: -8 }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-emerald-200/30 to-green-200/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                <div className="relative h-full p-8 rounded-3xl bg-white border border-gray-200/60 shadow-lg group-hover:border-emerald-200 group-hover:shadow-xl transition-all duration-500 overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-200/30 to-red-200/30 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                <div className="relative h-full p-8 rounded-3xl bg-white border border-gray-200/60 shadow-lg group-hover:border-orange-200 group-hover:shadow-xl transition-all duration-500 overflow-hidden">
                   {/* Decorative corner */}
-                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-emerald-50 to-transparent rounded-bl-full" />
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-50 to-transparent rounded-bl-full" />
 
                   <div className="relative">
-                    <div className="inline-flex p-3 rounded-2xl bg-emerald-50 text-emerald-600 mb-6 group-hover:scale-110 transition-transform duration-300">
+                    <div className="inline-flex p-3 rounded-2xl bg-orange-50 text-orange-600 mb-6 group-hover:scale-110 transition-transform duration-300">
                       <Download className="w-8 h-8" />
                     </div>
 
@@ -189,7 +189,7 @@ export default function DocsPage() {
 
                     <Link
                       href="https://docs.google.com/document/export?format=pdf&id=1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I"
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-600 to-green-600 text-white font-semibold rounded-xl hover:from-emerald-700 hover:to-green-700 transition-all duration-300 group/btn shadow-lg shadow-emerald-500/25"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-xl hover:from-orange-600 hover:to-orange-700 transition-all duration-300 group/btn shadow-lg shadow-orange-500/25"
                     >
                       <span>Pobierz PDF</span>
                       <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -214,8 +214,8 @@ export default function DocsPage() {
               >
                 <Sparkles className="w-5 h-5 text-amber-500" />
                 <span className="text-sm text-amber-700 font-medium">
-                  Dokumentacja w ciągłej rozbudowie — wkrótce więcej treści i
-                  przykładów!
+                  Dokumentacja w ciągłej rozbudowie — wkrótce jeszcze więcej
+                  treści i przykładów!
                 </span>
               </motion.div>
             </motion.div>
