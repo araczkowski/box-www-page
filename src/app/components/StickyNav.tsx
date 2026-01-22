@@ -43,6 +43,12 @@ export default function StickyNav() {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-6">
+            <a
+              href="/docs"
+              className="transition-colors font-medium text-gray-600 hover:text-black"
+            >
+              Dokumentacja
+            </a>
             <button
               onClick={() => scrollToSection("tech-specs")}
               className="transition-colors font-medium text-gray-600 hover:text-black"
@@ -109,6 +115,12 @@ export default function StickyNav() {
           className="hidden md:hidden pb-4 border-gray-200 border-t"
         >
           <div className="flex flex-col gap-3 mt-4">
+            <a
+              href="/docs"
+              className="text-left py-2 px-4 rounded-lg transition-colors text-gray-600 hover:bg-gray-100"
+            >
+              Dokumentacja
+            </a>
             <button
               onClick={() => {
                 scrollToSection("tech-specs");

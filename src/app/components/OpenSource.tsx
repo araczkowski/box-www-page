@@ -72,8 +72,7 @@ export default function OpenSource() {
           <p className="text-slate-500 text-sm">
             Instrukcje instalacji znajdziesz w{" "}
             <a
-              href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
-              target="_blank"
+              href="/docs"
               rel="noopener noreferrer"
               className="text-slate-900 font-medium hover:underline inline-flex items-center gap-1"
             >
@@ -87,7 +86,17 @@ export default function OpenSource() {
   );
 }
 
-function FeatureCard({ icon, title, description, delay }: { icon: React.ReactNode, title: string, description: string, delay: number }) {
+function FeatureCard({
+  icon,
+  title,
+  description,
+  delay,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+  delay: number;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

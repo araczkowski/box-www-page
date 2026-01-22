@@ -3,30 +3,151 @@
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { Home, Cloud, Shield, Container, Code, Database, Activity, Gauge, Lock, TrendingUp, HardDrive, Eye, BarChart3, Workflow, Sparkles } from "lucide-react";
+import {
+  Home,
+  Cloud,
+  Shield,
+  Container,
+  Code,
+  Database,
+  Activity,
+  Gauge,
+  Lock,
+  TrendingUp,
+  HardDrive,
+  Eye,
+  BarChart3,
+  Workflow,
+  Sparkles,
+} from "lucide-react";
 
 const applications = [
-  { icon: Home, title: "Home Assistant", description: "Automatyka domu", url: "https://www.home-assistant.io/" },
-  { icon: Cloud, title: "Nextcloud", description: "Prywatna chmura", url: "https://nextcloud.com/" },
-  { icon: Shield, title: "Pi-hole", description: "Blokowanie reklam", url: "https://pi-hole.net/" },
-  { icon: Container, title: "Portainer", description: "Zarządzanie Dockerem", url: "https://www.portainer.io/" },
-  { icon: Code, title: "VSCode", description: "Narzędzia dla programistów", url: "https://code.visualstudio.com/" },
-  { icon: Container, title: "Docker", description: "Zarządzanie kontenerami", url: "https://www.docker.com/" },
-  { icon: Activity, title: "EMQX", description: "MQTT broker", url: "https://www.emqx.io/" },
-  { icon: Activity, title: "Zigbee2mqtt", description: "Zarządzanie urządzeniami Zigbee", url: "https://www.zigbee2mqtt.io/" },
-  { icon: Gauge, title: "Cockpit", description: "Interfejs administracyjny", url: "https://cockpit-project.org/" },
-  { icon: BarChart3, title: "Btop", description: "Monitorowanie wydajności", url: "https://github.com/aristocratos/btop" },
-  { icon: Lock, title: "Defguard", description: "Ochrona przed atakami", url: "https://defguard.net/" },
-  { icon: TrendingUp, title: "Uptime Kuma", description: "Monitorowanie dostępności", url: "https://uptime.kuma.pet/" },
-  { icon: Database, title: "PostgreSQL", description: "Baza danych", url: "https://www.postgresql.org/" },
-  { icon: HardDrive, title: "pgAdmin", description: "Zarządzanie bazą danych", url: "https://www.pgadmin.org/" },
-  { icon: Eye, title: "Glances", description: "Monitorowanie wydajności", url: "https://nicolargo.github.io/glances/" },
-  { icon: BarChart3, title: "Grafana", description: "Wizualizacja danych", url: "https://grafana.com/" },
-  { icon: Workflow, title: "Node-RED", description: "Low-code programowanie", url: "https://nodered.org/" },
-  { icon: Home, title: "Domoticz", description: "Automatyka domowa", url: "https://www.domoticz.com/" },
-  { icon: Home, title: "OpenHAB", description: "Automatyka domowa", url: "https://www.openhab.org/" },
-  { icon: Home, title: "SUPLA", description: "Automatyka domowa", url: "https://supla.org/" },
-  { icon: Activity, title: "CoreELEC", description: "Centrum multimedialne", url: "https://coreelec.org/" },
+  {
+    icon: Home,
+    title: "Home Assistant",
+    description: "Automatyka domu",
+    url: "https://www.home-assistant.io/",
+  },
+  {
+    icon: Cloud,
+    title: "Nextcloud",
+    description: "Prywatna chmura",
+    url: "https://nextcloud.com/",
+  },
+  {
+    icon: Shield,
+    title: "Pi-hole",
+    description: "Blokowanie reklam",
+    url: "https://pi-hole.net/",
+  },
+  {
+    icon: Container,
+    title: "Portainer",
+    description: "Zarządzanie Dockerem",
+    url: "https://www.portainer.io/",
+  },
+  {
+    icon: Code,
+    title: "VSCode",
+    description: "Narzędzia dla programistów",
+    url: "https://code.visualstudio.com/",
+  },
+  {
+    icon: Container,
+    title: "Docker",
+    description: "Zarządzanie kontenerami",
+    url: "https://www.docker.com/",
+  },
+  {
+    icon: Activity,
+    title: "EMQX",
+    description: "MQTT broker",
+    url: "https://www.emqx.io/",
+  },
+  {
+    icon: Activity,
+    title: "Zigbee2mqtt",
+    description: "Zarządzanie urządzeniami Zigbee",
+    url: "https://www.zigbee2mqtt.io/",
+  },
+  {
+    icon: Gauge,
+    title: "Cockpit",
+    description: "Interfejs administracyjny",
+    url: "https://cockpit-project.org/",
+  },
+  {
+    icon: BarChart3,
+    title: "Btop",
+    description: "Monitorowanie wydajności",
+    url: "https://github.com/aristocratos/btop",
+  },
+  {
+    icon: Lock,
+    title: "Defguard",
+    description: "Ochrona przed atakami",
+    url: "https://defguard.net/",
+  },
+  {
+    icon: TrendingUp,
+    title: "Uptime Kuma",
+    description: "Monitorowanie dostępności",
+    url: "https://uptime.kuma.pet/",
+  },
+  {
+    icon: Database,
+    title: "PostgreSQL",
+    description: "Baza danych",
+    url: "https://www.postgresql.org/",
+  },
+  {
+    icon: HardDrive,
+    title: "pgAdmin",
+    description: "Zarządzanie bazą danych",
+    url: "https://www.pgadmin.org/",
+  },
+  {
+    icon: Eye,
+    title: "Glances",
+    description: "Monitorowanie wydajności",
+    url: "https://nicolargo.github.io/glances/",
+  },
+  {
+    icon: BarChart3,
+    title: "Grafana",
+    description: "Wizualizacja danych",
+    url: "https://grafana.com/",
+  },
+  {
+    icon: Workflow,
+    title: "Node-RED",
+    description: "Low-code programowanie",
+    url: "https://nodered.org/",
+  },
+  {
+    icon: Home,
+    title: "Domoticz",
+    description: "Automatyka domowa",
+    url: "https://www.domoticz.com/",
+  },
+  {
+    icon: Home,
+    title: "OpenHAB",
+    description: "Automatyka domowa",
+    url: "https://www.openhab.org/",
+  },
+  {
+    icon: Home,
+    title: "SUPLA",
+    description: "Automatyka domowa",
+    url: "https://supla.org/",
+  },
+  {
+    icon: Activity,
+    title: "CoreELEC",
+    description: "Centrum multimedialne",
+    url: "https://coreelec.org/",
+  },
 ];
 
 export default function Applications() {
@@ -81,7 +202,10 @@ export default function Applications() {
   }, []);
 
   return (
-    <section id="applications" className="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+    <section
+      id="applications"
+      className="py-20 bg-gradient-to-b from-slate-800 to-slate-900"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -111,7 +235,11 @@ export default function Applications() {
             <div className="flex justify-center">
               <motion.div
                 animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
+                }}
                 className="relative"
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 rounded-3xl blur-xl opacity-50"></div>
@@ -156,7 +284,9 @@ export default function Applications() {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-white font-bold mb-4 text-lg">Asystent domowy</h3>
+                <h3 className="text-white font-bold mb-4 text-lg">
+                  Asystent domowy
+                </h3>
                 <div className="space-y-3">
                   <div className="bg-slate-800 px-4 py-2 rounded-lg text-white text-sm">
                     Godzina: {clock}
@@ -198,9 +328,7 @@ export default function Applications() {
                   {app.title}
                 </h3>
 
-                <p className="text-gray-400 text-sm mb-3">
-                  {app.description}
-                </p>
+                <p className="text-gray-400 text-sm mb-3">{app.description}</p>
 
                 <span className="text-purple-400 text-sm font-medium group-hover:text-purple-300 transition-colors">
                   Dowiedz się więcej →
@@ -211,8 +339,7 @@ export default function Applications() {
 
           {/* More card */}
           <motion.a
-            href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
-            target="_blank"
+            href="/docs"
             rel="noopener noreferrer"
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -250,8 +377,7 @@ export default function Applications() {
           <p className="text-gray-400">
             Więcej informacji w{" "}
             <a
-              href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
-              target="_blank"
+              href="/docs"
               rel="noopener noreferrer"
               className="text-purple-400 hover:text-purple-300 transition-colors underline"
             >

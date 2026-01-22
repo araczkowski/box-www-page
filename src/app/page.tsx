@@ -17,7 +17,10 @@ export default function Home() {
       <div className="fixed inset-0 -z-10 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-transparent to-purple-50/20" />
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-200/10 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
+        <div
+          className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-200/10 rounded-full blur-3xl animate-pulse"
+          style={{ animationDelay: "1s" }}
+        />
       </div>
 
       <MobileTopBar />
@@ -47,17 +50,19 @@ export default function Home() {
                   Linux Box
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Twój kompaktowy serwer domowy. Wydajność, elastyczność i cena w jednym.
+                  Twój kompaktowy serwer domowy. Wydajność, elastyczność i cena
+                  w jednym.
                 </p>
               </div>
 
               {/* Links Section */}
               <div className="space-y-4">
-                <h4 className="font-semibold text-gray-900 mb-4">Przydatne linki</h4>
+                <h4 className="font-semibold text-gray-900 mb-4">
+                  Przydatne linki
+                </h4>
                 <div className="space-y-3">
                   <a
-                    href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
-                    target="_blank"
+                    href="/docs"
                     rel="noopener noreferrer"
                     className="group flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-all duration-200 hover:translate-x-1"
                   >
@@ -111,7 +116,8 @@ export default function Home() {
             <div className="pt-8 border-t border-gray-200">
               <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                 <p className="text-gray-600 text-sm">
-                  &copy; {new Date().getFullYear()} Linux Box. Wszystkie prawa zastrzeżone.
+                  &copy; {new Date().getFullYear()} Linux Box. Wszystkie prawa
+                  zastrzeżone.
                 </p>
                 <div className="flex items-center gap-2 text-xs text-gray-500">
                   <span>Made with</span>

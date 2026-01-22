@@ -18,10 +18,11 @@ export default function Footer() {
           <div className="mb-8 bg-slate-900/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-800">
             <p className="text-xs text-gray-500 leading-relaxed">
               <span className="font-semibold text-gray-400">SEO Keywords:</span>{" "}
-              Raspberry Pi, alternatywa dla Raspberry Pi, Home Assistant, serwer domowy,
-              Ubuntu, Docker, Amlogic S905X3, Mini PC, CoreELEC, Batocera, Domoticz,
-              SUPLA, OpenHAB, Pi-hole, Nextcloud, self-hosting, tani serwer,
-              kompaktowy serwer, serwer multimedialny, konsola retro.
+              Raspberry Pi, alternatywa dla Raspberry Pi, Home Assistant, serwer
+              domowy, Ubuntu, Docker, Amlogic S905X3, Mini PC, CoreELEC,
+              Batocera, Domoticz, SUPLA, OpenHAB, Pi-hole, Nextcloud,
+              self-hosting, tani serwer, kompaktowy serwer, serwer
+              multimedialny, konsola retro.
             </p>
           </div>
 
@@ -44,8 +45,7 @@ export default function Footer() {
           {/* Additional Links */}
           <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
             <a
-              href="https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing"
-              target="_blank"
+              href="/docs"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-purple-400 transition-colors"
             >
