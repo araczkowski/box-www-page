@@ -97,10 +97,10 @@ export default function DocsPage() {
                 { icon: Zap, label: "Szybki start", value: "5 min" },
                 {
                   icon: Shield,
-                  label: "Przetestowane działanie",
+                  label: "Sprawdzone działanie",
                   value: "100%",
                 },
-                { icon: Code, label: "Przykłady", value: "50+" },
+                { icon: Code, label: "Przykłady użycia", value: "50+" },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
