@@ -17,7 +17,7 @@ const features = [
   {
     icon: <Monitor className="w-8 h-8" />,
     title: "System",
-    description: "Ubuntu, Debian, Armbian. Wybierz to, co lubisz najbardziej.",
+    description: "Ubuntu, Debian, Armbian, Android. Wybierz to, co lubisz najbardziej.",
   },
   {
     icon: <Terminal className="w-8 h-8" />,
