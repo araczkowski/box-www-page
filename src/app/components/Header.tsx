@@ -76,17 +76,6 @@ export default function Header() {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
             <a
-              href="https://allegro.pl/uzytkownik/AI-Speaker"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-600 text-white rounded-xl font-bold text-lg shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
-            >
-              <span className="flex flex-col items-center gap-1">
-                <span className="flex items-center gap-2">🛒 Kup teraz</span>
-                <span className="text-sm font-normal">Tylko 199 zł</span>
-              </span>
-            </a>
-            <a
               href="#features"
               className="group relative px-8 py-4 bg-slate-800/50 backdrop-blur-sm text-white rounded-xl font-bold text-lg border-2 border-purple-500/50 hover:border-purple-400 shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300"
             >

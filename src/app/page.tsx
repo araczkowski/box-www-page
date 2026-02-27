@@ -2,13 +2,13 @@
 
 import HeaderSimple from "./components/HeaderSimple";
 import StickyNav from "./components/StickyNav";
-import FloatingCTA from "./components/FloatingCTA";
+
 import MobileTopBar from "./components/MobileTopBar";
 import TechSpecs from "./components/TechSpecs";
 import Features from "./components/Features";
 import Comparison from "./components/Comparison";
 import OpenSource from "./components/OpenSource";
-import { Mail, FileText, ShoppingBag, ArrowUpRight } from "lucide-react";
+import { Mail, FileText, ArrowUpRight } from "lucide-react";
 
 export default function Home() {
   return (
@@ -25,7 +25,7 @@ export default function Home() {
 
       <MobileTopBar />
       <StickyNav />
-      <FloatingCTA />
+
       <HeaderSimple />
 
       <TechSpecs />
@@ -68,16 +68,6 @@ export default function Home() {
                   >
                     <FileText className="w-4 h-4" />
                     <span>Dokumentacja</span>
-                    <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                  </a>
-                  <a
-                    href="https://allegro.pl/uzytkownik/AI-Speaker"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-all duration-200 hover:translate-x-1"
-                  >
-                    <ShoppingBag className="w-4 h-4" />
-                    <span>Sklep Allegro</span>
                     <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                   </a>
                 </div>

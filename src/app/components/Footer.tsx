@@ -51,15 +51,6 @@ export default function Footer() {
             >
               Dokumentacja
             </a>
-            <span className="text-gray-700">•</span>
-            <a
-              href="https://allegro.pl/uzytkownik/AI-Speaker"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-400 hover:text-purple-400 transition-colors"
-            >
-              Sklep Allegro
-            </a>
           </div>
         </motion.div>
       </div>

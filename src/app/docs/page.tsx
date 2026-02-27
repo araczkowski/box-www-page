@@ -14,7 +14,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import FloatingCTA from "../components/FloatingCTA";
+
 import Footer from "../components/Footer";
 
 const fadeInUp = {
@@ -43,8 +43,6 @@ export default function DocsPage() {
           style={{ animationDelay: "1s" }}
         />
       </div>
-
-      <FloatingCTA />
 
       <div className="pt-24 pb-16 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
