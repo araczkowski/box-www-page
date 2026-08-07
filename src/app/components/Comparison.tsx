@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, X, Cpu, MemoryStick, HardDrive, Box, Zap, Monitor } from "lucide-react";
+import { Cpu, MemoryStick, HardDrive, Box, Zap } from "lucide-react";
 
 const comparisonData = [
   {

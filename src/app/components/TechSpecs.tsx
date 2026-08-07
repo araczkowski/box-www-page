@@ -4,61 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { Cpu, HardDrive, Wifi, Zap, Monitor, Server, Database } from "lucide-react";
 
-interface SpecItem {
-    icon: React.ReactNode;
-    label: string;
-    value: string;
-    desc: string;
-    colSpan?: string;
-    iconColor?: string;
-}
 
-const specs: SpecItem[] = [
-    {
-        icon: <Cpu className="w-8 h-8" />,
-        label: "Procesor",
-        value: "Amlogic S922X-H",
-        desc: "Potężny 6-rdzeniowy procesor (4x ARM Cortex-A73 @ 1,8 GHz i 2x ARM Cortex-A53 @ 2,21 GHz). Zapewnia wybitną wydajność i płynną pracę systemu.",
-        colSpan: "md:col-span-2",
-        iconColor: "bg-blue-600 text-white shadow-lg shadow-blue-900/50"
-    },
-    {
-        icon: <Database className="w-6 h-6" />,
-        label: "Pamięć RAM",
-        value: "4 GB",
-        desc: "LPDDR4"
-    },
-    {
-        icon: <HardDrive className="w-6 h-6" />,
-        label: "Pamięć wbudowana",
-        value: "64 GB",
-        desc: "Szybka pamięć eMMC 5.1"
-    },
-    {
-        icon: <Wifi className="w-6 h-6" />,
-        label: "Łączność",
-        value: "Dual Band WiFi",
-        desc: "2.4GHz / 5GHz AC + Bluetooth"
-    },
-    {
-        icon: <Server className="w-6 h-6" />,
-        label: "Ethernet",
-        value: "Gigabit LAN",
-        desc: "1000 Mbps RJ45"
-    },
-    {
-        icon: <Zap className="w-6 h-6" />,
-        label: "Porty USB",
-        value: "USB 3.0 + 2.0",
-        desc: "Szybki transfer danych"
-    },
-    {
-        icon: <Monitor className="w-6 h-6" />,
-        label: "Wideo",
-        value: "4K Ultra HD",
-        desc: "HDMI 2.1 z obsługą HDR"
-    }
-];
 
 export default function TechSpecs() {
     return (
