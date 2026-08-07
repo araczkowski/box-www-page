@@ -19,7 +19,7 @@ export default function Footer() {
             <p className="text-xs text-gray-500 leading-relaxed">
               <span className="font-semibold text-gray-400">SEO Keywords:</span>{" "}
               Raspberry Pi, alternatywa dla Raspberry Pi, Home Assistant, serwer
-              domowy, Ubuntu, Docker, Amlogic S905X3, Mini PC, CoreELEC,
+              domowy, Ubuntu, Docker, Amlogic S922X-H, Mini PC, CoreELEC,
               Batocera, Domoticz, SUPLA, OpenHAB, Pi-hole, Nextcloud,
               self-hosting, tani serwer, kompaktowy serwer, serwer
               multimedialny, konsola retro.

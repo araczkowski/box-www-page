@@ -7,22 +7,22 @@ const comparisonData = [
   {
     feature: "Procesor",
     icon: <Cpu className="w-5 h-5" />,
-    rpi: "Broadcom BCM2711",
-    linuxBox: "Amlogic S905X3",
+    rpi: "Broadcom BCM2712",
+    linuxBox: "Amlogic S922X-H",
     highlight: true,
   },
   {
     feature: "Pamięć RAM",
     icon: <MemoryStick className="w-5 h-5" />,
     rpi: "4GB LPDDR4",
-    linuxBox: "4GB DDR4",
+    linuxBox: "4GB LPDDR4",
     highlight: true,
   },
   {
     feature: "Pamięć masowa",
     icon: <HardDrive className="w-5 h-5" />,
     rpi: "Brak (wymagana karta SD)",
-    linuxBox: "128GB eMMC",
+    linuxBox: "64GB eMMC",
     highlight: true,
   },
   {
@@ -37,13 +37,6 @@ const comparisonData = [
     icon: <Zap className="w-5 h-5" />,
     rpi: "Brak",
     linuxBox: "W zestawie",
-    highlight: true,
-  },
-  {
-    feature: "Wyświetlacz LED",
-    icon: <Monitor className="w-5 h-5" />,
-    rpi: <X className="w-5 h-5 text-slate-600" />,
-    linuxBox: <Check className="w-5 h-5 text-blue-400" />,
     highlight: true,
   },
 ];
@@ -79,7 +72,7 @@ export default function Comparison() {
           {/* Header Row */}
           <div className="grid grid-cols-3 gap-4 mb-8 px-6 py-4 border-b border-slate-800 text-sm font-semibold text-slate-500 uppercase tracking-wider">
             <div className="text-left">Cecha</div>
-            <div className="text-center">Raspberry Pi 4</div>
+            <div className="text-center">Raspberry Pi 5</div>
             <div className="text-center text-blue-400">Linux Box</div>
           </div>
 
@@ -120,11 +113,11 @@ export default function Comparison() {
           >
             <div className="text-lg font-bold text-white pl-4">Cena zestawu</div>
             <div className="text-center">
-              <span className="text-2xl text-slate-500 line-through decoration-slate-700">~410 zł</span>
+              <span className="text-2xl text-slate-500 line-through decoration-slate-700">~1029,00 zł</span>
             </div>
             <div className="text-center">
               <span className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500">
-                199 zł
+                xxx zł
               </span>
             </div>
           </motion.div>

@@ -94,9 +94,9 @@ export default function Header() {
             className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
           >
             {[
-              { icon: "💾", value: "128 GB", label: "eMMC" },
+              { icon: "💾", value: "64 GB", label: "eMMC" },
               { icon: "🧠", value: "4 GB", label: "RAM" },
-              { icon: "⚡", value: "Amlogic", label: "S905X3" },
+              { icon: "⚡", value: "Amlogic", label: "S922X-H" },
               { icon: "🖥️", value: "Ubuntu", label: "25.04" },
             ].map((spec, index) => (
               <div

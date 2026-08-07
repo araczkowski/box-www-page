@@ -10,7 +10,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Linux Box - Alternatywa dla Raspberry Pi",
   description:
-    "Twój kompaktowy domowy serwer Ubuntu. Gotowy do pracy od razu po wyjęciu z pudełka. Tylko 199 zł!",
+    "Twój kompaktowy domowy serwer Ubuntu. Gotowy do pracy od razu po wyjęciu z pudełka.",
   keywords: [
     "Raspberry Pi",
     "alternatywa dla Raspberry Pi",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "serwer domowy",
     "Ubuntu",
     "Docker",
-    "Amlogic S905X3",
+    "Amlogic S922X-H",
     "Mini PC",
     "CoreELEC",
     "Batocera",

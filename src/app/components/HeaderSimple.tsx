@@ -11,55 +11,78 @@ export default function HeaderSimple() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20 pb-20">
         <div className="max-w-5xl mx-auto text-center">
           {/* Main Title */}
-          <h1 className="mb-6 opacity-0 animate-[fadeIn_0.8s_ease-out_0.2s_forwards]">
-            <span className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-2 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
-              Linux Box
-            </span>
-            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight bg-gradient-to-r from-gray-500 to-gray-400 bg-clip-text text-transparent">
-              Twój mini serwer.
-            </span>
+          <h1 className="mb-8 opacity-0 animate-[fadeIn_0.8s_ease-out_0.2s_forwards]">
+            <div className="flex justify-center">
+              <div className="inline-flex flex-wrap items-center justify-center gap-3 sm:gap-4.5 px-5 sm:px-7 py-3 sm:py-3.5 rounded-3xl bg-white/90 border border-gray-200/80 shadow-md backdrop-blur-md hover:shadow-lg transition-all duration-300">
+                <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                  Linux Box
+                </span>
+                <div className="w-px h-7 sm:h-9 bg-gray-200 mx-1" />
+                <Image
+                  src="/linux.svg"
+                  alt="Linux"
+                  width={36}
+                  height={36}
+                  className="w-7 h-7 sm:w-9 sm:h-9 object-contain hover:scale-110 transition-transform"
+                  title="Linux"
+                />
+                <div className="w-px h-6 sm:h-7 bg-gray-200" />
+                <Image
+                  src="/home-assistant.svg"
+                  alt="Home Assistant"
+                  width={36}
+                  height={36}
+                  className="w-7 h-7 sm:w-9 sm:h-9 object-contain hover:scale-110 transition-transform"
+                  title="Home Assistant"
+                />
+                <div className="w-px h-6 sm:h-7 bg-gray-200" />
+                <div className="flex items-center gap-2" title="Thread / Matter">
+                  <Image
+                    src="/thread.svg"
+                    alt="Thread"
+                    width={60}
+                    height={24}
+                    className="h-5 sm:h-7 w-auto object-contain hover:scale-110 transition-transform"
+                  />
+                  <span className="text-gray-300 text-xs font-semibold">/</span>
+                  <Image
+                    src="/matter.svg"
+                    alt="Matter"
+                    width={60}
+                    height={24}
+                    className="h-5 sm:h-7 w-auto object-contain hover:scale-110 transition-transform"
+                  />
+                </div>
+              </div>
+            </div>
           </h1>
 
-          {/* Subtitle with gradient */}
-          <div className="mb-8 opacity-0 animate-[fadeIn_0.8s_ease-out_0.4s_forwards]">
-            <div className="mt-2 text-sm text-gray-500">
-              Gotowy do użycia od razu po wyjęciu z pudełka
-            </div>
-          </div>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16 opacity-0 animate-[fadeIn_0.8s_ease-out_0.6s_forwards]">
-            <a
-              href="#features"
-              className="px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:scale-105 bg-gray-100 hover:bg-gray-200 text-gray-900 border-2 border-transparent hover:border-gray-300"
-            >
-              Dowiedz się więcej
-            </a>
-          </div>
-
           {/* Device Image with enhanced styling */}
-          <div className="mb-16 opacity-0 animate-[fadeIn_1s_ease-out_0.8s_forwards]">
+          <div className="mb-8 opacity-0 animate-[fadeIn_1s_ease-out_0.6s_forwards]">
             <div className="relative mx-auto" style={{ maxWidth: "800px" }}>
-              {/* Glow effect behind image */}
-              {/* Glow effect removed */}
               <div className="relative">
                 <Image
-                  src="/ais_gate_3_main.png"
+                  src="/Code_Generated_Image.png"
                   alt="Linux Box"
-                  width={420}
-                  height={420}
-                  className="mx-auto hover:scale-105 transition-transform duration-500"
+                  width={500}
+                  height={500}
+                  className="mx-auto hover:scale-105 transition-transform duration-500 rounded-2xl drop-shadow-xl"
                   priority
                 />
               </div>
             </div>
           </div>
 
+          {/* Subtitle placed under device image */}
+          <p className="mb-16 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 bg-clip-text text-transparent opacity-0 animate-[fadeIn_0.8s_ease-out_0.9s_forwards]">
+            Twój dom, Twoje zasady. Bez chmury, bez ograniczeń.
+          </p>
+
           {/* Specs with modern cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto opacity-0 animate-[fadeIn_0.8s_ease-out_1s_forwards]">
             {[
               {
-                value: 128,
+                value: 64,
                 suffix: "GB",
                 label: "eMMC",
                 color: "from-blue-500 to-blue-600",
@@ -71,7 +94,7 @@ export default function HeaderSimple() {
                 color: "from-purple-500 to-purple-600",
               },
               {
-                value: "S905X3",
+                value: "S922X-H",
                 suffix: "",
                 label: "Procesor",
                 color: "from-gray-700 to-gray-800",
