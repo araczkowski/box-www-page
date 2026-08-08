@@ -14,8 +14,8 @@ export default function HeaderSimple() {
           <h1 className="mb-8 opacity-0 animate-[fadeIn_0.8s_ease-out_0.2s_forwards]">
             <div className="flex justify-center">
               <div className="inline-flex flex-wrap items-center justify-center gap-3 sm:gap-4.5 px-5 sm:px-7 py-3 sm:py-3.5 rounded-3xl bg-white/90 border border-gray-200/80 shadow-md backdrop-blur-md hover:shadow-lg transition-all duration-300">
-                <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
-                  Linux Box
+                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent">
+                  Linux Box PRO
                 </span>
                 <div className="w-px h-7 sm:h-9 bg-gray-200 mx-1" />
                 <Image

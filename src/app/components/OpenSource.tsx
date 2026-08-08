@@ -39,8 +39,8 @@ export default function OpenSource() {
           />
           <FeatureCard
             icon={<Command className="w-8 h-8" />}
-            title="Ubuntu 25.04"
-            description="Gotowy do użycia system z preinstalowanym oprogramowaniem. W pełni funkcjonalny i zoptymalizowany dla Linux Box."
+            title="Ubuntu Resolute Raccoon (v26.04 LTS)"
+            description="Gotowy do użycia system z jądrem Linux 6.18.40 oraz preinstalowanym oprogramowaniem. W pełni funkcjonalny i zoptymalizowany dla Linux Box PRO."
             delay={0.3}
           />
           <FeatureCard
@@ -66,7 +66,7 @@ export default function OpenSource() {
           >
             <Download className="w-5 h-5" />
             <span>Pobierz Obraz Systemu</span>
-            <span className="text-slate-400 ml-2 text-sm">Ubuntu 25.04</span>
+            <span className="text-slate-400 ml-2 text-xs md:text-sm">Ubuntu Resolute Raccoon (v26.04 LTS) with Linux kernel 6.18.40</span>
           </a>
 
           <p className="text-slate-500 text-sm">

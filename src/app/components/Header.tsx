@@ -97,7 +97,7 @@ export default function Header() {
               { icon: "💾", value: "64 GB", label: "eMMC" },
               { icon: "🧠", value: "4 GB", label: "RAM" },
               { icon: "⚡", value: "Amlogic", label: "S922X-H" },
-              { icon: "🖥️", value: "Ubuntu", label: "25.04" },
+              { icon: "🖥️", value: "Ubuntu", label: "26.04 LTS" },
             ].map((spec, index) => (
               <div
                 key={index}
