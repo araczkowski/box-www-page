@@ -56,18 +56,33 @@ export default function OpenSource() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="flex flex-col items-center gap-8"
+          className="flex flex-col items-center gap-6"
         >
-          <a
-            href="https://drive.google.com/file/d/1QR6u-WGWogbvLDciO9ELbaHB35zI3ucf/view?usp=drive_link"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 px-8 py-4 bg-slate-900 text-white rounded-full text-lg font-medium transition-all hover:bg-slate-800 hover:scale-105 active:scale-95"
-          >
-            <Download className="w-5 h-5" />
-            <span>Pobierz Obraz Systemu</span>
-            <span className="text-slate-400 ml-2 text-xs md:text-sm">Ubuntu Resolute Raccoon (v26.04 LTS) with Linux kernel 6.18.40</span>
-          </a>
+          <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 w-full max-w-5xl px-4">
+            <a
+              href="https://drive.google.com/file/d/1QR6u-WGWogbvLDciO9ELbaHB35zI3ucf/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center justify-center gap-3 px-6 py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full text-base md:text-lg font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-emerald-600/20 text-center w-full sm:w-auto"
+            >
+              <Download className="w-5 h-5 shrink-0" />
+              <span>Pobierz obraz systemu Linux BOX Standard</span>
+            </a>
+
+            <a
+              href="https://drive.google.com/file/d/1k_emkVVHaHPSF7OMyaLP4WuSo5NNRz6F/view?usp=drive_link"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center justify-center gap-3 px-6 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-base md:text-lg font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-slate-900/20 text-center w-full sm:w-auto"
+            >
+              <Download className="w-5 h-5 shrink-0" />
+              <span>Pobierz obraz systemu Linux BOX PRO</span>
+            </a>
+          </div>
+
+          <p className="text-slate-400 text-xs md:text-sm">
+            Ubuntu Resolute Raccoon (v26.04 LTS) with Linux kernel 6.18.40
+          </p>
 
           <p className="text-slate-500 text-sm">
             Instrukcje instalacji znajdziesz w{" "}
