@@ -63,57 +63,58 @@ export default function Features() {
   return (
     <section
       id="features"
-      className="py-32 bg-white text-black overflow-hidden"
+      className="py-32 bg-white text-[#1d1d1f] overflow-hidden"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mb-24 flex flex-col md:flex-row justify-between items-center text-center md:text-left"
+          className="mb-20 flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-8"
         >
           <div className="max-w-3xl md:w-2/3">
-            <h2 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6">
-              Możliwości. <span className="text-gray-400">Nieskończone.</span>
+            <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-[#1d1d1f]">
+              Możliwości. <span className="text-[#86868b]">Nieskończone.</span>
             </h2>
-            <p className="text-xl text-gray-500 mx-auto md:mx-0 leading-relaxed">
+            <p className="text-xl md:text-2xl text-[#86868b] font-medium leading-relaxed">
               Od serwera domowego po centrum multimedialne. Linux Box dostosowuje
-              się do Twoich potrzeb, oferując wydajność i elastyczność, której
-              oczekujesz.
+              się do Twoich potrzeb.
             </p>
           </div>
-          <div className="mt-8 md:mt-0 md:w-1/3 flex justify-center md:justify-end">
+          <div className="md:w-1/3 flex justify-center md:justify-end">
             <a
               href="/docs"
               rel="noopener noreferrer"
-              className="flex items-center text-blue-600 hover:underline text-lg"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#f5f5f7] hover:bg-[#ebebef] text-[#1d1d1f] font-semibold transition-all hover:scale-105"
             >
-              <FileText className="mr-2 h-5 w-5" />
-              <span className="font-bold">Przejdź do dokumentacji</span>
+              <FileText className="h-4 w-4 text-[#0071e3]" />
+              <span>Dokumentacja</span>
             </a>
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="flex flex-col items-start group"
+              transition={{ duration: 0.5, delay: index * 0.08 }}
+              className="flex flex-col justify-between p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 hover:scale-[1.02] group"
             >
-              <div className="mb-6 p-4 rounded-2xl bg-gray-50 text-black group-hover:bg-blue-50 group-hover:text-blue-600 transition-colors duration-300">
-                {feature.icon}
+              <div>
+                <div className="mb-6 p-4 rounded-2xl bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors duration-300 w-fit">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-bold mb-2 text-[#1d1d1f] tracking-tight">
+                  {feature.title}
+                </h3>
+                <p className="text-sm text-[#86868b] leading-relaxed font-medium">
+                  {feature.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold mb-3 group-hover:text-blue-600 transition-colors duration-300">
-                {feature.title}
-              </h3>
-              <p className="text-gray-500 leading-relaxed">
-                {feature.description}
-              </p>
             </motion.div>
           ))}
         </div>

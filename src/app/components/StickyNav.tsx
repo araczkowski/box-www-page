@@ -27,56 +27,57 @@ export default function StickyNav() {
 
   return (
     <nav
-      className={`hidden md:block fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-        } bg-white/80 border-gray-200 backdrop-blur-lg border-b shadow-lg`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+        } bg-white/80 dark:bg-slate-900/80 border-b border-slate-200/60 backdrop-blur-xl shadow-sm`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           {/* Logo */}
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2 font-bold text-xl transition-colors text-black hover:text-blue-600"
+            className="flex items-center gap-2 font-bold text-lg tracking-tight transition-opacity text-slate-900 hover:opacity-75"
           >
-            🐧 Linux Box
+            <span>🐧</span>
+            <span className="font-semibold">Linux Box</span>
           </button>
 
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-8 text-xs font-medium tracking-tight">
             <a
               href="/docs"
-              className="transition-colors font-medium text-gray-600 hover:text-black"
+              className="transition-colors text-slate-600 hover:text-slate-900"
             >
               Dokumentacja
             </a>
             <button
               onClick={() => scrollToSection("tech-specs")}
-              className="transition-colors font-medium text-gray-600 hover:text-black"
+              className="transition-colors text-slate-600 hover:text-slate-900"
             >
               Specyfikacja
             </button>
             <button
               onClick={() => scrollToSection("features")}
-              className="transition-colors font-medium text-gray-600 hover:text-black"
+              className="transition-colors text-slate-600 hover:text-slate-900"
             >
               Funkcje
             </button>
             <button
               onClick={() => scrollToSection("comparison")}
-              className="transition-colors font-medium text-gray-600 hover:text-black"
+              className="transition-colors text-slate-600 hover:text-slate-900"
             >
               Porównanie
             </button>
             <button
               onClick={() => scrollToSection("opensource")}
-              className="transition-colors font-medium text-gray-600 hover:text-black"
+              className="transition-colors text-slate-600 hover:text-slate-900"
             >
-              Download
+              Pobierz System
             </button>
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 rounded-lg transition-colors text-black hover:bg-gray-100"
+            className="md:hidden p-2 rounded-lg transition-colors text-slate-900 hover:bg-slate-100"
             onClick={() => {
               const menu = document.getElementById("mobile-menu");
               if (menu) {
@@ -85,7 +86,7 @@ export default function StickyNav() {
             }}
           >
             <svg
-              className="w-6 h-6"
+              className="w-5 h-5"
               fill="none"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -101,12 +102,12 @@ export default function StickyNav() {
         {/* Mobile Menu */}
         <div
           id="mobile-menu"
-          className="hidden md:hidden pb-4 border-gray-200 border-t"
+          className="hidden md:hidden pb-4 border-slate-200 border-t"
         >
-          <div className="flex flex-col gap-3 mt-4">
+          <div className="flex flex-col gap-2 mt-3 text-sm font-medium">
             <a
               href="/docs"
-              className="text-left py-2 px-4 rounded-lg transition-colors text-gray-600 hover:bg-gray-100"
+              className="text-left py-2 px-4 rounded-lg transition-colors text-slate-600 hover:bg-slate-100"
             >
               Dokumentacja
             </a>
@@ -115,7 +116,7 @@ export default function StickyNav() {
                 scrollToSection("tech-specs");
                 document.getElementById("mobile-menu")?.classList.add("hidden");
               }}
-              className="text-left py-2 px-4 rounded-lg transition-colors text-gray-600 hover:bg-gray-100"
+              className="text-left py-2 px-4 rounded-lg transition-colors text-slate-600 hover:bg-slate-100"
             >
               Specyfikacja
             </button>
@@ -124,7 +125,7 @@ export default function StickyNav() {
                 scrollToSection("features");
                 document.getElementById("mobile-menu")?.classList.add("hidden");
               }}
-              className="text-left py-2 px-4 rounded-lg transition-colors text-gray-600 hover:bg-gray-100"
+              className="text-left py-2 px-4 rounded-lg transition-colors text-slate-600 hover:bg-slate-100"
             >
               Funkcje
             </button>
@@ -133,7 +134,7 @@ export default function StickyNav() {
                 scrollToSection("comparison");
                 document.getElementById("mobile-menu")?.classList.add("hidden");
               }}
-              className="text-left py-2 px-4 rounded-lg transition-colors text-gray-600 hover:bg-gray-100"
+              className="text-left py-2 px-4 rounded-lg transition-colors text-slate-600 hover:bg-slate-100"
             >
               Porównanie
             </button>
@@ -142,9 +143,9 @@ export default function StickyNav() {
                 scrollToSection("opensource");
                 document.getElementById("mobile-menu")?.classList.add("hidden");
               }}
-              className="text-left py-2 px-4 rounded-lg transition-colors text-gray-600 hover:bg-gray-100"
+              className="text-left py-2 px-4 rounded-lg transition-colors text-slate-600 hover:bg-slate-100"
             >
-              Download
+              Pobierz System
             </button>
           </div>
         </div>

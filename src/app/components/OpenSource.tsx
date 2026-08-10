@@ -6,14 +6,14 @@ import { ArrowRight, Command, Globe, Settings2, Download } from "lucide-react";
 export default function OpenSource() {
   return (
     <section id="opensource" className="py-32 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center mb-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+        <div className="max-w-4xl mx-auto text-center mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6"
+            className="text-5xl md:text-7xl font-extrabold tracking-tight text-[#1d1d1f] mb-6"
           >
             Open Source.
           </motion.h2>
@@ -22,7 +22,7 @@ export default function OpenSource() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xl md:text-2xl text-slate-500 font-medium leading-relaxed"
+            className="text-xl md:text-2xl text-[#86868b] font-medium leading-relaxed"
           >
             Pełna wolność. Nieskończone możliwości.
             <br />
@@ -30,21 +30,21 @@ export default function OpenSource() {
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
           <FeatureCard
-            icon={<Globe className="w-8 h-8" />}
+            icon={<Globe className="w-7 h-7" />}
             title="Wolny Dostęp"
             description="Pobierz i zainstaluj system na USB, karcie SD lub pamięci eMMC. Linux Box ma włączony multiboot - wystarczy podłączyć nośnik."
             delay={0.2}
           />
           <FeatureCard
-            icon={<Command className="w-8 h-8" />}
+            icon={<Command className="w-7 h-7" />}
             title="Ubuntu Resolute Raccoon (v26.04 LTS)"
             description="Gotowy do użycia system z jądrem Linux 6.18.40 oraz preinstalowanym oprogramowaniem. W pełni funkcjonalny i zoptymalizowany dla Linux Box PRO."
             delay={0.3}
           />
           <FeatureCard
-            icon={<Settings2 className="w-8 h-8" />}
+            icon={<Settings2 className="w-7 h-7" />}
             title="Pełna Kontrola"
             description="Modyfikuj, instaluj i dostosowuj do swoich potrzeb. Dostęp do konta root i pełna swoboda konfiguracji."
             delay={0.4}
@@ -59,40 +59,42 @@ export default function OpenSource() {
           className="flex flex-col items-center gap-6"
         >
           <div className="flex flex-col sm:flex-row flex-wrap justify-center items-center gap-4 w-full max-w-5xl px-4">
+            {/* Gray button for Linux BOX Standard */}
             <a
               href="https://drive.google.com/file/d/1QR6u-WGWogbvLDciO9ELbaHB35zI3ucf/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-3 px-6 py-4 bg-emerald-600 hover:bg-emerald-700 text-white rounded-full text-base md:text-lg font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-emerald-600/20 text-center w-full sm:w-auto"
+              className="group inline-flex items-center justify-center gap-3 px-7 py-4 bg-[#e8e8ed] hover:bg-[#d2d2d7] text-[#1d1d1f] rounded-full text-base md:text-lg font-semibold transition-all hover:scale-105 active:scale-95 text-center w-full sm:w-auto"
             >
-              <Download className="w-5 h-5 shrink-0" />
+              <Download className="w-5 h-5 shrink-0 text-[#1d1d1f]" />
               <span>Pobierz obraz systemu Linux BOX Standard</span>
             </a>
 
+            {/* Blue button for Linux BOX PRO */}
             <a
               href="https://drive.google.com/file/d/1k_emkVVHaHPSF7OMyaLP4WuSo5NNRz6F/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-3 px-6 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-full text-base md:text-lg font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-slate-900/20 text-center w-full sm:w-auto"
+              className="group inline-flex items-center justify-center gap-3 px-7 py-4 bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full text-base md:text-lg font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/20 text-center w-full sm:w-auto"
             >
               <Download className="w-5 h-5 shrink-0" />
               <span>Pobierz obraz systemu Linux BOX PRO</span>
             </a>
           </div>
 
-          <p className="text-slate-400 text-xs md:text-sm">
+          <p className="text-[#86868b] text-xs sm:text-sm font-medium">
             Ubuntu Resolute Raccoon (v26.04 LTS) with Linux kernel 6.18.40
           </p>
 
-          <p className="text-slate-500 text-sm">
+          <p className="text-[#86868b] text-sm font-medium">
             Instrukcje instalacji znajdziesz w{" "}
             <a
               href="/docs"
               rel="noopener noreferrer"
-              className="text-slate-900 font-medium hover:underline inline-flex items-center gap-1"
+              className="text-[#0071e3] font-semibold hover:underline inline-flex items-center gap-1"
             >
               dokumentacji
-              <ArrowRight className="w-3 h-3" />
+              <ArrowRight className="w-3.5 h-3.5" />
             </a>
           </p>
         </motion.div>
@@ -118,13 +120,13 @@ function FeatureCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="p-8 rounded-3xl bg-slate-50 hover:bg-slate-100 transition-colors duration-300"
+      className="p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 hover:scale-[1.02]"
     >
-      <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-slate-900 shadow-sm mb-6">
+      <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#1d1d1f] shadow-sm mb-6">
         {icon}
       </div>
-      <h3 className="text-xl font-bold text-slate-900 mb-3">{title}</h3>
-      <p className="text-slate-600 leading-relaxed">{description}</p>
+      <h3 className="text-xl font-bold text-[#1d1d1f] mb-3 tracking-tight">{title}</h3>
+      <p className="text-sm text-[#86868b] leading-relaxed font-medium">{description}</p>
     </motion.div>
   );
 }

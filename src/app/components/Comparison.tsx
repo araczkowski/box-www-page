@@ -50,7 +50,7 @@ const comparisonData = [
 
 export default function Comparison() {
   return (
-    <section id="comparison" className="py-32 bg-white text-slate-900 overflow-hidden">
+    <section id="comparison" className="py-32 bg-[#fafafa] text-[#1d1d1f] overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <motion.h2
@@ -58,7 +58,7 @@ export default function Comparison() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-5xl md:text-7xl font-bold tracking-tight text-slate-900 mb-6"
+            className="text-5xl md:text-7xl font-extrabold tracking-tight text-[#1d1d1f] mb-6"
           >
             Porównanie.
           </motion.h2>
@@ -67,7 +67,7 @@ export default function Comparison() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="text-xl md:text-2xl text-slate-600 font-medium leading-relaxed"
+            className="text-xl md:text-2xl text-[#86868b] font-medium leading-relaxed"
           >
             Więcej możliwości. Mniej wydatków.
             <br />
@@ -77,14 +77,14 @@ export default function Comparison() {
 
         <div className="max-w-5xl mx-auto">
           {/* Header Row */}
-          <div className="grid grid-cols-3 gap-4 mb-6 px-6 py-4 border-b border-slate-200 text-sm font-bold text-slate-500 uppercase tracking-wider">
+          <div className="grid grid-cols-3 gap-4 mb-6 px-6 py-4 border-b border-slate-200 text-xs font-bold text-[#86868b] uppercase tracking-wider">
             <div className="text-left">Cecha</div>
             <div className="text-center">Raspberry Pi 5</div>
-            <div className="text-center text-blue-600 font-extrabold">Linux Box</div>
+            <div className="text-center text-[#0071e3] font-extrabold">Linux Box</div>
           </div>
 
           {/* Data Rows */}
-          <div className="space-y-3.5">
+          <div className="space-y-3">
             {comparisonData.map((row, index) => (
               <motion.div
                 key={index}
@@ -92,18 +92,18 @@ export default function Comparison() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.08 }}
-                className="grid grid-cols-3 gap-4 items-center px-6 py-5 rounded-2xl bg-slate-50/80 hover:bg-slate-100/80 transition-colors border border-slate-200/80 shadow-sm"
+                className="grid grid-cols-3 gap-4 items-center px-6 py-5 rounded-2xl bg-[#f5f5f7] hover:bg-[#ebebef] transition-all border border-slate-200/50"
               >
-                <div className="flex items-center gap-3 text-slate-800 font-semibold">
-                  <div className="p-2.5 rounded-xl bg-white text-blue-600 border border-slate-200/80 shadow-sm">
+                <div className="flex items-center gap-3 text-[#1d1d1f] font-semibold">
+                  <div className="p-2.5 rounded-xl bg-white text-[#0071e3] shadow-sm">
                     {row.icon}
                   </div>
                   <span className="hidden sm:inline">{row.feature}</span>
                 </div>
-                <div className="text-center text-slate-500 font-medium flex justify-center items-center">
+                <div className="text-center text-[#86868b] font-medium flex justify-center items-center">
                   {row.rpi}
                 </div>
-                <div className={`text-center font-bold flex justify-center items-center ${row.highlight ? 'text-blue-600' : 'text-slate-700'}`}>
+                <div className={`text-center font-bold flex justify-center items-center ${row.highlight ? 'text-[#0071e3]' : 'text-[#1d1d1f]'}`}>
                   {row.linuxBox}
                 </div>
               </motion.div>
@@ -112,18 +112,18 @@ export default function Comparison() {
 
           {/* Price Row */}
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="mt-10 grid grid-cols-3 gap-4 items-center px-8 py-8 rounded-3xl bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50 border border-blue-100 shadow-xl"
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-10 grid grid-cols-3 gap-4 items-center px-8 py-8 rounded-3xl bg-[#f5f5f7] border border-slate-200 shadow-sm"
           >
-            <div className="text-xl font-bold text-slate-900 pl-2">Cena zestawu</div>
+            <div className="text-xl font-bold text-[#1d1d1f] pl-2">Cena zestawu</div>
             <div className="text-center">
-              <span className="text-2xl text-slate-400 line-through decoration-slate-400 font-medium">~1029,00 zł</span>
+              <span className="text-2xl text-[#86868b] line-through font-medium">~1029,00 zł</span>
             </div>
             <div className="text-center">
-              <span className="text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-indigo-600">
+              <span className="text-4xl md:text-5xl font-extrabold text-[#0071e3] tracking-tight">
                 xxx zł
               </span>
             </div>
@@ -133,10 +133,10 @@ export default function Comparison() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.7 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
             className="mt-8 text-center"
           >
-            <p className="text-slate-400 text-sm">
+            <p className="text-[#86868b] text-xs sm:text-sm">
               * Ceny orientacyjne. Zestaw Raspberry Pi uwzględnia płytkę, obudowę, chłodzenie, zasilacz, kartę SD i kabel HDMI.
             </p>
           </motion.div>

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Cpu, HardDrive, Zap, Volume2, Server, Wifi } from "lucide-react";
+import { Cpu, HardDrive, Zap, Volume2, Server } from "lucide-react";
 
 const MatterIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
     <svg
@@ -20,38 +20,38 @@ const MatterIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
 
 export default function TechSpecs() {
     return (
-        <section id="tech-specs" className="py-24 bg-black text-white overflow-hidden">
+        <section id="tech-specs" className="py-32 bg-white text-[#1d1d1f] overflow-hidden">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
-                    className="text-center mb-20"
+                    className="text-center mb-24"
                 >
-                    <h2 className="text-4xl md:text-5xl font-semibold tracking-tight mb-4 text-white">
+                    <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-[#1d1d1f]">
                         Specyfikacja.
                     </h2>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-                        Wszystko, czego potrzebujesz!
+                    <p className="text-xl md:text-2xl text-[#86868b] font-medium max-w-2xl mx-auto">
+                        Moc, wydajność i pełne wyposażenie.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
                     {/* 1. OBRAZ BRAMKI */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="lg:col-span-2 flex items-center justify-center p-4 sm:p-6 rounded-3xl bg-white border border-slate-200 shadow-2xl overflow-hidden transition-all duration-500 group hover:scale-[1.01]"
+                        className="lg:col-span-2 flex items-center justify-center p-6 sm:p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 shadow-sm overflow-hidden transition-all duration-500 group hover:border-slate-300 hover:scale-[1.01]"
                     >
                         <Image
                             src="/Code_Generated_Image2.png"
                             alt="Specyfikacja Linux Box"
                             width={700}
                             height={450}
-                            className="rounded-2xl mx-auto object-cover hover:scale-[1.02] transition-transform duration-500 bg-white"
+                            className="rounded-2xl mx-auto object-cover hover:scale-[1.02] transition-transform duration-700 bg-[#f5f5f7]"
                         />
                     </motion.div>
 
@@ -61,19 +61,19 @@ export default function TechSpecs() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.2 }}
-                        className="lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-blue-300 transition-all duration-300 group hover:scale-[1.01] hover:shadow-2xl hover:shadow-blue-500/10"
+                        className="lg:col-span-2 flex flex-col justify-between p-8 sm:p-10 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 group hover:scale-[1.01]"
                     >
                         <div className="flex flex-col items-center justify-center text-center">
-                            <div className="mb-4 p-4 rounded-2xl inline-block bg-blue-600 text-white shadow-lg shadow-blue-500/30">
+                            <div className="mb-5 p-4 rounded-2xl inline-block bg-[#0071e3] text-white shadow-md shadow-blue-500/20">
                                 <Cpu className="w-8 h-8" />
                             </div>
-                            <h3 className="text-sm font-semibold text-slate-500 mb-1 uppercase tracking-wider">Procesor</h3>
-                            <p className="text-3xl font-bold text-slate-900 mb-2">Amlogic S922X-H</p>
-                            <p className="text-base sm:text-lg md:text-xl font-medium text-slate-700 leading-relaxed max-w-xl mx-auto">
+                            <h3 className="text-xs font-semibold text-[#86868b] mb-1 uppercase tracking-widest">Procesor</h3>
+                            <p className="text-3xl sm:text-4xl font-extrabold text-[#1d1d1f] mb-3 tracking-tight">Amlogic S922X-H</p>
+                            <p className="text-base sm:text-lg font-medium text-slate-700 leading-relaxed max-w-xl mx-auto">
                                 Potężny 6-rdzeniowy procesor (4x ARM Cortex-A73 @ 1,8 GHz i 2x ARM Cortex-A53 @ 2,21 GHz).
                             </p>
                         </div>
-                        <p className="text-sm text-slate-600 font-medium text-center mt-6">
+                        <p className="text-xs sm:text-sm text-[#86868b] font-medium text-center mt-6">
                             Zapewnia płynną pracę Home Assistant i aplikacji w kontenerach Docker.
                         </p>
                     </motion.div>
@@ -84,16 +84,16 @@ export default function TechSpecs() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.3 }}
-                        className="flex flex-col justify-between p-8 rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-blue-300 transition-all duration-300 group hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10"
+                        className="flex flex-col justify-between p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 group hover:scale-[1.02]"
                     >
                         <div>
-                            <div className="mb-6 p-4 rounded-2xl inline-block bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
                                 <HardDrive className="w-6 h-6" />
                             </div>
-                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Pamięć</h3>
-                            <p className="text-2xl font-bold text-slate-900 mb-2">64 GB / 4 GB</p>
+                            <h3 className="text-xs font-semibold text-[#86868b] mb-2 uppercase tracking-widest">Pamięć</h3>
+                            <p className="text-3xl font-extrabold text-[#1d1d1f] mb-2 tracking-tight">64 GB / 4 GB</p>
                         </div>
-                        <p className="text-sm text-slate-600 font-medium">64 GB eMMC 5.1 + 4 GB RAM LPDDR4</p>
+                        <p className="text-xs sm:text-sm text-[#86868b] font-medium">64 GB eMMC 5.1 + 4 GB RAM LPDDR4</p>
                     </motion.div>
 
                     {/* 4. Thread & Matter */}
@@ -102,16 +102,16 @@ export default function TechSpecs() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.4 }}
-                        className="flex flex-col justify-between p-8 rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-blue-300 transition-all duration-300 group hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10"
+                        className="flex flex-col justify-between p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 group hover:scale-[1.02]"
                     >
                         <div>
-                            <div className="mb-6 p-4 rounded-2xl inline-block bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
                                 <MatterIcon className="w-6 h-6" />
                             </div>
-                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Smart Home</h3>
-                            <p className="text-2xl font-bold text-slate-900 mb-2">Thread & Matter</p>
+                            <h3 className="text-xs font-semibold text-[#86868b] mb-2 uppercase tracking-widest">Smart Home</h3>
+                            <p className="text-3xl font-extrabold text-[#1d1d1f] mb-2 tracking-tight">Thread & Matter</p>
                         </div>
-                        <p className="text-sm text-slate-600 font-medium">Wbudowany router Thread i obsługa Matter</p>
+                        <p className="text-xs sm:text-sm text-[#86868b] font-medium">Wbudowany router Thread i obsługa Matter</p>
                     </motion.div>
 
                     {/* 5. Ethernet */}
@@ -120,70 +120,52 @@ export default function TechSpecs() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.5 }}
-                        className="flex flex-col justify-between p-8 rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-blue-300 transition-all duration-300 group hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10"
+                        className="lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 group hover:scale-[1.01]"
                     >
                         <div>
-                            <div className="mb-6 p-4 rounded-2xl inline-block bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
                                 <Server className="w-6 h-6" />
                             </div>
-                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Ethernet</h3>
-                            <p className="text-2xl font-bold text-slate-900 mb-2">Gigabit LAN</p>
+                            <h3 className="text-xs font-semibold text-[#86868b] mb-2 uppercase tracking-widest">Ethernet</h3>
+                            <p className="text-3xl font-extrabold text-[#1d1d1f] mb-2 tracking-tight">Gigabit LAN</p>
                         </div>
-                        <p className="text-sm text-slate-600 font-medium">1000 Mbps RJ45</p>
+                        <p className="text-xs sm:text-sm text-[#86868b] font-medium">1000 Mbps RJ45 (1 Gbps)</p>
                     </motion.div>
 
-                    {/* 6. Wi-Fi & Bluetooth */}
+                    {/* 6. Porty USB */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.6 }}
-                        className="flex flex-col justify-between p-8 rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-blue-300 transition-all duration-300 group hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10"
+                        className="lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 group hover:scale-[1.01]"
                     >
                         <div>
-                            <div className="mb-6 p-4 rounded-2xl inline-block bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                <Wifi className="w-6 h-6" />
+                            <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
+                                <Zap className="w-6 h-6" />
                             </div>
-                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Bezprzewodowo</h3>
-                            <p className="text-2xl font-bold text-slate-900 mb-2">Wi-Fi & BT</p>
+                            <h3 className="text-xs font-semibold text-[#86868b] mb-2 uppercase tracking-widest">Porty USB</h3>
+                            <p className="text-3xl font-extrabold text-[#1d1d1f] mb-2 tracking-tight">USB 3.0 + 2.0</p>
                         </div>
-                        <p className="text-sm text-slate-600 font-medium">Dual Band 2.4/5 GHz AC + Bluetooth</p>
+                        <p className="text-xs sm:text-sm text-[#86868b] font-medium">Szybki transfer danych i obsługa urządzeń peryferyjnych.</p>
                     </motion.div>
 
-                    {/* 7. Porty USB */}
+                    {/* 7. Audio */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.7 }}
-                        className="lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-blue-300 transition-all duration-300 group hover:scale-[1.01] hover:shadow-2xl hover:shadow-blue-500/10"
+                        className="lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 group hover:scale-[1.01]"
                     >
                         <div>
-                            <div className="mb-6 p-4 rounded-2xl inline-block bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                <Zap className="w-6 h-6" />
-                            </div>
-                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Porty USB</h3>
-                            <p className="text-2xl font-bold text-slate-900 mb-2">USB 3.0 + 2.0</p>
-                        </div>
-                        <p className="text-sm text-slate-600 font-medium">Szybki transfer danych i obsługa urządzeń peryferyjnych.</p>
-                    </motion.div>
-
-                    {/* 8. Audio */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.8 }}
-                        className="lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-blue-300 transition-all duration-300 group hover:scale-[1.01] hover:shadow-2xl hover:shadow-blue-500/10"
-                    >
-                        <div>
-                            <div className="mb-6 p-4 rounded-2xl inline-block bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
                                 <Volume2 className="w-6 h-6" />
                             </div>
-                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Audio</h3>
-                            <p className="text-2xl font-bold text-slate-900 mb-2">Wbudowane Audio Digital Stereo</p>
+                            <h3 className="text-xs font-semibold text-[#86868b] mb-2 uppercase tracking-widest">Audio</h3>
+                            <p className="text-3xl font-extrabold text-[#1d1d1f] mb-2 tracking-tight">Wbudowane Audio Digital Stereo</p>
                         </div>
-                        <p className="text-sm text-slate-600 font-medium">Wyjścia HDMI i S/PDIF – idealne do odtwarzania muzyki z Music Assistant.</p>
+                        <p className="text-xs sm:text-sm text-[#86868b] font-medium">Wyjścia HDMI i S/PDIF – idealne do odtwarzania muzyki z Music Assistant.</p>
                     </motion.div>
                 </div>
             </div>
