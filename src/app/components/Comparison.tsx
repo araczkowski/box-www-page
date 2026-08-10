@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cpu, MemoryStick, HardDrive, Box, Zap } from "lucide-react";
+import { Cpu, MemoryStick, HardDrive, Box, Zap, Thermometer } from "lucide-react";
 
 const comparisonData = [
   {
@@ -29,6 +29,13 @@ const comparisonData = [
     feature: "Obudowa",
     icon: <Box className="w-5 h-5" />,
     rpi: "Brak (płytka PCB)",
+    linuxBox: "W zestawie",
+    highlight: true,
+  },
+  {
+    feature: "Radiator procesora",
+    icon: <Thermometer className="w-5 h-5" />,
+    rpi: "Brak",
     linuxBox: "W zestawie",
     highlight: true,
   },
@@ -130,7 +137,7 @@ export default function Comparison() {
             className="mt-12 text-center"
           >
             <p className="text-slate-500 text-sm">
-              * Ceny orientacyjne na dzień 20.11.2025. Zestaw Raspberry Pi uwzględnia płytkę, obudowę, zasilacz, kartę SD i kabel HDMI.
+              * Ceny orientacyjne. Zestaw Raspberry Pi uwzględnia płytkę, obudowę, chłodzenie, zasilacz, kartę SD i kabel HDMI.
             </p>
           </motion.div>
         </div>
