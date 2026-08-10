@@ -82,28 +82,29 @@ export default function HeaderSimple() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto opacity-0 animate-[fadeIn_0.8s_ease-out_1s_forwards]">
             {[
               {
-                value: 64,
-                suffix: "GB",
-                label: "eMMC",
-                color: "from-blue-500 to-blue-600",
-              },
-              {
-                value: 4,
-                suffix: "GB",
-                label: "RAM",
-                color: "from-purple-500 to-purple-600",
-              },
-              {
                 value: "S922X-H",
                 suffix: "",
                 label: "Procesor",
                 color: "from-gray-700 to-gray-800",
               },
               {
+                value: "64 / 4",
+                suffix: " GB",
+                label: "eMMC / RAM",
+                color: "from-blue-500 to-purple-600",
+              },
+
+              {
                 value: "Ubuntu",
                 suffix: "",
                 label: "System",
                 color: "from-orange-500 to-orange-600",
+              },
+              {
+                value: "Thread",
+                suffix: "",
+                label: "Border Router",
+                color: "from-emerald-500 to-teal-600",
               },
             ].map((spec, index) => (
               <div
@@ -115,7 +116,10 @@ export default function HeaderSimple() {
                 />
                 <div className="relative text-center">
                   <div
-                    className={`text-3xl sm:text-4xl font-bold mb-1 bg-gradient-to-r ${spec.color} bg-clip-text text-transparent`}
+                    className={`${typeof spec.value === "string" && spec.value.length > 8
+                      ? "text-xl sm:text-2xl"
+                      : "text-3xl sm:text-4xl"
+                      } font-bold mb-1 bg-gradient-to-r ${spec.color} bg-clip-text text-transparent`}
                   >
                     {spec.value}
                     {spec.suffix}

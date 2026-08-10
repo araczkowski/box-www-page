@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Cpu, HardDrive, Zap, Volume2, Server, Database } from "lucide-react";
+import { Cpu, HardDrive, Zap, Volume2, Server, Wifi } from "lucide-react";
 
 const MatterIcon = ({ className = "w-6 h-6" }: { className?: string }) => (
     <svg
@@ -38,7 +38,7 @@ export default function TechSpecs() {
                 </motion.div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {/* 1. OBRAZ BRAMKI (Pierwszy kafelek) */}
+                    {/* 1. OBRAZ BRAMKI */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -63,19 +63,22 @@ export default function TechSpecs() {
                         transition={{ duration: 0.5, delay: 0.2 }}
                         className="lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-blue-300 transition-all duration-300 group hover:scale-[1.01] hover:shadow-2xl hover:shadow-blue-500/10"
                     >
-                        <div>
-                            <div className="mb-6 p-4 rounded-2xl inline-block bg-blue-600 text-white shadow-lg shadow-blue-500/30">
+                        <div className="flex flex-col items-center justify-center text-center">
+                            <div className="mb-4 p-4 rounded-2xl inline-block bg-blue-600 text-white shadow-lg shadow-blue-500/30">
                                 <Cpu className="w-8 h-8" />
                             </div>
-                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Procesor</h3>
-                            <p className="text-2xl font-bold text-slate-900 mb-2">Amlogic S922X-H</p>
+                            <h3 className="text-sm font-semibold text-slate-500 mb-1 uppercase tracking-wider">Procesor</h3>
+                            <p className="text-3xl font-bold text-slate-900 mb-2">Amlogic S922X-H</p>
+                            <p className="text-base sm:text-lg md:text-xl font-medium text-slate-700 leading-relaxed max-w-xl mx-auto">
+                                Potężny 6-rdzeniowy procesor (4x ARM Cortex-A73 @ 1,8 GHz i 2x ARM Cortex-A53 @ 2,21 GHz).
+                            </p>
                         </div>
-                        <p className="text-sm text-slate-600 mt-4 leading-relaxed">
-                            Potężny 6-rdzeniowy procesor (4x ARM Cortex-A73 @ 1,8 GHz i 2x ARM Cortex-A53 @ 2,21 GHz). Zapewnia wybitną wydajność i płynną pracę systemu.
+                        <p className="text-sm text-slate-600 font-medium text-center mt-6">
+                            Zapewnia płynną pracę Home Assistant i aplikacji w kontenerach Docker.
                         </p>
                     </motion.div>
 
-                    {/* 3. Pamięć RAM */}
+                    {/* 3. Pamięć 64 GB / 4 GB */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -85,15 +88,15 @@ export default function TechSpecs() {
                     >
                         <div>
                             <div className="mb-6 p-4 rounded-2xl inline-block bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                <Database className="w-6 h-6" />
+                                <HardDrive className="w-6 h-6" />
                             </div>
-                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Pamięć RAM</h3>
-                            <p className="text-2xl font-bold text-slate-900 mb-2">4 GB</p>
+                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Pamięć</h3>
+                            <p className="text-2xl font-bold text-slate-900 mb-2">64 GB / 4 GB</p>
                         </div>
-                        <p className="text-sm text-slate-600 font-medium">LPDDR4</p>
+                        <p className="text-sm text-slate-600 font-medium">64 GB eMMC 5.1 + 4 GB RAM LPDDR4</p>
                     </motion.div>
 
-                    {/* 4. Pamięć wbudowana */}
+                    {/* 4. Thread & Matter */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -103,38 +106,20 @@ export default function TechSpecs() {
                     >
                         <div>
                             <div className="mb-6 p-4 rounded-2xl inline-block bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                <HardDrive className="w-6 h-6" />
+                                <MatterIcon className="w-6 h-6" />
                             </div>
-                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Pamięć wbudowana</h3>
-                            <p className="text-2xl font-bold text-slate-900 mb-2">64 GB</p>
+                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Smart Home</h3>
+                            <p className="text-2xl font-bold text-slate-900 mb-2">Thread & Matter</p>
                         </div>
-                        <p className="text-sm text-slate-600 font-medium">Szybka pamięć eMMC 5.1</p>
+                        <p className="text-sm text-slate-600 font-medium">Wbudowany router Thread i obsługa Matter</p>
                     </motion.div>
 
-                    {/* 5. Łączność -> Thread / Matter */}
+                    {/* 5. Ethernet */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.5 }}
-                        className="flex flex-col justify-between p-8 rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-blue-300 transition-all duration-300 group hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10"
-                    >
-                        <div>
-                            <div className="mb-6 p-4 rounded-2xl inline-block bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
-                                <MatterIcon className="w-6 h-6" />
-                            </div>
-                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Łączność</h3>
-                            <p className="text-2xl font-bold text-slate-900 mb-2">Thread Border Router</p>
-                        </div>
-                        <p className="text-sm text-slate-600 font-medium">Wbudowany router Thread i obsługa Matter</p>
-                    </motion.div>
-
-                    {/* 6. Ethernet */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5, delay: 0.6 }}
                         className="flex flex-col justify-between p-8 rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-blue-300 transition-all duration-300 group hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10"
                     >
                         <div>
@@ -145,6 +130,24 @@ export default function TechSpecs() {
                             <p className="text-2xl font-bold text-slate-900 mb-2">Gigabit LAN</p>
                         </div>
                         <p className="text-sm text-slate-600 font-medium">1000 Mbps RJ45</p>
+                    </motion.div>
+
+                    {/* 6. Wi-Fi & Bluetooth */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                        className="flex flex-col justify-between p-8 rounded-3xl bg-white text-slate-900 border border-slate-200 hover:border-blue-300 transition-all duration-300 group hover:scale-[1.02] hover:shadow-2xl hover:shadow-blue-500/10"
+                    >
+                        <div>
+                            <div className="mb-6 p-4 rounded-2xl inline-block bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                                <Wifi className="w-6 h-6" />
+                            </div>
+                            <h3 className="text-sm font-semibold text-slate-500 mb-2 uppercase tracking-wider">Bezprzewodowo</h3>
+                            <p className="text-2xl font-bold text-slate-900 mb-2">Wi-Fi & BT</p>
+                        </div>
+                        <p className="text-sm text-slate-600 font-medium">Dual Band 2.4/5 GHz AC + Bluetooth</p>
                     </motion.div>
 
                     {/* 7. Porty USB */}
