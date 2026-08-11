@@ -1,7 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Cpu, MemoryStick, HardDrive, Box, Zap, Thermometer } from "lucide-react";
+import {
+  Cpu,
+  MemoryStick,
+  HardDrive,
+  Box,
+  Zap,
+  Thermometer,
+  Radio,
+} from "lucide-react";
 
 const comparisonData = [
   {
@@ -26,6 +34,13 @@ const comparisonData = [
     highlight: true,
   },
   {
+    feature: "Thread & Matter",
+    icon: <Radio className="w-5 h-5" />,
+    rpi: "Brak",
+    linuxBox: "W zestawie",
+    highlight: true,
+  },
+  {
     feature: "Obudowa",
     icon: <Box className="w-5 h-5" />,
     rpi: "Brak",
@@ -40,7 +55,7 @@ const comparisonData = [
     highlight: true,
   },
   {
-    feature: "Zasilacz",
+    feature: "Zasilacz i Kabel HDMI",
     icon: <Zap className="w-5 h-5" />,
     rpi: "Brak",
     linuxBox: "W zestawie",
@@ -50,7 +65,10 @@ const comparisonData = [
 
 export default function Comparison() {
   return (
-    <section id="comparison" className="py-32 bg-[#fafafa] text-[#1d1d1f] overflow-hidden">
+    <section
+      id="comparison"
+      className="py-32 bg-[#fafafa] text-[#1d1d1f] overflow-hidden"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <motion.h2
@@ -80,7 +98,9 @@ export default function Comparison() {
           <div className="grid grid-cols-3 gap-4 mb-6 px-6 py-4 border-b border-slate-200 text-xs font-bold text-[#86868b] uppercase tracking-wider">
             <div className="text-left">Cecha</div>
             <div className="text-center">Raspberry Pi 5</div>
-            <div className="text-center text-[#0071e3] font-extrabold">Linux Box</div>
+            <div className="text-center text-[#0071e3] font-extrabold">
+              Linux Box PRO
+            </div>
           </div>
 
           {/* Data Rows */}
@@ -103,7 +123,9 @@ export default function Comparison() {
                 <div className="text-center text-[#86868b] font-medium flex justify-center items-center">
                   {row.rpi}
                 </div>
-                <div className={`text-center font-bold flex justify-center items-center ${row.highlight ? 'text-[#0071e3]' : 'text-[#1d1d1f]'}`}>
+                <div
+                  className={`text-center font-bold flex justify-center items-center ${row.highlight ? "text-[#0071e3]" : "text-[#1d1d1f]"}`}
+                >
                   {row.linuxBox}
                 </div>
               </motion.div>
@@ -118,9 +140,13 @@ export default function Comparison() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="mt-10 grid grid-cols-3 gap-4 items-center px-8 py-8 rounded-3xl bg-[#f5f5f7] border border-slate-200 shadow-sm"
           >
-            <div className="text-xl font-bold text-[#1d1d1f] pl-2">Cena zestawu</div>
+            <div className="text-xl font-bold text-[#1d1d1f] pl-2">
+              Cena zestawu
+            </div>
             <div className="text-center">
-              <span className="text-2xl text-[#86868b] line-through font-medium">~1029,00 zł</span>
+              <span className="text-2xl text-[#86868b]  font-medium">
+                ~1229,00 zł
+              </span>
             </div>
             <div className="text-center">
               <span className="text-4xl md:text-5xl font-extrabold text-[#0071e3] tracking-tight">
@@ -137,7 +163,8 @@ export default function Comparison() {
             className="mt-8 text-center"
           >
             <p className="text-[#86868b] text-xs sm:text-sm">
-              * Ceny orientacyjne. Zestaw Raspberry Pi uwzględnia płytkę, obudowę, chłodzenie, zasilacz, kartę SD i kabel HDMI.
+              * Ceny orientacyjne. Zestaw Raspberry Pi uwzględnia płytkę, thread
+              dongle, obudowę, chłodzenie, zasilacz, kartę SD i kabel HDMI.
             </p>
           </motion.div>
         </div>
