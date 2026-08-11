@@ -49,7 +49,14 @@ const LinuxPenguinWatermark = () => (
       {/* Body */}
       <ellipse cx="50" cy="60" rx="30" ry="32" fill="currentColor" />
       {/* Belly */}
-      <ellipse cx="50" cy="62" rx="20" ry="24" fill="#F8FAFC" fillOpacity="0.9" />
+      <ellipse
+        cx="50"
+        cy="62"
+        rx="20"
+        ry="24"
+        fill="#F8FAFC"
+        fillOpacity="0.9"
+      />
       {/* Head */}
       <circle cx="50" cy="28" r="20" fill="currentColor" />
       {/* Eyes */}
@@ -60,8 +67,14 @@ const LinuxPenguinWatermark = () => (
       {/* Beak */}
       <polygon points="50,28 42,34 58,34" fill="#F59E0B" />
       {/* Wings */}
-      <path d="M 22 50 C 12 55 12 70 24 75 C 24 65 24 55 22 50 Z" fill="currentColor" />
-      <path d="M 78 50 C 88 55 88 70 76 75 C 76 65 76 55 78 50 Z" fill="currentColor" />
+      <path
+        d="M 22 50 C 12 55 12 70 24 75 C 24 65 24 55 22 50 Z"
+        fill="currentColor"
+      />
+      <path
+        d="M 78 50 C 88 55 88 70 76 75 C 76 65 76 55 78 50 Z"
+        fill="currentColor"
+      />
       {/* Feet */}
       <ellipse cx="38" cy="90" rx="10" ry="4" fill="#F59E0B" />
       <ellipse cx="62" cy="90" rx="10" ry="4" fill="#F59E0B" />
@@ -95,13 +108,14 @@ const docsData: DocItem[] = [
     title: "Linux Box PRO",
     badge: "Wersja PRO",
     badgeColor: "bg-blue-100 text-blue-800 border-blue-300 font-semibold",
-    subtitle: "Wydajna bramka IoT z Home Assistant (S922X-H, 4GB RAM, 64GB eMMC)",
+    subtitle:
+      "Wydajna bramka IoT z Home Assistant (S922X-H, 4GB RAM, 64GB eMMC)",
     description:
       "Dedykowana dokumentacja techniczna dla modelu Linux Box PRO. Zawiera szczegółowe instrukcje konfiguracji zaawansowanych usług, integracji i rozbudowy.",
     onlineUrl:
-      "https://docs.google.com/document/d/1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I/edit?usp=sharing",
+      "https://docs.google.com/document/d/1mFhOg6x7Zc9KEqYhMHZ5xfaH0QP8Uc2ZnkgWfM_to2U/edit?usp=drive_link",
     pdfUrl:
-      "https://docs.google.com/document/export?format=pdf&id=1srCEdwxgLsXWYs3N94VMChzI6eTjtDUmplZxLtWGJ4I",
+      "https://docs.google.com/document/export?format=pdf&id=1mFhOg6x7Zc9KEqYhMHZ5xfaH0QP8Uc2ZnkgWfM_to2U",
     topics: [
       "Uruchomienie kontenerów Docker na Linux Box PRO",
       "Konfiguracja Home Assistant",
@@ -113,7 +127,8 @@ const docsData: DocItem[] = [
     id: "standard",
     title: "Linux Box (Standard)",
     badge: "Wersja Standard",
-    badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-300 font-semibold",
+    badgeColor:
+      "bg-emerald-100 text-emerald-800 border-emerald-300 font-semibold",
     subtitle: "Bramka IoT z zaawansowanymi możliwościami rozbudowy",
     description:
       "Kompleksowa instrukcja instalacji, szybkiego startu, konfiguracji oprogramowania Home Assistant oraz rozwiązywania problemów dla bramki Linux Box.",
@@ -131,7 +146,7 @@ const docsData: DocItem[] = [
 ];
 
 export default function DocsPage() {
-  const [activeTab, setActiveTab] = useState<ModelType>("all");
+  const [activeTab, setActiveTab] = useState<ModelType>("pro");
 
   const filteredDocs =
     activeTab === "all"
@@ -187,8 +202,8 @@ export default function DocsPage() {
                 </span>
               </h1>
               <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                Wybierz model swojej bramki i uzyskaj dostęp do instrukcji
-                oraz poradników technicznych.
+                Wybierz model swojej bramki i uzyskaj dostęp do instrukcji oraz
+                poradników technicznych.
               </p>
             </motion.div>
 
@@ -200,30 +215,33 @@ export default function DocsPage() {
               <div className="inline-flex p-1.5 rounded-2xl bg-gray-100/80 border border-gray-200/60 shadow-inner">
                 <button
                   onClick={() => setActiveTab("all")}
-                  className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-2 ${activeTab === "all"
-                    ? "bg-white text-gray-900 shadow-md font-semibold"
-                    : "text-gray-600 hover:text-gray-900"
-                    }`}
+                  className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-2 ${
+                    activeTab === "all"
+                      ? "bg-white text-gray-900 shadow-md font-semibold"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
                 >
                   <Layers className="w-4 h-4" />
                   Wszystkie modele
                 </button>
                 <button
                   onClick={() => setActiveTab("pro")}
-                  className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-2 ${activeTab === "pro"
-                    ? "bg-blue-600 text-white shadow-md font-semibold"
-                    : "text-gray-600 hover:text-gray-900"
-                    }`}
+                  className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-2 ${
+                    activeTab === "pro"
+                      ? "bg-blue-600 text-white shadow-md font-semibold"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
                 >
                   <Cpu className="w-4 h-4" />
                   🐧 Linux Box PRO
                 </button>
                 <button
                   onClick={() => setActiveTab("standard")}
-                  className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-2 ${activeTab === "standard"
-                    ? "bg-emerald-600 text-white shadow-md font-semibold"
-                    : "text-gray-600 hover:text-gray-900"
-                    }`}
+                  className={`px-5 py-2.5 rounded-xl text-sm font-medium transition-all duration-200 flex items-center gap-2 ${
+                    activeTab === "standard"
+                      ? "bg-emerald-600 text-white shadow-md font-semibold"
+                      : "text-gray-600 hover:text-gray-900"
+                  }`}
                 >
                   <Box className="w-4 h-4" />
                   Linux Box Standard
@@ -243,7 +261,11 @@ export default function DocsPage() {
                   label: "Sprawdzone instrukcje",
                   value: "100%",
                 },
-                { icon: Code, label: "Wsparcie dla modeli", value: "PRO & Standard" },
+                {
+                  icon: Code,
+                  label: "Wsparcie dla modeli",
+                  value: "PRO & Standard",
+                },
               ].map((stat, index) => (
                 <motion.div
                   key={index}
@@ -278,10 +300,11 @@ export default function DocsPage() {
                   return (
                     <div
                       key={doc.id}
-                      className={`group relative rounded-3xl border shadow-2xl overflow-hidden p-8 md:p-10 transition-all duration-500 ${isPro
-                        ? "bg-gradient-to-br from-slate-50 via-blue-50/80 to-indigo-50/50 border-blue-200/90 text-slate-900 shadow-xl shadow-blue-100/50"
-                        : "bg-gradient-to-br from-emerald-50/90 via-teal-50/80 to-green-50/60 border-emerald-200/90 text-slate-900 shadow-xl shadow-emerald-100/50"
-                        }`}
+                      className={`group relative rounded-3xl border shadow-2xl overflow-hidden p-8 md:p-10 transition-all duration-500 ${
+                        isPro
+                          ? "bg-gradient-to-br from-slate-50 via-blue-50/80 to-indigo-50/50 border-blue-200/90 text-slate-900 shadow-xl shadow-blue-100/50"
+                          : "bg-gradient-to-br from-emerald-50/90 via-teal-50/80 to-green-50/60 border-emerald-200/90 text-slate-900 shadow-xl shadow-emerald-100/50"
+                      }`}
                     >
                       {/* Background Watermark */}
                       {isPro ? <LinuxPenguinWatermark /> : <BoxWatermark />}
@@ -293,8 +316,11 @@ export default function DocsPage() {
 
                       {/* Header Banner */}
                       <div
-                        className={`flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b relative z-10 ${isPro ? "border-blue-100 pr-24 md:pr-36" : "border-emerald-200/80"
-                          }`}
+                        className={`flex flex-wrap items-center justify-between gap-4 mb-6 pb-6 border-b relative z-10 ${
+                          isPro
+                            ? "border-blue-100 pr-24 md:pr-36"
+                            : "border-emerald-200/80"
+                        }`}
                       >
                         <div className="flex items-center gap-3">
                           <span
@@ -307,8 +333,11 @@ export default function DocsPage() {
                           </h2>
                         </div>
                         <span
-                          className={`text-sm font-medium ${isPro ? "text-blue-900 font-semibold" : "text-emerald-900 font-semibold"
-                            }`}
+                          className={`text-sm font-medium ${
+                            isPro
+                              ? "text-blue-900 font-semibold"
+                              : "text-emerald-900 font-semibold"
+                          }`}
                         >
                           {doc.subtitle}
                         </span>
@@ -321,8 +350,9 @@ export default function DocsPage() {
                       {/* Topics / Features checklist */}
                       <div className="mb-8 relative z-10">
                         <h3
-                          className={`text-sm font-semibold uppercase tracking-wider mb-4 ${isPro ? "text-blue-900/80" : "text-emerald-900/80"
-                            }`}
+                          className={`text-sm font-semibold uppercase tracking-wider mb-4 ${
+                            isPro ? "text-blue-900/80" : "text-emerald-900/80"
+                          }`}
                         >
                           Zawartość dokumentacji
                         </h3>
@@ -330,14 +360,16 @@ export default function DocsPage() {
                           {doc.topics.map((topic, idx) => (
                             <div
                               key={idx}
-                              className={`flex items-center gap-3 text-sm font-medium p-3.5 rounded-xl border backdrop-blur-sm transition-all ${isPro
-                                ? "bg-white/90 text-slate-800 border-blue-100 hover:border-blue-200 shadow-sm"
-                                : "bg-white/90 text-slate-800 border-emerald-200/80 hover:border-emerald-300 shadow-sm"
-                                }`}
+                              className={`flex items-center gap-3 text-sm font-medium p-3.5 rounded-xl border backdrop-blur-sm transition-all ${
+                                isPro
+                                  ? "bg-white/90 text-slate-800 border-blue-100 hover:border-blue-200 shadow-sm"
+                                  : "bg-white/90 text-slate-800 border-emerald-200/80 hover:border-emerald-300 shadow-sm"
+                              }`}
                             >
                               <CheckCircle2
-                                className={`w-4 h-4 shrink-0 ${isPro ? "text-blue-600" : "text-emerald-600"
-                                  }`}
+                                className={`w-4 h-4 shrink-0 ${
+                                  isPro ? "text-blue-600" : "text-emerald-600"
+                                }`}
                               />
                               <span>{topic}</span>
                             </div>
@@ -351,17 +383,19 @@ export default function DocsPage() {
                         <motion.div
                           whileHover={{ y: -4 }}
                           transition={{ type: "spring", stiffness: 300 }}
-                          className={`relative group/card p-6 rounded-2xl border shadow-sm hover:shadow-md transition-all flex flex-col justify-between ${isPro
-                            ? "bg-gradient-to-br from-blue-50/90 to-indigo-50/70 border-blue-200/80"
-                            : "bg-white/90 border-emerald-200/90 hover:border-emerald-300"
-                            }`}
+                          className={`relative group/card p-6 rounded-2xl border shadow-sm hover:shadow-md transition-all flex flex-col justify-between ${
+                            isPro
+                              ? "bg-gradient-to-br from-blue-50/90 to-indigo-50/70 border-blue-200/80"
+                              : "bg-white/90 border-emerald-200/90 hover:border-emerald-300"
+                          }`}
                         >
                           <div>
                             <div
-                              className={`inline-flex p-3 rounded-xl mb-4 shadow-md ${isPro
-                                ? "bg-blue-600 text-white shadow-blue-500/20"
-                                : "bg-emerald-600 text-white shadow-emerald-500/20"
-                                }`}
+                              className={`inline-flex p-3 rounded-xl mb-4 shadow-md ${
+                                isPro
+                                  ? "bg-blue-600 text-white shadow-blue-500/20"
+                                  : "bg-emerald-600 text-white shadow-emerald-500/20"
+                              }`}
                             >
                               <FileText className="w-6 h-6" />
                             </div>
@@ -369,17 +403,19 @@ export default function DocsPage() {
                               Dokumentacja Online ({doc.title})
                             </h4>
                             <p className="text-sm mb-6 text-slate-600">
-                              Przeglądaj w przeglądarce pełny poradnik krok po kroku z wyszukiwaniem i aktualnymi informacjami.
+                              Przeglądaj w przeglądarce pełny poradnik krok po
+                              kroku z wyszukiwaniem i aktualnymi informacjami.
                             </p>
                           </div>
                           <Link
                             href={doc.onlineUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className={`inline-flex items-center justify-center gap-2 px-5 py-3 font-semibold rounded-xl transition-all duration-300 shadow-md group/btn ${isPro
-                              ? "bg-blue-600 text-white hover:bg-blue-700 shadow-blue-500/20"
-                              : "bg-emerald-600 text-white hover:bg-emerald-700 shadow-emerald-500/20"
-                              }`}
+                            className={`inline-flex items-center justify-center gap-2 px-5 py-3 font-semibold rounded-xl transition-all duration-300 shadow-md group/btn ${
+                              isPro
+                                ? "bg-blue-600 text-white hover:bg-blue-700 shadow-blue-500/20"
+                                : "bg-emerald-600 text-white hover:bg-emerald-700 shadow-emerald-500/20"
+                            }`}
                           >
                             <span>Otwórz dokumentację</span>
                             <ExternalLink className="w-4 h-4 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform" />
@@ -390,17 +426,19 @@ export default function DocsPage() {
                         <motion.div
                           whileHover={{ y: -4 }}
                           transition={{ type: "spring", stiffness: 300 }}
-                          className={`relative group/card p-6 rounded-2xl border shadow-sm hover:shadow-md transition-all flex flex-col justify-between ${isPro
-                            ? "bg-gradient-to-br from-amber-50/90 to-orange-50/70 border-amber-200/80 hover:border-amber-300"
-                            : "bg-gradient-to-br from-emerald-50/90 to-teal-50/70 border-emerald-200/80 hover:border-emerald-300"
-                            }`}
+                          className={`relative group/card p-6 rounded-2xl border shadow-sm hover:shadow-md transition-all flex flex-col justify-between ${
+                            isPro
+                              ? "bg-gradient-to-br from-amber-50/90 to-orange-50/70 border-amber-200/80 hover:border-amber-300"
+                              : "bg-gradient-to-br from-emerald-50/90 to-teal-50/70 border-emerald-200/80 hover:border-emerald-300"
+                          }`}
                         >
                           <div>
                             <div
-                              className={`inline-flex p-3 rounded-xl mb-4 shadow-md ${isPro
-                                ? "bg-amber-600 text-white shadow-amber-500/20"
-                                : "bg-emerald-600 text-white shadow-emerald-500/20"
-                                }`}
+                              className={`inline-flex p-3 rounded-xl mb-4 shadow-md ${
+                                isPro
+                                  ? "bg-amber-600 text-white shadow-amber-500/20"
+                                  : "bg-emerald-600 text-white shadow-emerald-500/20"
+                              }`}
                             >
                               <Download className="w-6 h-6" />
                             </div>
@@ -408,15 +446,17 @@ export default function DocsPage() {
                               Pobierz PDF ({doc.title})
                             </h4>
                             <p className="text-sm mb-6 text-slate-600">
-                              Pobierz oficjalny plik PDF na swój dysk, aby uzyskać dostęp offline w dowolnym momencie.
+                              Pobierz oficjalny plik PDF na swój dysk, aby
+                              uzyskać dostęp offline w dowolnym momencie.
                             </p>
                           </div>
                           <Link
                             href={doc.pdfUrl}
-                            className={`inline-flex items-center justify-center gap-2 px-5 py-3 font-semibold rounded-xl transition-all duration-300 shadow-md group/btn ${isPro
-                              ? "bg-amber-600 text-white hover:bg-amber-700 shadow-amber-500/20"
-                              : "bg-emerald-600 text-white hover:bg-emerald-700 shadow-emerald-500/20"
-                              }`}
+                            className={`inline-flex items-center justify-center gap-2 px-5 py-3 font-semibold rounded-xl transition-all duration-300 shadow-md group/btn ${
+                              isPro
+                                ? "bg-amber-600 text-white hover:bg-amber-700 shadow-amber-500/20"
+                                : "bg-emerald-600 text-white hover:bg-emerald-700 shadow-emerald-500/20"
+                            }`}
                           >
                             <span>Pobierz plik PDF</span>
                             <ArrowRight className="w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -444,7 +484,8 @@ export default function DocsPage() {
               >
                 <Sparkles className="w-5 h-5 text-emerald-600" />
                 <span className="text-sm text-emerald-800 font-medium">
-                  Dokumentacja dla Linux Box oraz Linux Box PRO jest w ciągłej rozbudowie!
+                  Dokumentacja dla Linux Box oraz Linux Box PRO jest w ciągłej
+                  rozbudowie!
                 </span>
               </motion.div>
             </motion.div>
