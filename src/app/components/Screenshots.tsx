@@ -3,7 +3,16 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { Maximize2, X, Music, Home, Cpu, Network } from "lucide-react";
+import {
+  Maximize2,
+  X,
+  Music,
+  Home,
+  Cpu,
+  Network,
+  Gauge,
+  MapPin,
+} from "lucide-react";
 
 interface ScreenshotItem {
   id: string;
@@ -41,19 +50,41 @@ const screenshots: ScreenshotItem[] = [
   },
   {
     id: "thread-matter-map",
-    title: "Mapa sieci Thread & Matter",
+    title: "Wbudowany Thread & Matter",
     subtitle: "Wbudowany router Border Router i lokalna topologia urządzeń.",
     category: "Architektura Sieci",
-    imageSrc: "/ha-matter-server-thread.webp",
+    imageSrc: "/ha-matter-server-thread.png",
     icon: <Network className="w-5 h-5 text-[#0071e3]" />,
+  },
+  {
+    id: "energy",
+    title: "Energy Dashboard",
+    subtitle:
+      "Monitoruj produkcję i zużycie energii w całym domu w czasie rzeczywistym.",
+    category: "Energetyka",
+    imageSrc: "/energy.webp",
+    icon: <Gauge className="w-5 h-5 text-[#0071e3]" />,
+  },
+  {
+    id: "map",
+    title: "Mapa Lokalizacji",
+    subtitle: "Śledź położenie domowników na interaktywnej mapie.",
+    category: "Lokalizacja",
+    imageSrc: "/map-card.png",
+    icon: <MapPin className="w-5 h-5 text-[#0071e3]" />,
   },
 ];
 
 export default function Screenshots() {
-  const [selectedImage, setSelectedImage] = useState<ScreenshotItem | null>(null);
+  const [selectedImage, setSelectedImage] = useState<ScreenshotItem | null>(
+    null,
+  );
 
   return (
-    <section id="screenshots" className="py-32 bg-[#fafafa] text-[#1d1d1f] overflow-hidden">
+    <section
+      id="screenshots"
+      className="py-32 bg-[#fafafa] text-[#1d1d1f] overflow-hidden"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <motion.h2
@@ -72,7 +103,8 @@ export default function Screenshots() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-xl md:text-2xl text-[#86868b] font-medium leading-relaxed"
           >
-            Zintegrowane interfejsy i aplikacje gotowe do pracy od pierwszej minuty.
+            Zintegrowane interfejsy i aplikacje gotowe do pracy od pierwszej
+            minuty.
           </motion.p>
         </div>
 
