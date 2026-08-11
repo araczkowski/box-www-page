@@ -38,22 +38,23 @@ export default function StickyNav() {
             className="flex items-center gap-2 font-bold text-lg tracking-tight transition-opacity text-slate-900 hover:opacity-75"
           >
             <span>🐧</span>
-            <span className="font-semibold">Linux Box</span>
+            <span className="font-semibold">Linux Box Pro</span>
           </button>
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8 text-xs font-medium tracking-tight">
-            <a
-              href="/docs"
-              className="transition-colors text-slate-600 hover:text-slate-900"
-            >
-              Dokumentacja
-            </a>
+
             <button
               onClick={() => scrollToSection("tech-specs")}
               className="transition-colors text-slate-600 hover:text-slate-900"
             >
               Specyfikacja
+            </button>
+            <button
+              onClick={() => scrollToSection("screenshots")}
+              className="transition-colors text-slate-600 hover:text-slate-900"
+            >
+              Ekosystem
             </button>
             <button
               onClick={() => scrollToSection("features")}
@@ -73,6 +74,12 @@ export default function StickyNav() {
             >
               Pobierz System
             </button>
+            <a
+              href="/docs"
+              className="transition-colors text-slate-600 hover:text-slate-900"
+            >
+              Dokumentacja
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
