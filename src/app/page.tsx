@@ -105,8 +105,8 @@ export default function Home() {
                 </p>
                 <div className="flex items-center gap-2">
                   <span>Made with</span>
-                  <span className="text-red-500 text-sm">♥</span>
-                  <span>for developers</span>
+                  <span className="text-red-500 text-xl">♥</span>
+                  <span>for you</span>
                 </div>
               </div>
             </div>

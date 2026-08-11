@@ -27,20 +27,20 @@ interface ScreenshotItem {
 
 const screenshots: ScreenshotItem[] = [
   {
-    id: "music-assistant",
-    title: "Music Assistant",
-    subtitle: "Zarządzanie muzyką i strumieniowaniem w całym domu.",
-    category: "Audio & Strumieniowanie",
-    imageSrc: "/music-assistant.png",
-    icon: <Music className="w-5 h-5 text-[#0071e3]" />,
-  },
-  {
     id: "home-assistant",
     title: "Home Assistant",
     subtitle: "Główny pulpit nawigacyjny i automatyzacje Smart Home.",
     category: "Centrum Sterowania",
     imageSrc: "/home-assistant-ui.png",
     icon: <Home className="w-5 h-5 text-[#0071e3]" />,
+  },
+  {
+    id: "music-assistant",
+    title: "Music Assistant",
+    subtitle: "Zarządzanie muzyką i strumieniowaniem w całym domu.",
+    category: "Audio & Strumieniowanie",
+    imageSrc: "/music-assistant.png",
+    icon: <Music className="w-5 h-5 text-[#0071e3]" />,
   },
   {
     id: "esphome",
