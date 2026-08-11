@@ -12,6 +12,8 @@ import {
   Network,
   Gauge,
   MapPin,
+  Camera,
+  Terminal,
 } from "lucide-react";
 
 interface ScreenshotItem {
@@ -72,6 +74,23 @@ const screenshots: ScreenshotItem[] = [
     category: "Lokalizacja",
     imageSrc: "/map-card.png",
     icon: <MapPin className="w-5 h-5 text-[#0071e3]" />,
+  },
+  {
+    id: "monitoring",
+    title: "Monitoring",
+    subtitle: "Obraz z kamer bezpieczeństwa w czasie rzeczywistym.",
+    category: "Monitoring",
+    imageSrc: "/monitoring.png",
+    icon: <Camera className="w-5 h-5 text-[#0071e3]" />,
+  },
+  {
+    id: "full-access",
+    title: "Pełny dostęp",
+    subtitle:
+      "Root przez SSH, instalacja dowolnych aplikacji i kontenery Docker.",
+    category: "System",
+    imageSrc: "/terminal.png",
+    icon: <Terminal className="w-5 h-5 text-[#0071e3]" />,
   },
 ];
 

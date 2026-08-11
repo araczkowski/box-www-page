@@ -9,6 +9,7 @@ import Features from "./components/Features";
 import Screenshots from "./components/Screenshots";
 import Comparison from "./components/Comparison";
 import OpenSource from "./components/OpenSource";
+
 import { Mail, FileText, ArrowUpRight } from "lucide-react";
 
 export default function Home() {
