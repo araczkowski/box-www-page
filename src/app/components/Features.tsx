@@ -17,7 +17,8 @@ const features = [
   {
     icon: <Monitor className="w-8 h-8" />,
     title: "System",
-    description: "Ubuntu, Debian, Armbian, Android. Wybierz to, co lubisz najbardziej.",
+    description:
+      "Ubuntu, Debian, Armbian, Android. Wybierz to, co lubisz najbardziej.",
   },
   {
     icon: <Terminal className="w-8 h-8" />,
@@ -56,16 +57,25 @@ const features = [
     title: "Android",
     description: "Dostępne obrazy Android TV oraz Android AOSP.",
   },
-
 ];
 
 export default function Features() {
   return (
     <section
       id="features"
-      className="py-32 bg-white text-[#1d1d1f] overflow-hidden"
+      className="relative py-32 bg-white text-[#1d1d1f] overflow-hidden"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      {/* Ambient Aurora Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-32 left-1/4 w-[450px] h-[450px] rounded-full bg-[#10b981]/5 blur-[120px] animate-aurora" />
+        <div
+          className="absolute bottom-20 -right-32 w-[400px] h-[400px] rounded-full bg-[#0071e3]/5 blur-[120px] animate-aurora"
+          style={{ animationDelay: "6s" }}
+        />
+        <div className="absolute inset-0 bg-dots-pattern opacity-20" />
+      </div>
+
+      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -75,18 +85,19 @@ export default function Features() {
         >
           <div className="max-w-3xl md:w-2/3">
             <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 text-[#1d1d1f]">
-              Możliwości. <span className="text-[#86868b]">Nieskończone.</span>
+              <span className="gradient-text-emerald">Możliwości.</span>{" "}
+              <span className="text-[#86868b]">Nieskończone.</span>
             </h2>
             <p className="text-xl md:text-2xl text-[#86868b] font-medium leading-relaxed">
-              Od serwera domowego po centrum multimedialne. Linux Box dostosowuje
-              się do Twoich potrzeb.
+              Od serwera domowego po centrum multimedialne. Linux Box
+              dostosowuje się do Twoich potrzeb.
             </p>
           </div>
           <div className="md:w-1/3 flex justify-center md:justify-end">
             <a
               href="/docs"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#f5f5f7] hover:bg-[#ebebef] text-[#1d1d1f] font-semibold transition-all hover:scale-105"
+              className="btn-shine btn-glow inline-flex items-center gap-2 px-6 py-3 rounded-full glass-light border border-white/60 text-[#1d1d1f] font-semibold transition-all hover:scale-105"
             >
               <FileText className="h-4 w-4 text-[#0071e3]" />
               <span>Dokumentacja</span>
@@ -102,10 +113,10 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.08 }}
-              className="flex flex-col justify-between p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 hover:scale-[1.02] group"
+              className="card-hover card-glow flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 hover:border-[#0071e3]/40 transition-all duration-300 hover:scale-[1.02] group"
             >
               <div>
-                <div className="mb-6 p-4 rounded-2xl bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors duration-300 w-fit">
+                <div className="mb-6 p-4 rounded-2xl bg-white text-[#1d1d1f] group-hover:bg-gradient-to-br group-hover:from-[#0071e3] group-hover:to-[#00c6ff] group-hover:text-white shadow-md transition-all duration-300 w-fit">
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-[#1d1d1f] tracking-tight">

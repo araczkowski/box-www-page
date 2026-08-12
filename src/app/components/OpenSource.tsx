@@ -5,17 +5,29 @@ import { ArrowRight, Command, Globe, Settings2, Download } from "lucide-react";
 
 export default function OpenSource() {
   return (
-    <section id="opensource" className="py-32 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+    <section
+      id="opensource"
+      className="relative py-32 bg-white overflow-hidden"
+    >
+      {/* Ambient Aurora Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 -right-40 w-[450px] h-[450px] rounded-full bg-[#0071e3]/8 blur-[120px] animate-aurora" />
+        <div
+          className="absolute bottom-20 -left-40 w-[400px] h-[400px] rounded-full bg-[#10b981]/8 blur-[120px] animate-aurora"
+          style={{ animationDelay: "6s" }}
+        />
+      </div>
+
+      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-5xl md:text-7xl font-extrabold tracking-tight text-[#1d1d1f] mb-6"
+            className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
           >
-            Open Source.
+            <span className="gradient-text-emerald">Open Source.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -64,7 +76,7 @@ export default function OpenSource() {
               href="https://drive.google.com/file/d/1QR6u-WGWogbvLDciO9ELbaHB35zI3ucf/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-3 px-7 py-4 bg-[#e8e8ed] hover:bg-[#d2d2d7] text-[#1d1d1f] rounded-full text-base md:text-lg font-semibold transition-all hover:scale-105 active:scale-95 text-center w-full sm:w-auto"
+              className="btn-shine group inline-flex items-center justify-center gap-3 px-7 py-4 glass-light border border-white/60 hover:border-[#10b981]/40 text-[#1d1d1f] rounded-full text-base md:text-lg font-semibold transition-all hover:scale-105 active:scale-95 text-center w-full sm:w-auto shadow-md"
             >
               <Download className="w-5 h-5 shrink-0 text-[#1d1d1f]" />
               <span>Pobierz obraz systemu Linux BOX Standard</span>
@@ -75,7 +87,7 @@ export default function OpenSource() {
               href="https://drive.google.com/file/d/1k_emkVVHaHPSF7OMyaLP4WuSo5NNRz6F/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center justify-center gap-3 px-7 py-4 bg-[#0071e3] hover:bg-[#0077ed] text-white rounded-full text-base md:text-lg font-semibold transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-500/20 text-center w-full sm:w-auto"
+              className="btn-shine btn-glow group inline-flex items-center justify-center gap-3 px-7 py-4 bg-gradient-to-r from-[#0071e3] via-[#0084ff] to-[#00c6ff] hover:from-[#0084ff] hover:via-[#0099ff] hover:to-[#00e5ff] text-white rounded-full text-base md:text-lg font-semibold transition-all hover:scale-105 active:scale-95 shadow-xl shadow-blue-500/25 text-center w-full sm:w-auto"
             >
               <Download className="w-5 h-5 shrink-0" />
               <span>Pobierz obraz systemu Linux BOX PRO</span>
@@ -120,13 +132,17 @@ function FeatureCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 hover:scale-[1.02]"
+      className="card-hover card-glow p-8 rounded-3xl glass-light border border-white/60 hover:border-[#10b981]/40 transition-all duration-300 hover:scale-[1.02]"
     >
       <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#1d1d1f] shadow-sm mb-6">
         {icon}
       </div>
-      <h3 className="text-xl font-bold text-[#1d1d1f] mb-3 tracking-tight">{title}</h3>
-      <p className="text-sm text-[#86868b] leading-relaxed font-medium">{description}</p>
+      <h3 className="text-xl font-bold text-[#1d1d1f] mb-3 tracking-tight">
+        {title}
+      </h3>
+      <p className="text-sm text-[#86868b] leading-relaxed font-medium">
+        {description}
+      </p>
     </motion.div>
   );
 }

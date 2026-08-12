@@ -102,18 +102,26 @@ export default function Screenshots() {
   return (
     <section
       id="screenshots"
-      className="py-32 bg-[#fafafa] text-[#1d1d1f] overflow-hidden"
+      className="relative py-32 bg-[#fafafa] text-[#1d1d1f] overflow-hidden"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 -left-32 w-[400px] h-[400px] rounded-full bg-[#0071e3]/8 blur-[120px] animate-aurora" />
+        <div
+          className="absolute bottom-40 -right-32 w-[400px] h-[400px] rounded-full bg-[#00e5c8]/8 blur-[120px] animate-aurora"
+          style={{ animationDelay: "5s" }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl relative">
         <div className="max-w-4xl mx-auto text-center mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="text-5xl md:text-7xl font-extrabold tracking-tight text-[#1d1d1f] mb-6"
+            className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6"
           >
-            Ekosystem w działaniu.
+            <span className="gradient-text-purple">Ekosystem w działaniu.</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -136,7 +144,7 @@ export default function Screenshots() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative flex flex-col justify-between rounded-3xl bg-[#f5f5f7] border border-slate-200/60 p-6 sm:p-8 hover:border-slate-300 transition-all duration-500 hover:shadow-xl hover:scale-[1.01] overflow-hidden cursor-pointer"
+              className="card-hover card-glow group relative flex flex-col justify-between rounded-3xl glass-light border border-white/60 p-6 sm:p-8 hover:border-[#0071e3]/40 transition-all duration-500 hover:shadow-xl hover:scale-[1.01] overflow-hidden cursor-pointer"
               onClick={() => setSelectedImage(item)}
             >
               {/* Header Info */}
@@ -153,13 +161,13 @@ export default function Screenshots() {
                     {item.subtitle}
                   </p>
                 </div>
-                <div className="p-2.5 rounded-full bg-white text-[#1d1d1f] group-hover:bg-[#0071e3] group-hover:text-white shadow-sm transition-colors duration-300 shrink-0">
+                <div className="p-2.5 rounded-full bg-white text-[#1d1d1f] group-hover:bg-gradient-to-br group-hover:from-[#0071e3] group-hover:to-[#00c6ff] group-hover:text-white shadow-sm transition-colors duration-300 shrink-0">
                   <Maximize2 className="w-4 h-4" />
                 </div>
               </div>
 
               {/* Screenshot Preview */}
-              <div className="relative w-full h-64 sm:h-80 rounded-2xl overflow-hidden bg-slate-900 border border-slate-200/50 shadow-inner">
+              <div className="relative w-full h-64 sm:h-80 rounded-2xl overflow-hidden bg-slate-900 border border-white/20 shadow-inner">
                 <Image
                   src={item.imageSrc}
                   alt={item.title}
@@ -197,7 +205,7 @@ export default function Screenshots() {
               onClick={(e) => e.stopPropagation()}
             >
               {/* Modal Header */}
-              <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#1c1c1e]">
+              <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#1c1c1e]/95 backdrop-blur-xl">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-xl bg-white/10">
                     {selectedImage.icon}

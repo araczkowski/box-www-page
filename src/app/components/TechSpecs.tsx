@@ -22,9 +22,19 @@ export default function TechSpecs() {
   return (
     <section
       id="tech-specs"
-      className="py-32 bg-white text-[#1d1d1f] overflow-hidden"
+      className="relative py-32 bg-white text-[#1d1d1f] overflow-hidden"
     >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Ambient Aurora Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 right-1/4 w-[450px] h-[450px] rounded-full bg-[#0071e3]/5 blur-[120px] animate-aurora" />
+        <div
+          className="absolute bottom-20 -left-32 w-[400px] h-[400px] rounded-full bg-[#a855f7]/5 blur-[120px] animate-aurora"
+          style={{ animationDelay: "7s" }}
+        />
+        <div className="absolute inset-0 bg-dots-pattern opacity-20" />
+      </div>
+
+      <div className="container relative mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -32,8 +42,8 @@ export default function TechSpecs() {
           transition={{ duration: 0.6 }}
           className="text-center mb-24"
         >
-          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 text-[#1d1d1f]">
-            Specyfikacja.
+          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
+            <span className="gradient-text-blue">Specyfikacja.</span>
           </h2>
           <p className="text-xl md:text-2xl text-[#86868b] font-medium max-w-2xl mx-auto">
             Moc, wydajność i pełne wyposażenie.
@@ -47,14 +57,15 @@ export default function TechSpecs() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="lg:col-span-2 flex items-center justify-center p-6 sm:p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 shadow-sm overflow-hidden transition-all duration-500 group hover:border-slate-300 hover:scale-[1.01]"
+            className="card-hover card-glow lg:col-span-2 flex items-center justify-center p-6 sm:p-8 rounded-3xl glass-light border border-white/60 shadow-lg overflow-hidden transition-all duration-500 group hover:border-[#0071e3]/40 hover:scale-[1.01]"
           >
+            <div className="absolute inset-0 bg-gradient-to-br from-[#0071e3]/10 via-transparent to-[#00e5c8]/10 rounded-3xl pointer-events-none"></div>
             <Image
               src="/Code_Generated_Image2.png"
               alt="Specyfikacja Linux Box"
               width={700}
               height={450}
-              className="rounded-2xl mx-auto object-cover hover:scale-[1.02] transition-transform duration-700 bg-[#f5f5f7]"
+              className="rounded-2xl mx-auto object-cover hover:scale-[1.02] transition-transform duration-700"
             />
           </motion.div>
 
@@ -64,10 +75,10 @@ export default function TechSpecs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="lg:col-span-2 flex flex-col justify-between p-8 sm:p-10 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 group hover:scale-[1.01]"
+            className="card-hover card-glow lg:col-span-2 flex flex-col justify-between p-8 sm:p-10 rounded-3xl glass-light border border-white/60 shadow-md hover:border-[#0071e3]/40 transition-all duration-300 group hover:scale-[1.01]"
           >
             <div className="flex flex-col items-center justify-center text-center">
-              <div className="mb-5 p-4 rounded-2xl inline-block bg-[#0071e3] text-white shadow-md shadow-blue-500/20">
+              <div className="mb-5 p-4 rounded-2xl inline-block bg-gradient-to-br from-[#0071e3] to-[#00c6ff] text-white shadow-md shadow-blue-500/30 animate-pulse-ring">
                 <Cpu className="w-8 h-8" />
               </div>
               <h3 className="text-xs font-semibold text-[#86868b] mb-1 uppercase tracking-widest">
@@ -93,7 +104,7 @@ export default function TechSpecs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="flex flex-col justify-between p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 group hover:scale-[1.02]"
+            className="card-hover card-glow flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 shadow-md hover:border-[#0071e3]/40 transition-all duration-300 group hover:scale-[1.02]"
           >
             <div>
               <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
@@ -117,7 +128,7 @@ export default function TechSpecs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
-            className="flex flex-col justify-between p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 group hover:scale-[1.02]"
+            className="card-hover card-glow flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 shadow-md hover:border-[#0071e3]/40 transition-all duration-300 group hover:scale-[1.02]"
           >
             <div>
               <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
@@ -141,7 +152,7 @@ export default function TechSpecs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            className="lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 group hover:scale-[1.01]"
+            className="card-hover card-glow lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 shadow-md hover:border-[#0071e3]/40 transition-all duration-300 group hover:scale-[1.01]"
           >
             <div>
               <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
@@ -165,7 +176,7 @@ export default function TechSpecs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 group hover:scale-[1.01]"
+            className="card-hover card-glow lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 shadow-md hover:border-[#0071e3]/40 transition-all duration-300 group hover:scale-[1.01]"
           >
             <div>
               <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
@@ -189,7 +200,7 @@ export default function TechSpecs() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.7 }}
-            className="lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl bg-[#f5f5f7] border border-slate-200/50 hover:border-slate-300 transition-all duration-300 group hover:scale-[1.01]"
+            className="card-hover card-glow lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 shadow-md hover:border-[#0071e3]/40 transition-all duration-300 group hover:scale-[1.01]"
           >
             <div>
               <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">

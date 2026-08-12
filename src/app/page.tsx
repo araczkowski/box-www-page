@@ -31,8 +31,17 @@ export default function Home() {
       <OpenSource />
 
       {/* Apple-style Minimal Footer */}
-      <footer className="bg-[#f5f5f7] border-t border-slate-200/80 text-[#86868b]">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <footer className="relative bg-[#f5f5f7] border-t border-slate-200/80 text-[#86868b] overflow-hidden">
+        {/* Ambient gradient glow */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-32 left-1/4 w-[400px] h-[400px] rounded-full bg-[#0071e3]/8 blur-[120px] animate-aurora" />
+          <div
+            className="absolute bottom-0 right-1/4 w-[350px] h-[350px] rounded-full bg-[#00e5c8]/8 blur-[120px] animate-aurora"
+            style={{ animationDelay: "5s" }}
+          />
+        </div>
+
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-6xl mx-auto">
             {/* Main Footer Content */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
@@ -83,7 +92,7 @@ export default function Home() {
             </div>
 
             {/* SEO Keywords Section */}
-            <div className="mb-12 p-6 rounded-2xl bg-white border border-slate-200/60 shadow-sm">
+            <div className="mb-12 p-6 rounded-2xl glass-light border border-white/60 shadow-md">
               <p className="text-xs text-[#86868b] leading-relaxed">
                 <span className="font-semibold text-[#1d1d1f] mr-2">
                   SEO Keywords:

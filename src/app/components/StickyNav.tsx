@@ -27,8 +27,9 @@ export default function StickyNav() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
-        } bg-white/80 dark:bg-slate-900/80 border-b border-slate-200/60 backdrop-blur-xl shadow-sm`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"
+      } glass-light dark:bg-slate-900/80 border-b border-white/60 backdrop-blur-xl shadow-lg`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-14">
@@ -43,7 +44,6 @@ export default function StickyNav() {
 
           {/* Navigation Links */}
           <div className="hidden md:flex items-center gap-8 text-xs font-medium tracking-tight">
-
             <button
               onClick={() => scrollToSection("tech-specs")}
               className="transition-colors text-slate-600 hover:text-slate-900"
