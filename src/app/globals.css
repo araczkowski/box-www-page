@@ -279,7 +279,7 @@ footer {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradient-text 5s ease-in-out infinite;
+    animation: gradient-text 32s ease-in-out infinite;
 }
 
 .gradient-text-purple {

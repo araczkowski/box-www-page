@@ -43,6 +43,15 @@ export default function HeaderSimple() {
                 />
                 <span className="text-slate-300 text-xs font-semibold">•</span>
                 <Image
+                  src="/android.svg"
+                  alt="Android"
+                  width={28}
+                  height={28}
+                  className="w-6 h-6 sm:w-7 sm:h-7 object-contain opacity-90 hover:opacity-100 transition-opacity"
+                  title="Android"
+                />
+                <span className="text-slate-300 text-xs font-semibold">•</span>
+                <Image
                   src="/home-assistant.svg"
                   alt="Home Assistant"
                   width={28}
