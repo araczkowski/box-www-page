@@ -43,7 +43,7 @@ export default function TechSpecs() {
           className="text-center mb-24"
         >
           <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
-            <span className="gradient-text-blue">Specyfikacja.</span>
+            <span className="gradient-text-blue">Specyfikacja sprzętowa.</span>
           </h2>
           <p className="text-xl md:text-2xl text-[#86868b] font-medium max-w-2xl mx-auto">
             Moc, wydajność i pełne wyposażenie.
@@ -107,7 +107,7 @@ export default function TechSpecs() {
             className="card-hover card-glow flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 shadow-md hover:border-[#0071e3]/40 transition-all duration-300 group hover:scale-[1.02]"
           >
             <div>
-              <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
+              <div className="mb-6 p-4 rounded-2xl inline-block bg-cyan-50 text-[#0891b2] group-hover:bg-gradient-to-br group-hover:from-[#0891b2] group-hover:to-[#22d3ee] group-hover:text-white shadow-sm transition-all duration-300">
                 <HardDrive className="w-6 h-6" />
               </div>
               <h3 className="text-xs font-semibold text-[#86868b] mb-2 uppercase tracking-widest">
@@ -122,7 +122,7 @@ export default function TechSpecs() {
             </p>
           </motion.div>
 
-          {/* 4. Thread & Matter */}
+          {/* 4. Ethernet */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -131,31 +131,7 @@ export default function TechSpecs() {
             className="card-hover card-glow flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 shadow-md hover:border-[#0071e3]/40 transition-all duration-300 group hover:scale-[1.02]"
           >
             <div>
-              <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
-                <MatterIcon className="w-6 h-6" />
-              </div>
-              <h3 className="text-xs font-semibold text-[#86868b] mb-2 uppercase tracking-widest">
-                Smart Home
-              </h3>
-              <p className="text-3xl font-extrabold text-[#1d1d1f] mb-2 tracking-tight">
-                Thread & Matter
-              </p>
-            </div>
-            <p className="text-xs sm:text-sm text-[#86868b] font-medium">
-              Wbudowany router Thread i obsługa Matter
-            </p>
-          </motion.div>
-
-          {/* 5. Ethernet */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.5 }}
-            className="card-hover card-glow lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 shadow-md hover:border-[#0071e3]/40 transition-all duration-300 group hover:scale-[1.01]"
-          >
-            <div>
-              <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
+              <div className="mb-6 p-4 rounded-2xl inline-block bg-blue-50 text-[#0071e3] group-hover:bg-gradient-to-br group-hover:from-[#0071e3] group-hover:to-[#40c4ff] group-hover:text-white shadow-sm transition-all duration-300">
                 <Server className="w-6 h-6" />
               </div>
               <h3 className="text-xs font-semibold text-[#86868b] mb-2 uppercase tracking-widest">
@@ -170,6 +146,30 @@ export default function TechSpecs() {
             </p>
           </motion.div>
 
+          {/* 5. Thread & Matter */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            className="card-hover card-glow lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 shadow-md hover:border-[#0071e3]/40 transition-all duration-300 group hover:scale-[1.01]"
+          >
+            <div>
+              <div className="mb-6 p-4 rounded-2xl inline-block bg-emerald-50 text-[#10b981] group-hover:bg-gradient-to-br group-hover:from-[#10b981] group-hover:to-[#34d399] group-hover:text-white shadow-sm transition-all duration-300">
+                <MatterIcon className="w-6 h-6" />
+              </div>
+              <h3 className="text-xs font-semibold text-[#86868b] mb-2 uppercase tracking-widest">
+                Smart Home
+              </h3>
+              <p className="text-3xl font-extrabold text-[#1d1d1f] mb-2 tracking-tight">
+                Thread & Matter
+              </p>
+            </div>
+            <p className="text-xs sm:text-sm text-[#86868b] font-medium">
+              Wbudowany router Thread i obsługa Matter
+            </p>
+          </motion.div>
+
           {/* 6. Porty USB */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -179,7 +179,7 @@ export default function TechSpecs() {
             className="card-hover card-glow lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 shadow-md hover:border-[#0071e3]/40 transition-all duration-300 group hover:scale-[1.01]"
           >
             <div>
-              <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
+              <div className="mb-6 p-4 rounded-2xl inline-block bg-amber-50 text-[#f59e0b] group-hover:bg-gradient-to-br group-hover:from-[#f59e0b] group-hover:to-[#fbbf24] group-hover:text-white shadow-sm transition-all duration-300">
                 <Zap className="w-6 h-6" />
               </div>
               <h3 className="text-xs font-semibold text-[#86868b] mb-2 uppercase tracking-widest">
@@ -203,7 +203,7 @@ export default function TechSpecs() {
             className="card-hover card-glow lg:col-span-2 flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 shadow-md hover:border-[#0071e3]/40 transition-all duration-300 group hover:scale-[1.01]"
           >
             <div>
-              <div className="mb-6 p-4 rounded-2xl inline-block bg-white text-[#1d1d1f] group-hover:text-[#0071e3] shadow-sm transition-colors">
+              <div className="mb-6 p-4 rounded-2xl inline-block bg-violet-50 text-[#7c3aed] group-hover:bg-gradient-to-br group-hover:from-[#7c3aed] group-hover:to-[#a78bfa] group-hover:text-white shadow-sm transition-all duration-300">
                 <Volume2 className="w-6 h-6" />
               </div>
               <h3 className="text-xs font-semibold text-[#86868b] mb-2 uppercase tracking-widest">

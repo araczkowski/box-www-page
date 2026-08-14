@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Command, Globe, Settings2, Download } from "lucide-react";
+import Image from "next/image";
+import { ArrowRight, Bird, Settings2, Download } from "lucide-react";
 
 export default function OpenSource() {
   return (
@@ -44,19 +45,33 @@ export default function OpenSource() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
           <FeatureCard
-            icon={<Globe className="w-7 h-7" />}
+            icon={<Bird className="w-7 h-7 text-[#10b981]" />}
+            iconBg="bg-emerald-50"
+            iconHover="group-hover:from-[#10b981] group-hover:to-[#34d399]"
             title="Wolny Dostęp"
-            description="Pobierz i zainstaluj system na USB, karcie SD lub pamięci eMMC. Linux Box ma włączony multiboot - wystarczy podłączyć nośnik."
+            description="Pobierz i zainstaluj dodatkowy system na USB, karcie SD lub pamięci eMMC. Linux Box ma włączony multiboot - wystarczy podłączyć nośnik."
             delay={0.2}
           />
           <FeatureCard
-            icon={<Command className="w-7 h-7" />}
+            icon={
+              <Image
+                src="/linux.svg"
+                alt="Linux"
+                width={28}
+                height={28}
+                className="w-7 h-7 object-contain"
+              />
+            }
+            iconBg="bg-orange-50"
+            iconHover="group-hover:from-[#e95420] group-hover:to-[#f47951]"
             title="Ubuntu Resolute Raccoon (v26.04 LTS)"
             description="Gotowy do użycia system z jądrem Linux 6.18.40 oraz preinstalowanym oprogramowaniem. W pełni funkcjonalny i zoptymalizowany dla Linux Box PRO."
             delay={0.3}
           />
           <FeatureCard
-            icon={<Settings2 className="w-7 h-7" />}
+            icon={<Settings2 className="w-7 h-7 text-[#0071e3]" />}
+            iconBg="bg-blue-50"
+            iconHover="group-hover:from-[#0071e3] group-hover:to-[#40c4ff]"
             title="Pełna Kontrola"
             description="Modyfikuj, instaluj i dostosowuj do swoich potrzeb. Dostęp do konta root i pełna swoboda konfiguracji."
             delay={0.4}
@@ -117,11 +132,15 @@ export default function OpenSource() {
 
 function FeatureCard({
   icon,
+  iconBg,
+  iconHover,
   title,
   description,
   delay,
 }: {
   icon: React.ReactNode;
+  iconBg: string;
+  iconHover: string;
   title: string;
   description: string;
   delay: number;
@@ -132,9 +151,11 @@ function FeatureCard({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay }}
-      className="card-hover card-glow p-8 rounded-3xl glass-light border border-white/60 hover:border-[#10b981]/40 transition-all duration-300 hover:scale-[1.02]"
+      className="card-hover card-glow p-8 rounded-3xl glass-light border border-white/60 hover:border-[#10b981]/40 transition-all duration-300 hover:scale-[1.02] group"
     >
-      <div className="w-12 h-12 bg-white rounded-2xl flex items-center justify-center text-[#1d1d1f] shadow-sm mb-6">
+      <div
+        className={`w-12 h-12 ${iconBg} rounded-2xl flex items-center justify-center text-[#1d1d1f] shadow-sm mb-6 group-hover:bg-gradient-to-br ${iconHover} group-hover:scale-105 transition-all duration-300`}
+      >
         {icon}
       </div>
       <h3 className="text-xl font-bold text-[#1d1d1f] mb-3 tracking-tight">

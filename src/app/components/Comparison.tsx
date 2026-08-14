@@ -9,6 +9,7 @@ import {
   Zap,
   Thermometer,
   Radio,
+  MonitorPlay,
 } from "lucide-react";
 
 const comparisonData = [
@@ -36,6 +37,13 @@ const comparisonData = [
   {
     feature: "Thread & Matter",
     icon: <Radio className="w-5 h-5" />,
+    rpi: "Brak",
+    linuxBox: "W zestawie",
+    highlight: true,
+  },
+  {
+    feature: "CoreELEC",
+    icon: <MonitorPlay className="w-5 h-5" />,
     rpi: "Brak",
     linuxBox: "W zestawie",
     highlight: true,

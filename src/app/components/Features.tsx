@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import {
   Terminal,
   Monitor,
@@ -8,54 +9,80 @@ import {
   Home,
   Film,
   Code2,
-  Smartphone,
   ShieldCheck,
   FileText,
 } from "lucide-react";
 
 const features = [
   {
-    icon: <Monitor className="w-8 h-8" />,
+    icon: <Monitor className="w-8 h-8 text-[#0071e3]" />,
+    iconBg: "bg-blue-50",
+    iconHover: "group-hover:from-[#0071e3] group-hover:to-[#40c4ff]",
     title: "System",
     description:
       "Ubuntu, Debian, Armbian, Android. Wybierz to, co lubisz najbardziej.",
   },
   {
-    icon: <Terminal className="w-8 h-8" />,
+    icon: <Terminal className="w-8 h-8 text-[#0891b2]" />,
+    iconBg: "bg-cyan-50",
+    iconHover: "group-hover:from-[#0891b2] group-hover:to-[#22d3ee]",
     title: "Docker",
     description:
       "Gotowy na konteneryzację. Uruchamiaj aplikacje w izolowanych środowiskach.",
   },
   {
-    icon: <Gamepad2 className="w-8 h-8" />,
+    icon: <Gamepad2 className="w-8 h-8 text-[#9333ea]" />,
+    iconBg: "bg-purple-50",
+    iconHover: "group-hover:from-[#9333ea] group-hover:to-[#c084fc]",
     title: "Retro Gaming",
     description: "Zmień Linux Box w konsolę do gier dzięki Batocera.linux.",
   },
   {
-    icon: <Home className="w-8 h-8" />,
+    icon: <Home className="w-8 h-8 text-[#10b981]" />,
+    iconBg: "bg-emerald-50",
+    iconHover: "group-hover:from-[#10b981] group-hover:to-[#34d399]",
     title: "Smart Home",
-    description: "Idealny hub dla Home Assistant, SUPLA, Domoticz czy OpenHAB.",
+    description:
+      "Idealny hub dla Home Assistant (preinstalowany), SUPLA, Domoticz czy OpenHAB.",
   },
   {
-    icon: <Film className="w-8 h-8" />,
+    icon: <Film className="w-8 h-8 text-[#e11d48]" />,
+    iconBg: "bg-rose-50",
+    iconHover: "group-hover:from-[#e11d48] group-hover:to-[#fb7185]",
     title: "Multimedia",
-    description: "CoreELEC i Kodi zamienią go w potężne centrum rozrywki 4K.",
+    description:
+      "CoreELEC i Kodi (na załączonej karcie SD) zamienią go w potężne centrum rozrywki 4K.",
   },
   {
-    icon: <Code2 className="w-8 h-8" />,
+    icon: <Code2 className="w-8 h-8 text-[#7c3aed]" />,
+    iconBg: "bg-violet-50",
+    iconHover: "group-hover:from-[#7c3aed] group-hover:to-[#a78bfa]",
     title: "Dla deweloperów",
     description: "Twój osobisty, energooszczędny serwer deweloperski.",
   },
   {
-    icon: <ShieldCheck className="w-8 h-8" />,
+    icon: <ShieldCheck className="w-8 h-8 text-[#f97316]" />,
+    iconBg: "bg-orange-50",
+    iconHover: "group-hover:from-[#f97316] group-hover:to-[#fdba74]",
     title: "Hakowanie i testy",
     description:
       "Idealne narzędzie do nauki cyberbezpieczeństwa i testów penetracyjnych.",
   },
   {
-    icon: <Smartphone className="w-8 h-8" />,
+    icon: (
+      <Image
+        src="/android.svg"
+        alt="Android"
+        width={32}
+        height={32}
+        className="w-8 h-8 object-contain"
+      />
+    ),
+    iconBg: "bg-green-50",
+    iconHover: "group-hover:from-[#3ddc84] group-hover:to-[#a4c639]",
     title: "Android",
-    description: "Dostępne obrazy Android TV oraz Android AOSP.",
+    description:
+      "Gdy znudzi Ci się sterowanie i multimedia — zainstaluj Android na tej samej bramce.",
   },
 ];
 
@@ -116,7 +143,9 @@ export default function Features() {
               className="card-hover card-glow flex flex-col justify-between p-8 rounded-3xl glass-light border border-white/60 hover:border-[#0071e3]/40 transition-all duration-300 hover:scale-[1.02] group"
             >
               <div>
-                <div className="mb-6 p-4 rounded-2xl bg-white text-[#1d1d1f] group-hover:bg-gradient-to-br group-hover:from-[#0071e3] group-hover:to-[#00c6ff] group-hover:text-white shadow-md transition-all duration-300 w-fit">
+                <div
+                  className={`mb-6 p-4 rounded-2xl ${feature.iconBg} text-[#1d1d1f] group-hover:bg-gradient-to-br ${feature.iconHover} group-hover:text-white shadow-md transition-all duration-300 w-fit`}
+                >
                   {feature.icon}
                 </div>
                 <h3 className="text-xl font-bold mb-2 text-[#1d1d1f] tracking-tight">
