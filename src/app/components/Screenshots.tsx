@@ -23,6 +23,7 @@ interface ScreenshotItem {
   category: string;
   imageSrc: string;
   icon: React.ReactNode;
+  imageBrightness?: boolean;
 }
 
 const screenshots: ScreenshotItem[] = [
@@ -57,6 +58,7 @@ const screenshots: ScreenshotItem[] = [
     category: "Architektura Sieci",
     imageSrc: "/ha-matter-server-thread.png",
     icon: <Network className="w-5 h-5 text-[#0071e3]" />,
+    imageBrightness: false,
   },
   {
     id: "energy",
@@ -82,6 +84,7 @@ const screenshots: ScreenshotItem[] = [
     category: "Monitoring",
     imageSrc: "/monitoring.png",
     icon: <Camera className="w-5 h-5 text-[#0071e3]" />,
+    imageBrightness: false,
   },
   {
     id: "full-access",
@@ -172,7 +175,11 @@ export default function Screenshots() {
                   src={item.imageSrc}
                   alt={item.title}
                   fill
-                  className="object-cover object-top group-hover:scale-105 transition-transform duration-700"
+                  className={`object-cover object-top group-hover:scale-105 transition-transform duration-700 ${
+                    item.imageBrightness === false
+                      ? ""
+                      : "brightness-[1.9] contrast-[1.2]"
+                  }`}
                   sizes="(max-width: 768px) 100vw, 50vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">

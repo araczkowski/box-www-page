@@ -51,57 +51,6 @@ export default function HeaderSimple() {
                 <span className="text-white"> </span>
                 <span className="text-[#1090d0]">Box PRO.</span>
               </span>
-              <div className="inline-flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-6 py-2.5 rounded-full glass-light shadow-lg border border-white/60">
-                <Image
-                  src="/linux.svg"
-                  alt="Linux"
-                  width={28}
-                  height={28}
-                  className="w-6 h-6 sm:w-7 sm:h-7 object-contain opacity-90 hover:opacity-100 transition-opacity"
-                  title="Linux"
-                />
-                <span className="text-slate-300 text-xs font-semibold">•</span>
-                <Image
-                  src="/android.svg"
-                  alt="Android"
-                  width={28}
-                  height={28}
-                  className="w-6 h-6 sm:w-7 sm:h-7 object-contain opacity-90 hover:opacity-100 transition-opacity"
-                  title="Android"
-                />
-                <span className="text-slate-300 text-xs font-semibold">•</span>
-                <Image
-                  src="/home-assistant.svg"
-                  alt="Home Assistant"
-                  width={28}
-                  height={28}
-                  className="w-6 h-6 sm:w-7 sm:h-7 object-contain opacity-90 hover:opacity-100 transition-opacity"
-                  title="Home Assistant"
-                />
-                <span className="text-slate-300 text-xs font-semibold">•</span>
-                <div
-                  className="flex items-center gap-2"
-                  title="Thread / Matter"
-                >
-                  <Image
-                    src="/thread.svg"
-                    alt="Thread"
-                    width={50}
-                    height={20}
-                    className="h-4 sm:h-5 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                  <span className="text-slate-300 text-xs font-semibold">
-                    /
-                  </span>
-                  <Image
-                    src="/matter.svg"
-                    alt="Matter"
-                    width={50}
-                    height={20}
-                    className="h-4 sm:h-5 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
-                  />
-                </div>
-              </div>
             </div>
           </h1>
 
@@ -127,8 +76,75 @@ export default function HeaderSimple() {
             </div>
           </div>
 
+          {/* Tech Badges moved below device image */}
+          <div className="mb-10 opacity-0 animate-[fadeIn_0.8s_ease-out_0.8s_forwards]">
+            <div className="inline-flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-6 py-2.5 rounded-full glass-light shadow-lg border border-white/60">
+              <Image
+                src="/linux.svg"
+                alt="Linux"
+                width={28}
+                height={28}
+                className="w-6 h-6 sm:w-7 sm:h-7 object-contain opacity-90 hover:opacity-100 transition-opacity"
+                title="Linux"
+              />
+              <span className="text-slate-300 text-xs font-semibold">•</span>
+              <Image
+                src="/android.svg"
+                alt="Android"
+                width={28}
+                height={28}
+                className="w-6 h-6 sm:w-7 sm:h-7 object-contain opacity-90 hover:opacity-100 transition-opacity"
+                title="Android"
+              />
+              <span className="text-slate-300 text-xs font-semibold">•</span>
+              <Image
+                src="/home-assistant.svg"
+                alt="Home Assistant"
+                width={28}
+                height={28}
+                className="w-6 h-6 sm:w-7 sm:h-7 object-contain opacity-90 hover:opacity-100 transition-opacity"
+                title="Home Assistant"
+              />
+              <span className="text-slate-300 text-xs font-semibold">•</span>
+              <div className="flex items-center gap-2" title="Thread / Matter">
+                <Image
+                  src="/thread.svg"
+                  alt="Thread"
+                  width={50}
+                  height={20}
+                  className="h-4 sm:h-5 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+                />
+                <span className="text-slate-300 text-xs font-semibold">/</span>
+                <Image
+                  src="/matter.svg"
+                  alt="Matter"
+                  width={50}
+                  height={20}
+                  className="h-4 sm:h-5 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* Prominent "Kup teraz" CTA button */}
           <div className="mb-16 opacity-0 animate-[fadeIn_0.8s_ease-out_0.8s_forwards] flex flex-col items-center gap-4">
+            {/* Notification shown above the button */}
+            {showNotice && (
+              <div className="animate-in fade-in slide-in-from-top-3 duration-300 flex items-center gap-3 px-6 py-3.5 rounded-2xl bg-slate-900 text-white shadow-2xl border border-slate-700 max-w-md">
+                <Sparkles className="w-5 h-5 text-amber-400 shrink-0 animate-pulse" />
+                <span className="text-base font-semibold tracking-tight">
+                  Sprzedaż już wkrótce
+                </span>
+                <button
+                  onClick={() => setShowNotice(false)}
+                  className="ml-auto p-1 rounded-full hover:bg-white/15 transition-colors text-slate-300 hover:text-white"
+                  title="Zamknij"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              </div>
+            )}
+
             <button
               onClick={() => setShowNotice(true)}
               className="btn-shine btn-glow group relative inline-flex items-center justify-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-[#0071e3] via-[#0084ff] to-[#00c6ff] hover:from-[#0084ff] hover:via-[#0099ff] hover:to-[#00e5ff] text-white text-lg font-semibold shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer animate-pulse-ring"
@@ -136,23 +152,6 @@ export default function HeaderSimple() {
               <ShoppingBag className="w-5 h-5 transition-transform group-hover:scale-110" />
               <span>Kup teraz</span>
             </button>
-
-            {/* Notification when button is clicked */}
-            {showNotice && (
-              <div className="animate-in fade-in slide-in-from-top-3 duration-300 flex items-center gap-3 px-6 py-3.5 rounded-2xl glass-dark text-white shadow-2xl border border-white/20 max-w-md">
-                <Sparkles className="w-5 h-5 text-amber-400 shrink-0 animate-pulse" />
-                <span className="text-base font-semibold tracking-tight">
-                  Sprzedaż już wkrótce
-                </span>
-                <button
-                  onClick={() => setShowNotice(false)}
-                  className="ml-auto p-1 rounded-full hover:bg-white/20 transition-colors text-slate-400 hover:text-white"
-                  title="Zamknij"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              </div>
-            )}
           </div>
 
           {/* Specs with Apple #f5f5f7 surface cards */}
