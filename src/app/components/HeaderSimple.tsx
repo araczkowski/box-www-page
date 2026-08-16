@@ -29,8 +29,27 @@ export default function HeaderSimple() {
           {/* Main Title & Tech Badges */}
           <h1 className="mb-6 opacity-0 animate-[fadeIn_0.8s_ease-out_0.2s_forwards]">
             <div className="flex flex-col items-center gap-4">
-              <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight gradient-text-black-navy">
-                Linux Box PRO.
+              <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-tight">
+                <span className="text-[#f0b020]">L</span>
+                <span className="relative inline-block align-baseline">
+                  <span
+                    className="absolute"
+                    style={{
+                      width: "0.13em",
+                      height: "0.13em",
+                      top: "0.08em",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      backgroundColor: "#60b040",
+                    }}
+                  />
+                  <span className="text-[#f08010]">ı</span>
+                </span>
+                <span className="text-[#e03030]">n</span>
+                <span className="text-[#903090]">u</span>
+                <span className="text-[#1090d0]">x</span>
+                <span className="text-white"> </span>
+                <span className="text-[#1090d0]">Box PRO.</span>
               </span>
               <div className="inline-flex flex-wrap items-center justify-center gap-3 sm:gap-4 px-6 py-2.5 rounded-full glass-light shadow-lg border border-white/60">
                 <Image
