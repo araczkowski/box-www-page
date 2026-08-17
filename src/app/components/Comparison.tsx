@@ -131,11 +131,13 @@ export default function Comparison() {
                 transition={{ duration: 0.4, delay: index * 0.08 }}
                 className="card-hover grid grid-cols-3 gap-4 items-center px-6 py-5 rounded-2xl glass-light border border-white/60 hover:border-[#0071e3]/40 transition-all duration-300"
               >
-                <div className="flex items-center gap-3 text-[#1d1d1f] font-semibold">
-                  <div className="p-2.5 rounded-xl bg-white text-[#0071e3] shadow-sm">
+                <div className="flex items-center gap-2 sm:gap-3 text-[#1d1d1f] font-semibold min-w-0">
+                  <div className="p-2 shrink-0 rounded-lg sm:p-2.5 sm:rounded-xl bg-white text-[#0071e3] shadow-sm">
                     {row.icon}
                   </div>
-                  <span className="hidden sm:inline">{row.feature}</span>
+                  <span className="inline text-xs sm:text-sm leading-tight break-words">
+                    {row.feature}
+                  </span>
                 </div>
                 <div className="text-center text-[#86868b] font-medium flex justify-center items-center">
                   {row.rpi}
